@@ -1,0 +1,484 @@
+export const IMGS = {
+  logistics: "/images/logistics-operations.png",
+  money: "/images/money-transfer.png",
+  partial: "/images/partial-cargo-truck.png",
+  blog1: "/images/logistics-operations.png",
+  blog2: "/images/customs-documents.png",
+  blog3: "/images/container-shipping.png",
+  blog4: "/images/europe-turkey-trade.png",
+  truck: "/images/tir-truck-transport.png",
+  warehouse: "/images/warehouse-interior.png",
+};
+
+export interface BlogPostBody {
+  subtitle: string;
+  img: string;
+  text: string;
+}
+
+export interface BlogPost {
+  id: number;
+  slug: string;
+  tag: string;
+  tagColor: string;
+  date: string;
+  isoDate: string;
+  readTime: string;
+  image: string;
+  title: string;
+  excerpt: string;
+  highlights: string[];
+  body: BlogPostBody[];
+  tags?: string[];
+}
+
+export const blogPosts: BlogPost[] = [
+  {
+    id: 1,
+    slug: "rusya-lojistik-operasyon-tek-cati",
+    tag: "Lojistik",
+    tagColor: "bg-blue-500/15 text-blue-300",
+    date: "Mart 2025",
+    isoDate: "2025-03-01",
+    readTime: "5 dk",
+    image: IMGS.logistics,
+    title: "Rusya Lojistik Operasyon: Tek Çatı Altında Eksiksiz Yönetim",
+    excerpt: "Rusya'ya taşınan ürünlerin lojistik aşamalarının tamamını tek çatı altında yönetiyoruz. Görsel incelemeden sigortalamaya, paketlemeden depolamaya kadar her adımda yanınızdayız.",
+    highlights: ["Görsel inceleme ve kalite kontrol", "Rusya standartlarına uygun paketleme", "Güvenli depolama (Türkiye & Rusya)", "Gümrükleme süreç yönetimi"],
+    tags: ["Rusya lojistik", "tek çatı lojistik", "depolama Rusya", "paketleme nakliye", "CMR sigorta", "Rusya gümrük"],
+    body: [
+      { subtitle: "Görsel İnceleme (Inspection)", img: IMGS.logistics, text: "Rusya'ya sevk edilmeden önce, ürünlerinizde herhangi bir hasar veya eksiklik olup olmadığını kontrol etmek büyük önem taşır. Görsel inceleme hizmetimiz, görsel denetimden detaylı kalite kontrol adımlarına kadar uzanır. Ürünlerde tespit edilen sorunlar teslimat öncesinde giderilir, böylece Rusya'daki alıcınızla sorun yaşamazsınız." },
+      { subtitle: "Paketleme & Depolama", img: IMGS.warehouse, text: "Rusya'ya nakliye sürecindeki en kritik aşamalardan biri ürünlerin doğru biçimde paketlenmesidir. Rusya'nın soğuk hava koşulları ve uzun karayolu güzergahları göz önüne alındığında ayrı bir özen gerektirir. ChapterLOG olarak, hem Kayseri'deki depomuz hem de Rusya'daki iş ortağı depolarımız ile güvenli ve düzenli depolama altyapısı sunuyoruz." },
+      { subtitle: "Sigorta & Güvence", img: IMGS.truck, text: "Yükünüzün sigortalanması lojistik sürecin ayrılmaz bir parçasıdır. 500.000 Euro'ya kadar CMR sigortası seçeneği sunan araçlarımızla yükünüz Rusya'ya güvence altında ulaşır. Hasar veya kayıp durumunda sigorta süreçlerini de sizin adınıza yönetiyoruz." },
+    ],
+  },
+  {
+    id: 2,
+    slug: "turkiyeden-rusyaya-para-transferi",
+    tag: "Para Transferi",
+    tagColor: "bg-amber-500/15 text-amber-300",
+    date: "Mart 2025",
+    isoDate: "2025-03-10",
+    readTime: "7 dk",
+    image: IMGS.money,
+    title: "Türkiye'den Rusya'ya Para Transferi: Yasal Çerçeve ve Komisyon Oranları",
+    excerpt: "10 yılı aşkın tecrübemizle Türkiye-Rusya arasındaki ticari para transferlerini hızlı, güvenli ve mevzuata tam uyumlu şekilde gerçekleştiriyoruz.",
+    highlights: ["%3,5–%5 komisyon oranı", "Resmî yasal çerçevede güvence", "Çoklu döviz: TL, USD, EUR, Ruble", "En geç 5 iş günü içinde transfer"],
+    tags: ["para transferi Rusya", "Türkiye Rusya havale", "ticari transfer", "komisyon oranı", "döviz transferi", "yasal para gönderme"],
+    body: [
+      { subtitle: "Neden Ticari Transfer Bu Kadar Zorlaştı?", img: IMGS.money, text: "2022 sonrasında Batı yaptırımları kapsamında birçok uluslararası banka Rusya'ya transfer hizmetini durdurdu. Türkiye ise bu yaptırımlara taraf olmadığından Türkiye-Rusya arası ticari transferler tamamen yasal. Ancak bankalar kendi iç uyum prosedürleri nedeniyle zorluklarla dolu süreçler yaratıyor. ChapterLOG, tam da bu noktada devreye girerek yasal ve şeffaf alternatif kanallarla transferinizi gerçekleştiriyor." },
+      { subtitle: "Komisyon Oranları ve Şartlar", img: IMGS.blog2, text: "Komisyon oranlarımız işlem hacmine, döviz türüne ve ödeme modeline göre değişmekle birlikte genel çerçeve şu şekildedir:\n• Türkiye-Rusya arası ticari transferlerde: %3,5–%5\n• İhraç kayıtlı işlemlerde: ek %2 komisyon\n• İthalat fatura devri: TCMB efektif satış kuru üzerinden %2\n• Rusya'dan mal alımında döviz ödemede: %0,5'ten başlar\n\nTüm ücretler önceden netleştirilir, sürpriz maliyet yoktur." },
+      { subtitle: "Yasal Dayanak", img: IMGS.blog1, text: "ChapterLOG, 5411 sayılı Bankacılık Kanunu ve 6493 sayılı Ödeme Hizmetleri Kanunu dahil tüm ilgili yasal düzenlemelere uygun faaliyet gösterir. Türkiye, AB ve ABD yaptırım rejimlerine taraf değildir; Türkiye-Rusya ticareti Türk mevzuatı çerçevesinde tamamen yasaldır." },
+    ],
+  },
+  {
+    id: 3,
+    slug: "rusya-parsiyel-nakliye-325-usd",
+    tag: "Nakliye",
+    tagColor: "bg-green-500/15 text-green-300",
+    date: "Şubat 2025",
+    isoDate: "2025-02-15",
+    readTime: "6 dk",
+    image: IMGS.partial,
+    title: "Rusya Parsiyel Nakliye: 325 USD'den Başlayan Maliyetle Güvenli Teslimat",
+    excerpt: "Az hacimli yüklerinizi Rusya'ya taşımak için komple tır kiralamak zorunda değilsiniz. 500.000 Euro CMR sigortalı paylaşımlı araçlarla ekonomik nakliye.",
+    highlights: ["325 USD'den başlayan maliyet", "500.000 Euro CMR sigorta güvencesi", "7–10 gün teslimat süresi", "Kapıdan alım + adrese teslim seçeneği"],
+    tags: ["parsiyel nakliye Rusya", "LTL nakliye", "Rusya parsiyel yük", "325 USD nakliye", "CMR sigorta", "ekonomik nakliye Rusya"],
+    body: [
+      { subtitle: "Parsiyel Nakliye Nedir?", img: IMGS.partial, text: "Parsiyel nakliye (LTL – Less Than Truckload), aynı güzergahta taşınacak farklı müşterilere ait yüklerin aynı araçta taşınması yöntemidir. Yükünüz tüm aracı doldurmuyorsa komple tır kiralamak yerine yalnızca kullandığınız hacim için ödeme yaparsınız. Bu yöntem özellikle düzenli ama küçük hacimli Rusya sevkiyatı yapan firmalar için idealdir." },
+      { subtitle: "ChapterLOG Parsiyel Nakliye Avantajları", img: IMGS.truck, text: "ChapterLOG Kayseri Depo'dan Moskova Gümrük Sahası'na kargo süresi genellikle 7–10 iş günüdür. Haftanın belirli günlerinde düzenli seferlerimiz mevcuttur. Kapıdan teslim alma ek ücret karşılığında, adrese teslim seçeneği de mevcuttur. 500.000 Euro'ya kadar CMR sigortalı araçlarımızla yükünüzü tam güvence altına alıyoruz." },
+      { subtitle: "Fiyatlandırma", img: IMGS.warehouse, text: "Parsiyel nakliye fiyatlarımız hacim (m³) üzerinden hesaplanmakta olup Kayseri-Moskova hattında 325 USD/m³'ten başlamaktadır. Çevre şehirler ve farklı destinasyonlar için ayrıca fiyatlandırma yapılmaktadır. Teklif almak için yük boyutlarınızı ve gönderim adresinizi bizimle paylaşmanız yeterlidir." },
+    ],
+  },
+  {
+    id: 4,
+    slug: "transit-tasimacilik-coklu-sinir-asimi",
+    tag: "Taşımacılık",
+    tagColor: "bg-purple-500/15 text-purple-300",
+    date: "Şubat 2025",
+    isoDate: "2025-02-05",
+    readTime: "4 dk",
+    image: IMGS.truck,
+    title: "Transit Taşımacılık: Tek Sözleşmeyle Çoklu Sınır Aşımı",
+    excerpt: "Yükünüz birden fazla ülke üzerinden geçse bile tek sözleşme ve tek gümrük işlemi güvencesiyle koordinasyonu biz sağlarız.",
+    highlights: ["Tek sözleşme, çok ülke", "Merkezi gümrük koordinasyonu", "Optimize rota planlaması", "Zaman ve maliyet tasarrufu"],
+    tags: ["transit taşımacılık", "çoklu sınır geçişi", "TIR karneti", "UBAK izni", "Gürcistan transit", "Rusya güzergah"],
+    body: [
+      { subtitle: "Transit Taşımacılık Neden Önemli?", img: IMGS.truck, text: "Rusya'ya giden yükler bazı güzergahlarda Gürcistan, Ermenistan, Azerbaycan veya Belarus sınırından geçmek durumundadır. Her ülkenin farklı gümrük mevzuatı ve transit belge gereksinimleri vardır. ChapterLOG, tek sözleşmeyle tüm sınır geçişlerini ve gümrük prosedürlerini merkezi olarak yönetir." },
+      { subtitle: "Avantajlar", img: IMGS.warehouse, text: "ChapterLOG transit taşımacılığında sağlanan avantajlar: tek noktadan koordinasyon, minimize edilmiş bürokratik yük, optimize edilmiş güzergah planlaması ve maliyet tasarrufu. TIR karnesi, UBAK izinleri ve ilgili transit belgeler ekibimiz tarafından hazırlanır." },
+      { subtitle: "Uygulanan Güzergahlar", img: IMGS.blog3, text: "Türkiye çıkışlı Rusya transit hatlarında en sık kullanılan güzergahlar: Türkiye-Gürcistan-Azerbaycan-Rusya (Hazar rotası) ve Türkiye-Bulgaristan-Romanya-Ukrayna-Rusya. Güzergah seçimi yükün tipine, mevsime ve müşteri önceliklerine göre belirlenir." },
+    ],
+  },
+  {
+    id: 5,
+    slug: "rusya-konteyner-tasimaciligi-fcl",
+    tag: "Konteyner",
+    tagColor: "bg-cyan-500/15 text-cyan-300",
+    date: "Ocak 2025",
+    isoDate: "2025-01-20",
+    readTime: "5 dk",
+    image: IMGS.blog4,
+    title: "Rusya Konteyner Taşımacılığı (FCL): Haftalık Sabit Seferler",
+    excerpt: "Haftalık sabit çıkışlarla, tek mühür ve tek beyanname güvencesiyle Rusya iç gümrüğüne doğrudan erişim.",
+    highlights: ["Haftalık sabit seferler", "Tek mühür, tek beyanname", "Şeffaf maliyet yapısı", "Rusya iç gümrüğüne doğrudan erişim"],
+    tags: ["konteyner taşımacılığı", "FCL nakliye", "Rusya konteyner", "haftalık sefer", "tek mühür", "konteyner fiyat"],
+    body: [
+      { subtitle: "FCL Taşımacılık Nedir?", img: IMGS.blog4, text: "FCL (Full Container Load) taşımacılığında konteyner tamamen sizin yükünüze tahsis edilir. Bu hem gümrük işlemlerini basitleştirir hem de yükün güvenliğini artırır. Tek mühür uygulaması sayesinde konteyner açılmadan sınırı geçer, hasar riski minimuma iner." },
+      { subtitle: "Haftalık Sabit Seferler", img: IMGS.truck, text: "ChapterLOG, Türkiye-Rusya konteyner hattında haftalık sabit çıkışlar düzenler. Bu düzenlilik, tedarik zincirinizi öngörülebilir kılar ve acil stok karar almak zorunda kalmazsınız. 20' ve 40' standart ile frigorifik konteyner seçenekleri mevcuttur." },
+      { subtitle: "Maliyet ve Şeffaflık", img: IMGS.warehouse, text: "Konteyner taşımacılığı fiyatlarımız güzergah, konteyner tipi ve mevsimsel yoğunluğa göre belirlenir. Tüm maliyetler önceden netleştirilir; yükleme, gümrük, sigorta ve teslimat bedelleri ayrı ayrı raporlanır." },
+    ],
+  },
+  {
+    id: 6,
+    slug: "ftl-tam-dorse-nakliye",
+    tag: "FTL",
+    tagColor: "bg-orange-500/15 text-orange-300",
+    date: "Ocak 2025",
+    isoDate: "2025-01-10",
+    readTime: "5 dk",
+    image: IMGS.truck,
+    title: "FTL Tam Dorse Nakliye: Büyük Hacimli Yükler İçin Hızlı Çözüm",
+    excerpt: "M³ bazlı şeffaf fiyat, haftalık sabit seferler ve acil kapasite seçenekleriyle büyük yüklerinizi Rusya'ya taşıyoruz.",
+    highlights: ["M³ bazlı şeffaf fiyatlandırma", "Haftalık düzenli seferler", "TIR karnesi ve UBAK izinleri", "Acil sevkiyat için esnek takvim"],
+    tags: ["FTL nakliye", "komple tır", "tam dorse", "Rusya TIR", "UBAK izni", "karayolu nakliye"],
+    body: [
+      { subtitle: "FTL Nakliyenin Avantajları", img: IMGS.truck, text: "FTL (Full Truckload) taşımacılığı, yükünüzün tek bir araçla ve herhangi bir aktarma yapılmadan doğrudan hedefe ulaşmasını sağlar. Parsiyel nakliyeye kıyasla transit süresi kısalır, hasar riski azalır ve takip daha kolay olur. Büyük hacimli veya düzenli sevkiyat yapan firmalar için en ekonomiktir." },
+      { subtitle: "TIR ve UBAK Süreçleri", img: IMGS.warehouse, text: "Türkiye-Rusya FTL hattında TIR karnesi zorunludur. ChapterLOG, TIR belgesi temini, UBAK (karayolu izin belgesi) ve diğer gümrük dokümanlarını eksiksiz hazırlar. Sürücülerimiz Rusya gümrük prosedürlerine hakimdir, bu sayede sınır geçişlerinde gereksiz bekleme yaşanmaz." },
+      { subtitle: "Fiyatlandırma", img: IMGS.blog1, text: "FTL nakliye fiyatlandırmamız m³ bazlıdır. Aylık veya mevsimlik düzenli sevkiyat planları için özel fiyat anlaşması yapılabilir. Acil sevkiyatlar için ek kapasite ve sürücü desteği sağlanabilir." },
+    ],
+  },
+  {
+    id: 7,
+    slug: "rusya-gumruk-danismanligi",
+    tag: "Gümrük",
+    tagColor: "bg-red-500/15 text-red-300",
+    date: "Aralık 2024",
+    isoDate: "2024-12-05",
+    readTime: "8 dk",
+    image: IMGS.blog3,
+    title: "Rusya Gümrük Danışmanlığı: Doğru Beyanname, Sıfır Gecikme",
+    excerpt: "Ortalama %7–%10 gümrük tarifesi, %20 KDV ve EAC sertifikası gereksinimiyle karmaşık Rusya gümrük süreçlerini sizin adınıza yönetiyoruz.",
+    highlights: ["GTİP tespiti ve beyanname hazırlığı", "EAC/GOST-R sertifikasyon desteği", "Vergi hesaplama danışmanlığı", "Eksiksiz evrak takibi"],
+    tags: ["gümrük danışmanlığı", "Rusya gümrük", "EAC sertifika", "GOST-R", "GTİP kodu", "beyanname hazırlığı"],
+    body: [
+      { subtitle: "Rusya Gümrük Mevzuatı Genel Çerçeve", img: IMGS.blog3, text: "Rusya, Avrasya Ekonomik Birliği (EAÜ) üyesi olarak ortak gümrük tarifesi uygular. Ortalama gümrük tarifeleri %7–%10 aralığında seyretmekle birlikte bazı ürünlerde (tarım, elektronik, otomotiv) bu oran %15–%25'e çıkabilir. Genel KDV oranı %20, gıda ve temel ihtiyaç ürünlerinde %10'dur." },
+      { subtitle: "Gerekli Belgeler", img: IMGS.warehouse, text: "Rusya'ya ihracat için gereken temel belgeler:\n• GTİP (HS Kodu) tespiti\n• EAC Sertifikası / GOST-R Uygunluk Belgesi\n• Ticari fatura (invoice)\n• Konşimento / taşıma senedi\n• Paket listesi (packing list)\n• Menşe şahadetnamesi (gerektiğinde)\n• Sigorta belgesi\n• Gümrük beyannamesi (ГТД)\n\nEksik veya hatalı belge gümrükte ciddi gecikmelere ve para cezalarına yol açar." },
+      { subtitle: "EAC Sertifikası", img: IMGS.blog2, text: "EAC (Evrasya Uygunluk İşareti) sertifikası, Rusya dahil EAÜ ülkelerine ithal edilen pek çok ürün grubu için zorunludur. Elektrikli ürünler, gıda ambalajları, tekstil, oyuncaklar ve makine ekipmanları başlıca sertifika gerektiren kategorilerdir. ChapterLOG, sertifikasyon sürecini Rusya'daki akredite test kuruluşlarıyla koordineli yürütür." },
+    ],
+  },
+  {
+    id: 8,
+    slug: "rusya-ile-ticaret-ithalat-ihracat-danismanligi",
+    tag: "Dış Ticaret",
+    tagColor: "bg-teal-500/15 text-teal-300",
+    date: "Kasım 2024",
+    isoDate: "2024-11-10",
+    readTime: "9 dk",
+    image: IMGS.blog1,
+    title: "Rusya ile Ticaret: İthalat ve İhracat Danışmanlığı Rehberi",
+    excerpt: "2023 yılında 10,9 Milyar Dolara ulaşan Türkiye-Rusya ticaret hacminde nasıl etkin bir yer alırsınız? Kapsamlı rehber.",
+    highlights: ["Pazar araştırması ve analizi", "Tedarikçi / müşteri bulma desteği", "Gümrük ve mevzuat danışmanlığı", "Kapsamlı süreç yönetimi"],
+    tags: ["Rusya ithalat ihracat", "dış ticaret danışmanlığı", "Türkiye Rusya ticaret", "ihracat rehberi", "ithalat Rusya", "ticaret hacmi"],
+    body: [
+      { subtitle: "Türkiye-Rusya Ticaret Hacmi", img: IMGS.blog1, text: "T.C. Ticaret Bakanlığı verilerine göre 2023 yılında Türkiye-Rusya ticaret hacmi 2022'ye kıyasla %16,9 artışla 10,9 Milyar Dolar seviyesinde gerçekleşti. Bu rakam iki ülke arasındaki ekonomik ilişkinin ne denli güçlü olduğunu ortaya koyuyor. Tekstil, tarım ürünleri, makine ekipmanları ve inşaat malzemeleri ihracatta öne çıkan sektörler arasında yer alıyor." },
+      { subtitle: "İhracat Süreci", img: IMGS.truck, text: "Rusya'ya ihracat yapmak isteyen Türk firmaları için temel adımlar:\n1. Ürünün HS Kodu tespiti ve gümrük tarifesi araştırması\n2. EAC/GOST-R sertifika gereksiniminin belirlenmesi\n3. Ticari sözleşme ve ödeme yönteminin netleştirilmesi\n4. Lojistik güzergah ve nakliye tipinin seçilmesi\n5. Gümrük beyannamesi hazırlığı ve sevkiyat\n\nChapterLOG tüm bu adımlarda yanınızda." },
+      { subtitle: "İthalat Süreci", img: IMGS.blog4, text: "Rusya'dan Türkiye'ye ithalat yapmak isteyen firmalar için süreç; kaynak ülkedeki tedarikçi tespiti, ürün uygunluk kontrolü, Türkiye gümrük mevzuatına göre beyanname hazırlığı ve yurt içi teslimat aşamalarından oluşur. ChapterLOG, Rusya'daki iş ağı sayesinde güvenilir Rus tedarikçilere erişim sağlar." },
+    ],
+  },
+  {
+    id: 9,
+    slug: "ihracat-icin-dogrudan-satin-alim",
+    tag: "İhracat",
+    tagColor: "bg-indigo-500/15 text-indigo-300",
+    date: "Ekim 2024",
+    isoDate: "2024-10-15",
+    readTime: "5 dk",
+    image: IMGS.blog2,
+    title: "İhracat İçin Doğrudan Satın Alım: Operasyonel Yükü Devredin",
+    excerpt: "Faturalama, beyanname ve ödeme süreçlerini sizin adınıza yönetiyoruz. Tek fatura kesin, gerisini biz halledelim.",
+    highlights: ["Tek fatura, tam operasyon", "TL bazında ihracat bedeli alma imkânı", "Banka uyum süreçlerinden muafiyet", "Tam beyanname ve gümrük yönetimi"],
+    tags: ["doğrudan satın alım", "ihracat operasyonu", "tek fatura ihracat", "İBKB", "Rusya ihracat", "banka uyum"],
+    body: [
+      { subtitle: "Bu Modelden Kim Yararlanır?", img: IMGS.blog2, text: "Rusya'daki alıcılarla doğrudan faturalama ilişkisi kurmak istemeyen, ihracat bürokratik süreçlerinden uzak durmak isteyen veya bankaların uyum departmanlarındaki engellerle uğraşmak istemeyen Türk firmaları bu modelden büyük fayda sağlar. Sadece Türkiye içinde tek bir fatura kesersiniz, geri kalan her şeyi biz hallederiz." },
+      { subtitle: "Nasıl Çalışır?", img: IMGS.money, text: "ChapterLOG, ürünlerinizi Türkiye'de sizden satın alır ve kendi firmamız üzerinden Rusya'ya ihraç eder. İhraç kayıtlı işlemlerde ihracat bedellerinizi yurt içinde TL bazında alabilirsiniz. Bankaların uyum departmanlarına takılmak, İBKB kapatma süreçleriyle uğraşmak veya gümrük müşavirleriyle uzun prosedürler yürütmek artık gündemde olmaz." },
+      { subtitle: "Maliyet ve Avantajlar", img: IMGS.truck, text: "Bu modelde maliyetler; satın alım bedeli üzerinden uygulanan işlem ücreti ve para transferi komisyonundan oluşur. Tüm maliyetler önceden şeffaf biçimde belirlenir. Faydası ise nettir: ihracat operasyonuna harcanan süre ve enerji tamamen ortadan kalkar, kendi uzmanlık alanınıza odaklanırsınız." },
+    ],
+  },
+  {
+    id: 10,
+    slug: "avrupadan-rusyaya-nakliye-turkiye-transit",
+    tag: "Avrupa→Rusya",
+    tagColor: "bg-sky-500/15 text-sky-300",
+    date: "Mart 2025",
+    isoDate: "2025-03-20",
+    readTime: "7 dk",
+    image: IMGS.blog4,
+    title: "Avrupa'dan Rusya'ya Nakliye: Türkiye Üzerinden Transit Güzergah Rehberi",
+    excerpt: "AB ülkelerinden Rusya'ya mal taşımanın en güvenli ve yasal yolu: Türkiye transit güzergahı, TIR karnesi, UBAK izinleri ve eksiksiz gümrük desteğiyle.",
+    highlights: ["🇪🇺 → 🇹🇷 → 🇷🇺 tam transit hat", "TIR karnesi ve UBAK izni dahil", "14–21 gün teslimat süresi", "500.000 € CMR sigorta güvencesi"],
+    tags: ["Avrupa Rusya nakliye", "transit güzergah", "Türkiye transit", "AB Rusya lojistik", "TIR karnesi", "Europe Russia freight"],
+    body: [
+      { subtitle: "Neden Türkiye Üzerinden Transit?", img: IMGS.blog4, text: "2022 sonrasında Avrupa-Rusya doğrudan hava ve karayolu hatlarının büyük çoğunluğu kapandı. Türkiye ise hem AB hem de Rusya ile açık ticaret ilişkisini sürdüren nadir ülkelerden biridir. Bu konumu, Avrupa'dan Rusya'ya mal taşımak isteyen firmalar için Türkiye'yi vazgeçilmez bir transit merkeze dönüştürdü.\n\nTürkiye bu yaptırımlara taraf değildir; Avrupa menşeli malları Rusya'ya transit olarak geçirme işlemi Türk mevzuatı çerçevesinde tamamen yasaldır." },
+      { subtitle: "Güzergah ve Süreler", img: IMGS.truck, text: "Avrupa çıkışlı Rusya transitinde en çok tercih edilen güzergah:\n\n🇩🇪/🇵🇱/🇨🇿 → Türkiye (TIR) → Gürcistan/Azerbaycan → Rusya\n\nAlman, Polonya veya Çek kaynaklı bir yük için tahmini transit süreler:\n• Avrupa → Türkiye sınırı: 3–5 gün\n• Türkiye geçişi: 2–3 gün\n• Gürcistan/Azerbaycan → Rusya: 3–4 gün\n• Toplam: ortalama 14–21 gün\n\nAcil sevkiyatlar için hava yükü kombinasyonu da düzenlenebilir." },
+      { subtitle: "Gerekli Belgeler ve Süreç", img: IMGS.blog3, text: "Avrupa-Rusya transit taşımacılığında gereken belgeler:\n• TIR Karnesi: Gümrük güvencesi sağlar, transit ülkelerde ayrı beyanname zorunluluğunu ortadan kaldırır.\n• UBAK İzinleri: Her transit ülke için ayrı karayolu izin belgesi.\n• CMR Konşimentosu: Uluslararası karayolu taşıma sözleşmesi.\n• Menşe Şahadetnamesi ve Ticari Fatura.\n• Rusya Gümrük Beyannamesi (ГТД).\n\nChapterLOG tüm bu belgeleri sizin adınıza hazırlar ve takip eder." },
+    ],
+  },
+  {
+    id: 11,
+    slug: "almanyadan-rusyaya-mal-gondermek-2025",
+    tag: "Avrupa→Rusya",
+    tagColor: "bg-sky-500/15 text-sky-300",
+    date: "Şubat 2025",
+    isoDate: "2025-02-20",
+    readTime: "8 dk",
+    image: IMGS.blog1,
+    title: "Almanya'dan Rusya'ya Mal Göndermek: Adım Adım Lojistik Rehber (2025)",
+    excerpt: "Almanya'dan Rusya'ya ihracat yapıyorsanız doğrudan hat artık mümkün değil. Türkiye transit güzergahı, maliyetler ve yasal çerçeve — eksiksiz rehber.",
+    highlights: ["Almanya → Türkiye → Rusya hattı", "Güncel maliyet ve süre bilgisi", "Yasal dayanak ve uyum notları", "EAC sertifikasyon desteği"],
+    tags: ["Almanya Rusya nakliye", "Germany Russia freight", "Almanya transit", "Alman mal gönderme Rusya", "yaptırım uyumu", "2025 nakliye"],
+    body: [
+      { subtitle: "Mevcut Durum: Almanya-Rusya Doğrudan Hat Yok", img: IMGS.blog1, text: "AB yaptırımları kapsamında Almanya, Rusya'ya doğrudan karayolu nakliyesi yapamamaktadır. Rus ve Beyaz Rus TIR araçları AB'ye giremez. Bu durum Avrupa menşeli malların Rusya'ya ulaştırılmasında ciddi bir lojistik boşluk yarattı.\n\nTürkiye bu boşluğu doldurmaktadır. Türk TIR araçları hem Almanya'ya hem Rusya'ya serbestçe girebilir. Bu nedenle Almanya-Rusya güzergahında Türkiye transit merkezi olarak kritik rol üstlenmektedir." },
+      { subtitle: "Maliyet Yapısı", img: IMGS.money, text: "Almanya-Rusya transit taşımacılığında tipik maliyet kalemleri:\n\n• Almanya → Türkiye karayolu nakliyesi: yaklaşık 1.800–2.500 EUR/araç\n• Türkiye → Rusya (Gürcistan üzeri) nakliyesi: yaklaşık 2.500–3.500 USD/araç\n• TIR karnesi ve UBAK izinleri: 150–300 USD\n• Gümrük danışmanlığı ve beyanname: ayrıca fiyatlandırılır\n• CMR sigortası: yük değerinin yaklaşık %0,3–0,5'i\n\nNot: Tüm rakamlar genel referans niteliğindedir; güzergah, yük tipi ve mevsime göre değişir. Kesin teklif için bizimle iletişime geçin." },
+      { subtitle: "Yasal Çerçeve ve Risk Yönetimi", img: IMGS.blog2, text: "Almanya menşeli ürünlerin Rusya'ya ihracatında dikkat edilmesi gereken kritik nokta: ürünün Rusya yaptırım listelerinde yer alıp almadığıdır. Çift kullanımlı mallar, ileri teknoloji ürünleri ve savunma sanayi bileşenleri bu listede olabilir.\n\nChapterLOG, her sevkiyat öncesinde ürünün HS kodunu kontrol ederek yaptırım uyumluluk değerlendirmesi yapar. Yalnızca yasal ve uyumlu sevkiyatlar kabul edilir. Bu şeffaf yaklaşım hem müşterilerimizi hem de şirketimizi korur." },
+    ],
+  },
+  {
+    id: 12,
+    slug: "avrupadan-rusyaya-gumruk-eac-sertifikasi",
+    tag: "Avrupa→Rusya",
+    tagColor: "bg-sky-500/15 text-sky-300",
+    date: "Ocak 2025",
+    isoDate: "2025-01-15",
+    readTime: "6 dk",
+    image: IMGS.blog3,
+    title: "Avrupa'dan Rusya'ya Gümrük: EAC Sertifikası ve Transit Prosedürler",
+    excerpt: "Avrupa çıkışlı malların Rusya gümrüğünden sorunsuz geçmesi için gereken EAC belgesi, HS kodu tespiti ve transit prosedürlerin eksiksiz rehberi.",
+    highlights: ["EAC uygunluk belgesi nedir?", "Hangi ürünler sertifika gerektirir?", "Transit gümrük prosedürleri", "Rusya'da kaçınılması gereken hatalar"],
+    tags: ["EAC sertifikası", "Avrupa Rusya gümrük", "transit prosedür", "uygunluk belgesi", "CE EAC farkı", "Rusya sertifikasyon"],
+    body: [
+      { subtitle: "Rusya Gümrüğünde EAC Sertifikası", img: IMGS.blog3, text: "EAC (Евразийское соответствие — Avrasya Uygunluk İşareti), Avrasya Ekonomik Birliği (EAÜ) pazarına girmek için pek çok ürün kategorisinde zorunlu tutulan belgelendirme sistemidir. Rusya, Belarus, Kazakistan, Ermenistan ve Kırgızistan'ı kapsayan bu ortak sertifikasyon, AB'nin CE işaretine benzer ancak kendi teknik gereksinimlerine sahiptir.\n\nEAC olmadan ürününüz Rusya gümrüğünden geçemez ve büyük gecikme, para cezası veya yükün iade edilmesiyle karşılaşabilirsiniz." },
+      { subtitle: "EAC Gerektiren Ürün Kategorileri", img: IMGS.warehouse, text: "Avrupa'dan Rusya'ya sıklıkla ihraç edilen ve EAC sertifikası gerektiren başlıca ürün grupları:\n\n• Elektrikli ve elektronik ürünler (makinalar, aletler, beyaz eşya)\n• Tekstil ve giyim (yetişkin ve çocuk)\n• Gıda ürünleri ve ambalaj malzemeleri\n• İnşaat malzemeleri (boru, yalıtım, yapı kimyasalları)\n• Oyuncaklar ve çocuk ürünleri\n• Tıbbi cihazlar\n• Araç parçaları ve aksesuarlar\n\nEAC gerektirmeyen bazı ürünler de (sanayi hammaddeleri, bazı kimyasallar) farklı belge talep edebilir. Her ürün için ayrı değerlendirme yapılması önerilir." },
+      { subtitle: "ChapterLOG ile Sertifikasyon Süreci", img: IMGS.blog2, text: "ChapterLOG, Rusya'daki akredite test kuruluşlarıyla işbirliği içinde EAC sertifikasyon sürecini uçtan uca yönetir:\n\n1. Ürün kategorisi ve HS kodu tespiti\n2. Hangi EAC teknik düzenlemesinin uygulanacağının belirlenmesi\n3. Rusya'daki akredite laboratuvara numune gönderimi\n4. Test ve belgelendirme sürecinin takibi\n5. Sertifikanın temin edilmesi ve gümrük dosyasına eklenmesi\n\nSertifikasyon süreci ürüne göre 2–8 hafta arasında değişmektedir. Sevkiyat planınızı buna göre yapmanızı öneririz." },
+    ],
+  },
+  {
+    id: 13,
+    slug: "2025-2026-turkiye-rusya-nakliye-fiyatlari",
+    tag: "Nakliye",
+    tagColor: "bg-green-500/15 text-green-300",
+    date: "Mart 2026",
+    isoDate: "2026-03-01",
+    readTime: "8 dk",
+    image: IMGS.truck,
+    title: "2025–2026 Türkiye-Rusya Nakliye Fiyatları Rehberi",
+    excerpt: "Parsiyel yük (LTL), komple tır (FTL) ve konteyner (FCL) seçenekleriyle Türkiye-Rusya nakliye maliyetleri: güncel fiyat aralıkları, etki eden faktörler ve tasarruf ipuçları.",
+    highlights: ["LTL 325 USD/m³'ten başlar", "FTL Kayseri-Moskova ortalama", "Mevsimsel fiyat değişimi", "Gizli maliyet kalemleri"],
+    tags: ["nakliye fiyatları 2025", "nakliye fiyatları 2026", "Rusya nakliye maliyet", "FTL fiyat", "LTL fiyat", "Türkiye Rusya kargo ücreti"],
+    body: [
+      { subtitle: "Parsiyel Nakliye (LTL) Fiyatları", img: IMGS.partial, text: "Parsiyel nakliyede fiyatlandırma hacim (m³) bazındadır. Kayseri–Moskova güzergahında güncel LTL fiyat aralığı 325–420 USD/m³ bandında seyretmektedir. Fiyatı etkileyen başlıca faktörler:\n\n• Yük hacmi ve ağırlığı (yoğunluk oranı)\n• Gönderim sıklığı (düzenli müşterilere indirim)\n• Mevsimsel talep (kış aylarında %10–15 artış)\n• Çıkış noktası (Kayseri deposu dışındaki şehirlerde ek ücret)\n• Özel yük tipleri (frigo, ADR, oversized)\n\nFiyata dahil olanlar: Türkiye çıkış gümrüğü, Rusya gümrük beyanı, CMR sigortası. Dahil olmayanlar: yerel dağıtım, akreditif/ödeme hizmetleri." },
+      { subtitle: "Komple Tır (FTL) Fiyatları", img: IMGS.truck, text: "FTL taşımacılıkta araç komple size tahsis edilir. Kayseri–Moskova hattında standart tenteli TIR için güncel spot fiyat aralığı 4.500–6.500 USD'dir. Bu rakam şu değişkenlere göre farklılaşır:\n\n• Yakıt fiyatları (en önemli etken)\n• Güzergah (Gürcistan, Hazar veya Karadeniz rotası)\n• Bekleme süresi ve gümrük gecikmesi riski\n• Frigorifik, mega veya özel araç gerekliliği\n• Yükleme/boşaltma noktası sayısı\n\nFTL, 15 m³ üzeri düzenli yüklemelerde LTL'ye göre genellikle daha ekonomiktir." },
+      { subtitle: "Konteyner (FCL) Fiyatları", img: IMGS.blog3, text: "FCL taşımacılıkta 20' veya 40' konteyner tamamen sizin yükünüze tahsis edilir. Karadeniz denizyolu + Rusya kara kombinasyonunda 20' FCL için güncel piyasa 2.000–3.500 USD aralığında seyrediyor. Karayolu FCL Kayseri–Moskova ise 5.000–7.500 USD bandında.\n\nDenizyolu FCL avantajı: hacim açısından daha ekonomik, transit süresi karayoluna kıyasla öngörülebilir. Dezavantajı: karayoluna göre 7–10 gün daha uzun transit süre.\n\nÖnemli not: Konteyner kiraları piyasa koşullarına göre değişkenlik gösterir. Fiyat teklifi için güncel durumu firmamızdan alınız." },
+    ],
+  },
+  {
+    id: 14,
+    slug: "rusya-parsiyel-mi-komple-tir-mi",
+    tag: "Nakliye",
+    tagColor: "bg-green-500/15 text-green-300",
+    date: "Şubat 2026",
+    isoDate: "2026-02-10",
+    readTime: "6 dk",
+    image: IMGS.partial,
+    title: "Rusya Parsiyel mi, Komple Tır mı? Doğru Seçim Rehberi",
+    excerpt: "Az miktarlı yükler için LTL parsiyel, büyük yükler için FTL komple tır. Hangisi sizin için doğru? Fiyat, süre ve güvenlik karşılaştırması.",
+    highlights: ["LTL ne zaman avantajlı?", "FTL hangi durumda tercih edilmeli?", "Maliyet karşılaştırma tablosu", "Hibrit çözüm mümkün mü?"],
+    tags: ["parsiyel mi FTL mi", "LTL FTL karşılaştırma", "nakliye tipi seçimi", "Rusya yük gönderme", "maliyet karşılaştırma", "hibrit nakliye"],
+    body: [
+      { subtitle: "Parsiyel Nakliye (LTL) Ne Zaman Tercih Edilmeli?", img: IMGS.partial, text: "Parsiyel nakliye şu durumlarda idealdir:\n\n✅ Yükleme hacminiz 1–12 m³ arasında\n✅ Düzenli ama küçük sevkiyatlarınız var\n✅ Tüm aracı bekletecek stok birikiminiz yok\n✅ Maliyet optimizasyonu önceliğiniz\n✅ 500.000 Euro CMR sigorta güvencesi yeterli\n\nDezavantajları:\n❌ Araç doluncaya kadar bekleme süresi (genellikle 2–5 gün)\n❌ Farklı müşteri yükleriyle aynı araç — hasar riski daha yüksek\n❌ Aktarma noktası olabilir" },
+      { subtitle: "Komple Tır (FTL) Ne Zaman Tercih Edilmeli?", img: IMGS.truck, text: "FTL taşımacılık şu durumlarda avantajlıdır:\n\n✅ Yükleme hacminiz 12 m³ üzerinde\n✅ Zaman kritik sevkiyat (Yılbaşı, Noel, kampanya dönemleri)\n✅ Hassas, kırılgan veya yüksek değerli yük\n✅ Direkten teslim (aktarmasız)\n✅ Gıda, ilaç, frigo gerektiren ürünler\n\n15 m³ üzerindeki yüklerde FTL genellikle LTL'ye kıyasla ton başına daha ekonomiktir. Hesabı basit yapın: LTL birim fiyat × hacim > FTL sabit fiyat ise FTL tercih edin." },
+      { subtitle: "Hibrit Çözüm: FTL + LTL Kombinasyonu", img: IMGS.warehouse, text: "Bazı müşteriler büyük sevkiyatı FTL ile göndermek, küçük tamamlayıcı yükleri ise LTL ile ayda birkaç kez göndermek ister. ChapterLOG her iki seçeneği de sunar ve mevsimsel yük planlamanıza göre esnek geçiş imkânı tanır.\n\nÜcretsiz karşılaştırmalı teklif almak için: yük hacmi (m³), ağırlık (kg), çıkış–varış adresleri ve tercihen aylık sıklık bilgilerini paylaşmanız yeterlidir." },
+    ],
+  },
+  {
+    id: 15,
+    slug: "rusyaya-ihracatta-gumruk-islemleri-2025",
+    tag: "Gümrük",
+    tagColor: "bg-red-500/15 text-red-300",
+    date: "Şubat 2026",
+    isoDate: "2026-02-01",
+    readTime: "9 dk",
+    image: IMGS.blog2,
+    title: "Rusya'ya İhracatta Gümrük İşlemleri: Adım Adım Rehber 2025",
+    excerpt: "Türkiye'den Rusya'ya ihracat yaparken gümrük beyannamesi, vergi oranları, yasaklı ürünler ve EAC sertifikası gibi tüm süreçleri adım adım açıklıyoruz.",
+    highlights: ["Türkiye çıkış gümrüğü adımları", "Rusya gümrük tarife ve KDV", "EAC sertifikasyon zorunluluğu", "Gecikme ve ceza riski nasıl önlenir?"],
+    tags: ["gümrük işlemleri 2025", "Rusya ihracat gümrük", "gümrük adım adım", "KDV Rusya", "gümrük cezası", "ihracat beyanname"],
+    body: [
+      { subtitle: "1. Adım: Türkiye Çıkış Gümrüğü", img: IMGS.blog2, text: "Rusya'ya ihracatta Türkiye tarafında şu belgeler hazırlanmalıdır:\n\n• İhracat beyannamesi (e-Gümrük sistemi üzerinden)\n• Ticari fatura (commercial invoice) — Rusça ve Türkçe\n• Çeki listesi (packing list)\n• CMR taşıma belgesi\n• A.TR dolaşım belgesi (gerekirse)\n• Menşei şahadetnamesi\n\nExpress veya acil sevkiyatlarda TIR karnesi süreçleri hızlandırabilir. Türk gümrüğünde ortalama bekleme süresi 4–12 saattir." },
+      { subtitle: "2. Adım: Rusya Gümrüğü — Vergi ve Tarifeler", img: IMGS.blog1, text: "Rusya gümrük tarife yapısı ürün koduna (HS/TN VED) göre belirlenir. Temel bileşenler:\n\n• İthalat gümrük vergisi: ürüne göre %0–%20 (tekstilde %12–%18, gıdada %5–%15)\n• KDV: standart %20 (bazı ürünlerde %10)\n• Aksiz (tüketim) vergisi: alkol, tütün, araçlar için ek vergi\n\nRusya FKZ 289 (Gümrük Kanunu) kapsamında beyan edilen değer üzerinden toplam ithal vergi yükü hesaplanır. Yanlış değer beyanı %200'e kadar idari ceza gerektirebilir." },
+      { subtitle: "3. Adım: EAC Sertifikası ve Uygunluk Belgeleri", img: IMGS.warehouse, text: "Pek çok ürün kategorisi için EAC (Avrasya Uygunluk Belgesi) zorunludur:\n\n• Elektrik ve elektronik ürünler\n• Tekstil ve giyim\n• Gıda ve ambalaj\n• İnşaat malzemeleri\n• Oyuncaklar ve çocuk ürünleri\n\nEAC olmadan mal gümrükten geçemez; iade veya imha kararı verilebilir. Sertifikasyon süreci 2–8 hafta sürer. ChapterLOG, Rusya akredite test merkezleriyle işbirliği yaparak bu süreci sizin adınıza yönetir." },
+    ],
+  },
+  {
+    id: 16,
+    slug: "turkiye-rusya-lojistik-guzergahlari",
+    tag: "Transit",
+    tagColor: "bg-purple-500/15 text-purple-300",
+    date: "Ocak 2026",
+    isoDate: "2026-01-15",
+    readTime: "7 dk",
+    image: IMGS.truck,
+    title: "Türkiye-Rusya Lojistik Güzergahları: Gürcistan mı, Hazar Rotası mı?",
+    excerpt: "Kayseri'den Moskova'ya hangi güzergah? Gürcistan-Azerbaycan, İran-Azerbaycan ve Karadeniz rotalarını maliyet, süre ve risk açısından karşılaştırıyoruz.",
+    highlights: ["Gürcistan rotası: avantaj ve riskler", "Hazar-Azerbaycan güzergahı", "Karadeniz feribotu seçeneği", "Mevsimsel güzergah değişimi"],
+    tags: ["Rusya güzergahları", "Gürcistan rotası", "Hazar güzergahı", "Karadeniz feribotu", "lojistik rota", "Türkiye Rusya yol"],
+    body: [
+      { subtitle: "Güzergah 1: Türkiye–Gürcistan–Rusya (Kuzey Güzergah)", img: IMGS.truck, text: "En yaygın kullanılan rota Türkiye çıkışından sonra Gürcistan üzerinden Rusya'ya ulaşır. Sarp/Sarpi sınır kapısından Gürcistan'a giriş yapan araçlar, Gürcistan-Rusya sınırından (Kazbegi–Lars) Rusya'ya geçer.\n\nAvantajları:\n✅ En kısa karayolu mesafesi (~2.800 km)\n✅ İyi gelişmiş altyapı\n✅ Yüksek frekans — her gün geçiş\n\nRiskler:\n❌ Kış aylarında Kazbegi dağ geçidi kapanabiliyor (Kasım–Mart)\n❌ Sınır kuyruğu zaman zaman 24–48 saate ulaşabiliyor" },
+      { subtitle: "Güzergah 2: Türkiye–İran–Azerbaycan–Rusya (Hazar Rotası)", img: IMGS.blog4, text: "Hazar rotası, Türkiye-İran-Azerbaycan üzerinden Rusya'ya ulaşır. Bazı operasyonlar Hazar Denizi'ni feribot ile geçerek Kazakistan veya Rusya'ya varış sağlar.\n\nAvantajları:\n✅ Kış aylarında güvenilir alternatif\n✅ Yüksek kapasiteli geçiş imkânı\n✅ İran/Azerbaycan sınırında genellikle daha az kuyruk\n\nRiskler:\n❌ Mesafe daha uzun (~3.500+ km)\n❌ İran geçişi için özel izinler gerekebilir\n❌ Feribot kapasitesi sınırlı ve rezervasyon gerektirir" },
+      { subtitle: "Mevsimsel Güzergah Stratejisi", img: IMGS.warehouse, text: "ChapterLOG, yük tipi ve mevsime göre optimal güzergah seçimi yapar:\n\n• Nisan–Ekim: Gürcistan rotası öncelikli (hız + maliyet)\n• Kasım–Mart: Hazar alternatifi değerlendirilir (risk yönetimi)\n• Deniz bağlantısı gereken yükler: Karadeniz feribot hattı (Zonguldak/İstanbul–Novorossiysk)\n\nGüzergah seçiminde belirleyici faktörler: transit süre, maliyet, yük tipi (ADR, soğuk zincir), müşteri özelinde SLA ve mevsimsel geçiş koşulları." },
+    ],
+  },
+  {
+    id: 17,
+    slug: "cmr-sigortasi-rusya-nakliye",
+    tag: "Sigorta",
+    tagColor: "bg-yellow-500/15 text-yellow-300",
+    date: "Ocak 2026",
+    isoDate: "2026-01-05",
+    readTime: "5 dk",
+    image: IMGS.blog1,
+    title: "CMR Sigortası Nedir? Rusya Nakliyesinde Yük Güvencesi",
+    excerpt: "500.000 Euro'ya kadar CMR sigorta güvencesi ile yükünüzü koruma altına alın. CMR sözleşmesi, hasar tazminatı ve nakliyeci sorumluluğu hakkında bilmeniz gerekenler.",
+    highlights: ["CMR sigortası nedir?", "Hangi hasarlar kapsamda?", "500.000 Euro sınırı ne anlama gelir?", "Hasar durumunda süreç"],
+    tags: ["CMR sigortası", "nakliye sigorta", "yük sigortası", "hasar tazminat", "500.000 Euro sigorta", "karayolu sigorta"],
+    body: [
+      { subtitle: "CMR Sigortası Nedir?", img: IMGS.blog1, text: "CMR (Convention Merchandises Routières), uluslararası karayolu taşımacılığını düzenleyen bir sözleşme çerçevesidir. CMR sigortası ise bu çerçevede taşınan yükün zarar görmesi, kaybolması veya geç teslim edilmesi durumunda nakliyecinin sorumluluğunu güvence altına alır.\n\nTürkiye de dahil 55'ten fazla ülke CMR'ye taraftır. Bu nedenle Türkiye-Rusya karayolu nakliyesinin tamamı CMR kapsamındadır." },
+      { subtitle: "ChapterLOG'un 500.000 Euro Sigorta Güvencesi", img: IMGS.money, text: "Standart CMR sorumluluğu nakliyeci başına 8.33 SDR/kg ile sınırlıdır — bu birçok yükte yetersiz kalabilir. ChapterLOG, standart CMR limitinin çok üzerinde 500.000 Euro'ya kadar genişletilmiş sigorta kapsamı sunar.\n\nBu güvence:\n✅ Tüm araçlarımızda standarttır, ek ücret yoktur\n✅ Hasar, kayıp ve kısmi zarar senaryolarını kapsar\n✅ Rusya gümrüğünde bekleme süresindeki hasarı da kapsar" },
+      { subtitle: "Hasar Durumunda Süreç", img: IMGS.warehouse, text: "Yükünüzde hasar tespit etmeniz durumunda izlemeniz gereken adımlar:\n\n1. Teslim sırasında CMR belgelerine hasar şerhini yazın\n2. Fotoğraf ve video ile hasarı belgeleyin\n3. ChapterLOG operasyon ekibini aynı gün bilgilendirin (7/24 erişim)\n4. Sigorta hasar dosyası ekibimiz tarafından açılır ve takip edilir\n5. Ortalama 15–30 iş günü içinde tazminat sonuçlanır\n\nÖnemli: Hasar bildirimi teslimden itibaren 7 takvim günü içinde yapılmalıdır. Bu süre geçirildiğinde CMR kapsamı düşebilir." },
+    ],
+  },
+  {
+    id: 18,
+    slug: "rusya-ihracat-odeme-yontemleri-2026",
+    tag: "Dış Ticaret",
+    tagColor: "bg-teal-500/15 text-teal-300",
+    date: "Mart 2026",
+    isoDate: "2026-03-20",
+    readTime: "10 dk",
+    image: IMGS.money,
+    title: "Rusya'ya İhracatta Ödeme Yöntemleri: Akreditif, Havale ve Alternatif Kanallar (2026)",
+    excerpt: "SWIFT kesintisi sonrası Rusya'ya nasıl ödeme yapılır? Akreditif, muhabir banka, Türk bankaları üzerinden havale, alternatif ödeme kanalları ve komisyon karşılaştırması — 2026 güncel rehber.",
+    highlights: ["SWIFT sonrası alternatif kanallar", "Akreditif (L/C) ile güvenli ödeme", "Türk bankaları üzerinden havale seçenekleri", "Komisyon oranları karşılaştırması"],
+    tags: ["Rusya ödeme yöntemleri", "SWIFT alternatifi Rusya", "akreditif Rusya", "Rusya'ya para gönderme 2026", "Türkiye Rusya havale", "muhabir banka Rusya", "ticari ödeme Rusya", "Rusya ithalat ödeme", "döviz transferi Rusya", "Russia payment methods", "оплата Россия Турция"],
+    body: [
+      {
+        subtitle: "SWIFT Sonrası Durum: Rusya'ya Ödeme Neden Zorlaştı?",
+        img: IMGS.money,
+        text: "2022 yılında Batı ülkelerinin uyguladığı finansal yaptırımlar kapsamında Rusya'nın önde gelen bankaları (Sberbank, VTB, Gazprombank vb.) SWIFT sisteminden çıkarıldı. Bu durum uluslararası ödemelerin klasik yollarla yapılmasını neredeyse imkansız hale getirdi.\n\nAncak kritik bir ayrım var: Türkiye bu yaptırımlara taraf değildir. Türk bankaları üzerinden Rusya'ya ticari ödeme yapmak Türk mevzuatı çerçevesinde tamamen yasaldır. Buna rağmen bankalar kendi iç uyum (compliance) süreçleri nedeniyle işlemleri yavaşlatabilir veya reddedebilir.\n\nİşte tam bu noktada ödeme kanalı seçimi hayati önem kazanır. 2026 itibarıyla Türkiye-Rusya ticari ödemelerinde kullanılabilen başlıca yöntemler aşağıda detaylı olarak açıklanmıştır."
+      },
+      {
+        subtitle: "Yöntem 1: Akreditif (Letter of Credit — L/C)",
+        img: IMGS.blog2,
+        text: "Akreditif, uluslararası ticarette en güvenli ödeme yöntemlerinden biridir. Alıcının bankası, satıcıya belirli koşullar karşılandığında ödemenin yapılacağını garanti eder.\n\nTürkiye-Rusya ticaretinde akreditif avantajları:\n✅ Banka garantisi — alıcı ödeme yapmazsa banka devreye girer\n✅ Belge bazlı ödeme — yanlış ürün veya eksik sevkiyat riski minimize\n✅ Yaptırım uyumlu — bankalar L/C işlemlerini daha kolay onaylar\n✅ Büyük tutarlı işlemler için ideal (50.000 USD üzeri)\n\nDezavantajları:\n❌ Komisyon yüksek — toplam işlem tutarının %1,5–%3'ü\n❌ Banka prosedürleri nedeniyle 7–15 gün açılma süresi\n❌ Belge hatası halinde ödeme gecikebilir\n\nChapterLOG, akreditif açılması ve belge uyumu konusunda danışmanlık sağlar. Rusya tarafındaki muhabir banka ile koordinasyonu üstlenir."
+      },
+      {
+        subtitle: "Yöntem 2: Muhabir Banka Üzerinden Havale (T/T)",
+        img: IMGS.blog1,
+        text: "Telegrafik transfer (T/T) en yaygın ödeme yöntemidir. Ancak Rusya'ya T/T ile ödeme yapabilmek için Türk bankasının Rusya'da aktif bir muhabir bankası olması gerekir.\n\n2026 itibarıyla Türkiye-Rusya hattında aktif muhabir banka ilişkileri sınırlıdır. Bazı Türk bankaları hâlâ belirli Rus bankalarıyla çalışmaktadır, ancak işlem süreleri uzamış ve uyum gereksinimleri artmıştır.\n\nT/T ile ödeme yaparken dikkat edilmesi gerekenler:\n• Ödeme amacının açık ve net yazılması (ticari fatura referansı şart)\n• Gönderici ve alıcı firma bilgilerinin eksiksiz olması\n• Yaptırım listesinde yer almayan ürünler için olması\n• Bankanın ek belge talep edebileceğinin bilinmesi\n\nOrtalama komisyon: %0,5–%1,5 + SWIFT ücreti (25–50 USD)\nOrtalama süre: 3–7 iş günü (gecikmeler olabilir)"
+      },
+      {
+        subtitle: "Yöntem 3: Aracı Firma Üzerinden Ticari Transfer",
+        img: IMGS.money,
+        text: "Bankaların uyum süreçlerinden kaçınmak isteyen firmalar için en pratik çözüm, ChapterLOG gibi lisanslı aracı firmalar üzerinden ticari transfer yapmaktır.\n\nBu modelde nasıl çalışır:\n1. Türk firması, ChapterLOG'a TL veya USD/EUR cinsinden ödeme yapar\n2. ChapterLOG, Rusya'daki alıcıya veya tedarikçiye Ruble veya USD cinsinden ödemeyi gerçekleştirir\n3. Tüm işlem yasal çerçevede, faturalı ve şeffaf biçimde tamamlanır\n\nAvantajları:\n✅ Banka uyum süreçleriyle uğraşmaya gerek yok\n✅ Sabit komisyon (%3,5 genel oran)\n✅ 3–5 iş günü içinde transfer\n✅ Çoklu döviz desteği: TRY, USD, EUR, RUB\n✅ Küçük tutarlar dahil tüm işlemler kabul edilir\n\nChapterLOG, 5411 sayılı Bankacılık Kanunu ve 6493 sayılı Ödeme Hizmetleri Kanunu kapsamında faaliyet gösterir."
+      },
+      {
+        subtitle: "Yöntem Karşılaştırma Tablosu ve Öneri",
+        img: IMGS.blog3,
+        text: "Ödeme yöntemi seçimi işlem tutarına, aciliyetine ve risk toleransınıza göre değişir:\n\nAkreditif (L/C):\n• Komisyon: %1,5–%3\n• Süre: 7–15 gün\n• Güvenlik: Çok yüksek\n• İdeal: 50.000+ USD işlemler\n\nBanka Havalesi (T/T):\n• Komisyon: %0,5–%1,5\n• Süre: 3–7 gün\n• Güvenlik: Orta (ön ödeme riski)\n• İdeal: Güvenilir tedarikçilerle düzenli ticaret\n\nAracı Firma (ChapterLOG):\n• Komisyon: %3,5 sabit\n• Süre: 3–5 gün\n• Güvenlik: Yüksek (yasal çerçeve)\n• İdeal: Hızlı, sorunsuz, her tutarda\n\nÖnerimiz: İlk işlemlerde ve büyük tutarlarda akreditif, düzenli tedarikçilerle aracı firma transferini tercih edin. Hibrit model de mümkündür — örneğin %50 akreditif, %50 aracı transfer.\n\nÜcretsiz ödeme danışmanlığı için bizimle iletişime geçin: +90 533 380 30 56"
+      },
+    ],
+  },
+  {
+    id: 19,
+    slug: "rusya-e-ticaret-wildberries-ozon-ihracat",
+    tag: "Dış Ticaret",
+    tagColor: "bg-teal-500/15 text-teal-300",
+    date: "Mart 2026",
+    isoDate: "2026-03-15",
+    readTime: "11 dk",
+    image: IMGS.blog4,
+    title: "Rusya E-Ticaret Pazarı: Wildberries ve Ozon'a Türkiye'den Nasıl Mal Gönderilir?",
+    excerpt: "145 milyon nüfuslu Rusya'nın patlayan e-ticaret pazarına Türkiye'den nasıl girilir? Wildberries ve Ozon'a kayıt, FBO/FBS modelleri, gümrük, etiketleme ve lojistik süreçlerin eksiksiz rehberi.",
+    highlights: ["Wildberries ve Ozon kayıt süreci", "FBO (depo) vs FBS (kendi gönderim) modeli", "Rusya e-ticaret pazar büyüklüğü", "Etiketleme, barkod ve EAC gereksinimleri"],
+    tags: ["Rusya e-ticaret", "Wildberries Türkiye", "Ozon Türkiye", "Rusya online satış", "Rusya marketplace", "e-ticaret ihracat Rusya", "Wildberries kayıt", "Ozon'a mal göndermek", "Rusya FBO FBS", "cross-border e-commerce Russia", "электронная коммерция Россия Турция", "Wildberries экспорт"],
+    body: [
+      {
+        subtitle: "Rusya E-Ticaret Pazarı: Neden Şimdi?",
+        img: IMGS.blog4,
+        text: "Rusya, Avrupa'nın en büyük ve dünyanın en hızlı büyüyen e-ticaret pazarlarından biridir. 2025 yılında Rusya online perakende hacmi 7,4 trilyon Ruble'yi (yaklaşık 80 milyar USD) aşmıştır. 145 milyon nüfusun %75'inden fazlası internet kullanıcısıdır ve online alışveriş penetrasyonu her yıl çift haneli büyüme göstermektedir.\n\n2022 sonrasında Batılı markaların (Zara, H&M, IKEA, Nike vb.) Rusya'dan çekilmesi devasa bir arz boşluğu yarattı. Türk markaları bu boşluğu doldurmak için eşsiz bir konumdadır: coğrafi yakınlık, rekabetçi fiyatlar ve Rusya tüketicisinin Türk ürünlerine olan güveni.\n\nWildberries ve Ozon, Rusya'nın iki dominant marketplace platformudur. Toplam online perakende pazarının %65'inden fazlasını kontrol ederler."
+      },
+      {
+        subtitle: "Wildberries: Rusya'nın En Büyük Marketplace'i",
+        img: IMGS.blog1,
+        text: "Wildberries, aylık 180+ milyon ziyaretçisiyle Rusya'nın (ve BDT'nin) en büyük e-ticaret platformudur. Moda, kozmetik, ev tekstili ve FMCG ürünlerinde pazar lideridir.\n\nTürkiye'den Wildberries'e giriş süreci:\n\n1. Satıcı Kaydı: wildberries.ru üzerinden cross-border satıcı başvurusu. Türk şirketleri yabancı satıcı statüsünde kayıt olabilir.\n2. Ürün Kartı Oluşturma: Rusça ürün açıklamaları, görseller, barkod (EAN-13) ve fiyatlandırma.\n3. EAC Sertifikası: Tekstil, kozmetik ve elektronik ürünler için zorunlu. Belgeler Wildberries'e yüklenmelidir.\n4. Etiketleme: Rusya'nın zorunlu dijital etiketleme sistemi 'Честный знак' (Honest Mark) bazı kategorilerde geçerlidir.\n5. Depo Teslimi: Ürünler Wildberries'in Rusya'daki depolarına (fulfillment center) gönderilir.\n\nWildberries FBO modelinde platform depolama, paketleme ve son mil teslimatı üstlenir. Satıcı komisyonu kategoriye göre %5–%15 arasındadır."
+      },
+      {
+        subtitle: "Ozon: Rusya'nın Amazon'u",
+        img: IMGS.blog3,
+        text: "Ozon, Rusya'nın ikinci büyük marketplace'idir ve özellikle elektronik, ev eşyası ve gıda kategorilerinde güçlüdür. Aylık 120+ milyon ziyaretçiye sahiptir.\n\nOzon'a Türkiye'den giriş:\n\n1. Satıcı Kaydı: seller.ozon.ru üzerinden yabancı satıcı başvurusu.\n2. FBO vs FBS Modeli:\n   • FBO (Fulfillment by Ozon): Ürünler Ozon deposuna gönderilir, depolama ve kargo Ozon tarafından yapılır. Daha yüksek görünürlük ve daha hızlı teslimat.\n   • FBS (Fulfillment by Seller): Sipariş gelince satıcı kendi deposundan gönderir. Cross-border satıcılar için daha zor ama mümkün.\n3. Ürün İçeriği: Rusça açıklama, minimum 3 görsel, ürün özellikleri tablosu.\n4. Fiyatlandırma: Ruble cinsinden. Kur riski satıcıya aittir.\n5. Reklam: Ozon'un dahili reklam sistemi (Ozon Performance) ile görünürlük artırılabilir.\n\nOzon komisyonu: %4–%15 (kategoriye göre değişir)."
+      },
+      {
+        subtitle: "Lojistik Süreç: Türkiye'den Rusya Deposuna",
+        img: IMGS.truck,
+        text: "Wildberries veya Ozon'a mal göndermek için lojistik süreç şu adımlardan oluşur:\n\n1. Ürün Hazırlığı (Türkiye):\n   • Rusça etiketleme ve barkodlama\n   • EAC sertifikası/uygunluk belgesi temini\n   • Marketplace gereksinimlerine uygun paketleme\n   • Palet veya kutu bazlı gruplandırma\n\n2. Nakliye (Türkiye → Rusya):\n   • LTL parsiyel nakliye: Küçük partiler için ideal (325 USD/m³'ten)\n   • FTL komple tır: Büyük stok gönderimlerinde ekonomik\n   • Konteyner (FCL): Düzenli, yüksek hacimli gönderimler için\n\n3. Rusya Gümrüğü:\n   • Gümrük beyannamesi hazırlığı\n   • İthalat vergisi (%5–%20) ve KDV (%20) ödenmesi\n   • EAC belgesi sunumu\n\n4. Depo Teslimi:\n   • Wildberries/Ozon deposuna randevulu teslim\n   • Depo kabul koşullarına uygun etiketleme ve paketleme\n\nChapterLOG, bu sürecin tamamını tek çatı altında yönetir: etiketlemeden gümrüğe, nakliyeden depo teslimine kadar."
+      },
+      {
+        subtitle: "Maliyetler, Riskler ve Başarı İpuçları",
+        img: IMGS.warehouse,
+        text: "Rusya e-ticaret pazarına giriş maliyetleri:\n\n• EAC sertifikası: ürüne göre 500–3.000 USD (tek seferlik)\n• Nakliye (LTL): 325 USD/m³'ten başlar\n• Gümrük vergisi + KDV: ürün değerinin %25–%40'ı\n• Marketplace komisyonu: %5–%15\n• Etiketleme/barkodlama: ürün başına 0,5–2 USD\n\nRiskler ve dikkat edilecekler:\n⚠️ Kur riski: Ruble dalgalanması kâr marjını etkileyebilir\n⚠️ İade oranları: Moda kategorisinde %20–%30'a ulaşabilir\n⚠️ Stok yönetimi: Yetersiz stok = listing sıralaması düşer\n⚠️ Rusça müşteri hizmetleri: Olumsuz yorumlar satışı ciddi etkiler\n\nBaşarı ipuçları:\n✅ İlk girişte en çok satan 5–10 ürünle başlayın\n✅ Rusça ürün açıklamalarına yatırım yapın (profesyonel çeviri)\n✅ Rekabetçi fiyatlandırma yapın (pazar araştırması şart)\n✅ Ozon/Wildberries reklam bütçesi ayırın (ilk 3 ay kritik)\n✅ Düzenli stok gönderimi planlayın (ayda 1–2 sevkiyat)\n\nChapterLOG olarak Rusya e-ticaret lojistiğinde uçtan uca destek veriyoruz. İlk adımı atmak için: +90 533 380 30 56"
+      },
+    ],
+  },
+  {
+    id: 20,
+    slug: "rusyadan-turkiyeye-para-transferi-2026",
+    tag: "Para Transferi",
+    tagColor: "bg-amber-500/15 text-amber-300",
+    date: "Mart 2026",
+    isoDate: "2026-03-25",
+    readTime: "9 dk",
+    image: IMGS.money,
+    title: "Rusya'dan Türkiye'ye Para Transferi: İthalatçılar İçin 2026 Güncel Rehber",
+    excerpt: "Rusya'dan Türkiye'ye nasıl para gelir? İthalat bedeli tahsilatı, Ruble/USD dönüşümü, muhabir banka kanalları ve aracı firma çözümleri — ithalatçılar için eksiksiz 2026 rehberi.",
+    highlights: ["Rusya'dan TL/USD/EUR tahsilat", "İthalat bedeli alma yöntemleri", "Ruble dönüşüm seçenekleri", "3–5 iş günü transfer süresi"],
+    tags: ["Rusya'dan Türkiye'ye para transferi", "Rusya'dan para alma", "ithalat bedeli tahsilatı", "Ruble TL dönüşüm", "Rusya'dan havale", "Rusya Türkiye ticari ödeme", "para transferi Rusya 2026", "Россия Турция денежный перевод", "получить деньги из России", "Russia to Turkey money transfer"],
+    body: [
+      {
+        subtitle: "Rusya'dan Türkiye'ye Ödeme: Neden Farklı Bir Süreç?",
+        img: IMGS.money,
+        text: "Türkiye'den Rusya'ya para göndermek ile Rusya'dan Türkiye'ye para almak farklı süreçlerdir. İthalatçılar, ihracatçılar veya Rusya'da iş yapan Türk firmaları için Rusya'dan Türkiye'ye ödeme almak 2022 sonrasında özel bir dikkat gerektirmektedir.\n\nTemel zorluklar:\n• Rusya'daki bankaların uluslararası transfer kapasitesi daralmıştır\n• SWIFT üzerinden gelen transferler bazı Türk bankalarında uyum süreçlerine takılabilir\n• Ruble cinsinden gelen ödemelerde kur dönüşümü sorunu yaşanabilir\n• Büyük tutarlarda ek belge (fatura, sözleşme, gümrük beyannamesi) talep edilmektedir\n\nAncak doğru kanal ve aracı firma desteğiyle bu süreç tamamen yönetilebilir ve yasaldır."
+      },
+      {
+        subtitle: "Yöntem 1: Muhabir Banka Kanalıyla Doğrudan Havale",
+        img: IMGS.blog2,
+        text: "Rusya'daki alıcı firma, kendi bankası aracılığıyla Türkiye'deki hesabınıza doğrudan transfer yapabilir. Bunun için Rus bankasının Türkiye'de aktif bir muhabir ilişkisi olması gerekir.\n\n2026 itibarıyla bazı Rus bankaları hâlâ Türk bankalarıyla muhabir ilişkisini sürdürmektedir. Ancak bu kanaldan gelen transferlerde şu hususlara dikkat edilmelidir:\n\n• Transfer amacı açıkça belirtilmeli (ticari fatura numarası referans gösterilmeli)\n• Gönderici ve alıcı firma bilgileri eksiksiz olmalı\n• Türk bankası ek uyum belgesi talep edebilir (fatura, sözleşme fotokopisi)\n• Transfer süresi: 5–10 iş günü (gecikmeler yaşanabilir)\n• Komisyon: %0,3–%1 (gönderici tarafı) + %0,5–%1 (alıcı tarafı)\n\nBu yöntem büyük ve düzenli ticari ödemeler için uygundur, ancak süreç her zaman öngörülebilir değildir."
+      },
+      {
+        subtitle: "Yöntem 2: ChapterLOG Aracılığıyla Garantili Transfer",
+        img: IMGS.blog1,
+        text: "Banka kanallarındaki belirsizliklerden kaçınmak isteyen ithalatçılar için ChapterLOG güvenli bir alternatif sunar.\n\nNasıl çalışır:\n1. Rusya'daki firma, ChapterLOG'un Rusya hesabına Ruble veya USD cinsinden ödeme yapar\n2. ChapterLOG, Türkiye'deki hesabınıza TL, USD veya EUR cinsinden transferi gerçekleştirir\n3. Tüm işlem faturalı, yasal ve şeffaf biçimde tamamlanır\n\nAvantajları:\n✅ Banka uyum süreçleriyle uğraşmaya gerek yok\n✅ Kur dönüşümü ChapterLOG tarafından yapılır (TCMB efektif kuru baz alınır)\n✅ Sabit komisyon: %3,5\n✅ Transfer süresi: 3–5 iş günü\n✅ Minimum tutar sınırı yok\n✅ Çoklu döviz desteği: TRY, USD, EUR, RUB\n\nÖzellikle düzenli ithalat yapan firmalar için aylık hacim anlaşmaları mümkündür."
+      },
+      {
+        subtitle: "İthalat Bedeli Tahsilatında Dikkat Edilecekler",
+        img: IMGS.blog3,
+        text: "Rusya'dan Türkiye'ye gelen ticari ödemelerde yasal uyum kritik önemdedir. İthalatçıların dikkat etmesi gereken hususlar:\n\n1. Fatura Uyumu: Gelen ödeme tutarı ile gümrük beyannamesindeki tutar uyumlu olmalıdır. Fark %5'i geçmemelidir.\n\n2. Kambiyo Mevzuatı: TCMB'nin kambiyo düzenlemelerine göre, ihracat/ithalat bedelleri belirli sürelerde yurda getirilmelidir. İthalat işlemlerinde ödeme belgesi gümrük müşavirine ibraz edilmelidir.\n\n3. Belge Arşivi: Transfer dekontları, faturalar ve sözleşmeler en az 5 yıl saklanmalıdır.\n\n4. Vergi Beyanı: Gelen döviz, kurumlar/gelir vergisi beyanına dahil edilmelidir.\n\n5. Yaptırım Kontrolü: Gönderici firmanın uluslararası yaptırım listelerinde olmaması gerekir. ChapterLOG bu kontrolü sizin adınıza otomatik olarak yapar.\n\nChapterLOG, tüm bu uyum gereksinimlerini bilen ve sürecinizi buna göre yöneten bir partnerdir."
+      },
+      {
+        subtitle: "Sık Sorulan Sorular ve İletişim",
+        img: IMGS.warehouse,
+        text: "S: Rusya'dan gelen para Türkiye'de vergilendirilir mi?\nC: Ticari bir işleme dayalı (ithalat bedeli, hizmet bedeli vb.) transferler normal ticari gelir olarak beyan edilir. Kişisel transferler farklı kurallara tabidir.\n\nS: Ruble cinsinden mi, yoksa dolar cinsinden mi almak daha avantajlı?\nC: Kur dalgalanmasına bağlıdır. Ancak USD veya EUR cinsinden alma genelde daha öngörülebilirdir. ChapterLOG her iki seçeneği de sunar.\n\nS: Minimum transfer tutarı var mı?\nC: ChapterLOG'da minimum tutar sınırı yoktur. 1.000 USD'den başlayan tutarlar da kabul edilir.\n\nS: Transfer ne kadar sürer?\nC: Aracı firma kanalıyla 3–5 iş günü, banka kanalıyla 5–10 iş günü.\n\nRusya'dan Türkiye'ye para transferi hakkında ücretsiz danışmanlık için:\n+90 533 380 30 56 | info@chapterlog.com.tr"
+      },
+    ],
+  },
+];
+
+export const TAGS = ["Tümü", "Lojistik", "Para Transferi", "Nakliye", "Taşımacılık", "Konteyner", "FTL", "Gümrük", "Dış Ticaret", "İhracat", "Avrupa→Rusya", "Transit", "Sigorta", "E-Ticaret"];

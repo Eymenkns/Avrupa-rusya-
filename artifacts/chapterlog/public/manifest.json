@@ -1,0 +1,20 @@
+{
+  "name": "ChapterLOG — Türkiye-Rusya Lojistik",
+  "short_name": "ChapterLOG",
+  "description": "Türkiye-Rusya ve Avrupa-Rusya hattında FTL nakliye, parsiyel yük, ticari para transferi ve gümrük danışmanlığı.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#131313",
+  "theme_color": "#fb5b2d",
+  "orientation": "portrait-primary",
+  "lang": "tr",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["business", "logistics"]
+}

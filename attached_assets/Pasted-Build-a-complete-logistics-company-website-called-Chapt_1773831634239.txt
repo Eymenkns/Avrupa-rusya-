@@ -1,0 +1,155 @@
+Build a complete logistics company website called ChapterLOG in a single HTML file with inline CSS and JS. Dark theme, orange #F7941D accent color. Multi-page SPA with smooth navigation.
+
+============================
+BRAND
+============================
+Name: ChapterLOG
+Legal: Bedir Uluslararası Nakliyat Ticaret Ltd. Şti.
+Address: KAYSERİ OSB MAH. 9 CAD. NO:5/1 İÇ KAPI NO:2 MELİKGAZİ/KAYSERİ
+Email: info@bedirhan.com
+Phone: [TELEFON]
+Route: Turkey–Russia
+
+============================
+PAGE 1 — HOMEPAGE
+============================
+
+HERO:
+H1: "İşimiz ve Gücümüz Türkiye-Rusya arası ticaretinizi kolaylaştırmak."
+Text: "Kayseri'de yerleşik yapımızla Türkiye-Rusya arasındaki ticaretinizin güçlenerek büyümesi için bütüncül çözümler ChapterLOG'da. Sizin için ne yapabiliriz?"
+Buttons: "İletişim" | "Hizmetlerimiz"
+
+SERVICES PREVIEW (3 cards):
+1. "Rusya Lojistik Operasyon Hizmetleri" — "ChapterLOG, Rusya'ya taşınacak ürünlerin tüm lojistik aşamalarını tek çatı altında yönetir" — Fiyat: Bilgi isteyiniz.
+2. "Rusya-Türkiye Para Transferi Danışmanlığı" — "ChapterLOG ile kolay ve güvenli bir şekilde Rusya para transferi yapabilir, işinizi büyütebilirsiniz." — Fiyat: Yüzde oranı (%) uygulanır. Bilgi isteyiniz.
+3. "Rusya Parsiyel Nakliye Hizmeti" — "ChapterLOG, Rusya parsiyel nakliye seçeneğiyle düşük maliyetli teslimat yapmanıza olanak tanır" — Fiyat: M³ bazındadır. Bilgi isteyiniz.
+"Hepsini Gör" button
+
+ABOUT SECTION:
+Intro: "Doğuştan iki uluslu ve iki ülkede de yerleşik yapımızla işimiz ve gücümüz Türkiye - Rusya arasındaki ticaretinizi kolaylaştırmak."
+History card: "Kayseri'de başlayan ve ağırlıklı olarak Türkiye-Rusya arasında ticari faaliyetlerle süre gelen ticari tecrübe; ChapterLOG adı ile markalaştı."
+Vision card: "Ticari ve kültürel farklılıklardan bütüncül, sürdürülebilir ve toplumlara değer katan dönüşümler üretmek."
+Mission card: "Uluslararası ticaret yapan iş insanlarının Türkiye'deki ve Rusya'daki ticari faaliyetlerini güçlendirecek çözümler sunmak."
+Why us card: "Her gün iki ülkedeki farklı ticari kanunlar, vergi sistemleri, ithalat ve ihracat prosedürleri ile yaşayan pazar dinamikleri içinde çalışıyoruz. Bu deneyim bize, iki ülkedeki iş insanlarının hangi ticari çözümlere ihtiyaç duyduğunu yerinde anlama ve sonuç getirecek doğru hizmetler sunma yetkinliği kazandırıyor."
+Strength card: "Türkiye ve Rusya'da konuşulan dillerin, uygulanan mevzuatların, yaşanan kültürlerin ve coğrafyaların farklılıklarını ve bu farklılıklar ile nasıl çalışmamız gerektiğini iyi biliyor olmamız."
+
+STATS BAR (orange bg):
+04 — "Türkiye ve Rusya'da iki adedi ofis iki adedi depo birimi olmak üzere dört adet fiziki birimimiz ile hizmet veriyoruz"
+860+ — "860'ın üzerinde ithalat ve ihracat projesini başarı ile tamamladık."
+3000+ — "Tamamladığımız ticari projelerde çok çeşitli HS kodları ile çalıştık."
+
+TESTIMONIALS (3 cards):
+1. Janna Hanım, Satış Uzmanı, Döşemenler A.Ş. — "ChapterLOG ile ihraç kayıtlı işlemlerde ihracat bedellerimizi yurtiçinde TL bazında alıyor, tek fatura kesip işlerimize devam edebiliyoruz. İhracat işlemlerimizde bankaların uyum departmanlarına takılmak, İBKB kapatma süreçleriyle uğraşmak veya gümrük müşavirleri ile uzun prosedürler yürütmek artık gündemimizde değil. Böylece kendi uzmanlık alanımız olan imalata daha fazla zaman ayırabiliyoruz."
+2. Ahmet GÖRGÜLÜ, Genel Müdür, AG Görgülü Otomotiv — "Dış ödemeler ve Rusya lojistik konularında ChapterLOG tam bir çözüm ortağı oldu. Hem nakliye hem de para transferi süreçlerimizi rahatlıkla yönetebiliyoruz. Üstelik, ChapterLOG deposunun Kayseri'de olması da bizim için ekstra avantaj sağladı. Artık ürünlerimizi nakliye gününe kadar bekletmek zorunda kalmıyoruz."
+3. Umut ALIOĞLU, Satış Uzmanı, Kommar Dış Ticaret — "Firmamızın ödemeleri ve lojistik sevkiyatları ChapterLOG ile çalışmaya başladığımızdan beri çok daha güvenli ve düzenli ilerliyor. Özellikle Rusya pazarında sundukları etkin nakliye çözümleri rekabet gücümüzü artırdı."
+
+============================
+PAGE 2 — HİZMETLER (9 cards)
+============================
+
+1. Lojistik Operasyon — "Rusya'ya sevkiyat öncesinde ürünlerinizin görsel incelemesini yapıyor, paketleme, depolama ve gümrükleme süreçlerini profesyonelce yönetiyoruz. Doğru etiketleme, kalite kontrol ve güvenli depolama çözümleriyle lojistik sürecinizi sorunsuz hale getiriyoruz." — Bilgi isteyiniz.
+
+2. Para Transferi — "Türkiye ve Rusya arasındaki ticari faaliyetlerde Rusya para transferi işlemlerini kolaylaştırıyoruz. Düşük komisyon, hızlı işlem ve resmî prosedürlere uygunlukla, finansal akışınızı daha verimli hale getirmenize destek oluyoruz. Komisyon oranlarımız %3,5–%5 arasında değişmektedir." — %3.5'ten başlayan komisyon.
+
+3. Parsiyel Nakliye — "Az hacimli veya kısmi yüklerinizi Rusya parsiyel nakliye hizmetimizle güvenle taşıyoruz. 325 USD'den başlayan teslimat maliyetleriyle hızlı ve bütçe dostu çözümler sunarak, işletmenizin rekabet gücünü artırmanıza yardımcı oluyoruz. 500 bin Euro'ya kadar CMR sigortalı araçlarımızla hizmet veriyoruz." — 325 USD'den.
+
+4. Transit Taşıma — "ChapterLOG'un Rusya odaklı transit taşıma servisiyle yükünüz, tek sözleşme ve tek gümrük işlemiyle birden fazla ülkeyi aşarak varış noktasına güvenle ulaşır; zaman, maliyet ve evrak yükünden tasarruf edin." — Bilgi isteyiniz.
+
+5. Konteyner FCL — "ChapterLOG, Rusya konteyner hattında yükünüzü haftalık sabit çıkışlarla, tek mühür ve tek beyanname güvencesiyle taşıyarak; şeffaf maliyet yapısı, yasalara tam uyum ve operasyonel sorunsuzlukla Rusya iç gümrüğüne güvenle ulaştırır." — Bilgi isteyiniz.
+
+6. Tır Nakliye (FTL) — "Rusya nakliye hattında büyük hacimli gönderileriniz için tam dorse (FTL) nakliye modelimiz devrede. Komple tır taşımasında hızlı sevkiyat, şeffaf fiyatlandırma ve haftalık düzenli seferler ile işinizi sorunsuz biçimde büyütün." — M³ bazındadır.
+
+7. Gümrük Danışmanlığı — "Rusya gümrük süreçleri, Rusya ile ticaret yapmak isteyen firmalar için oldukça kritik. Gümrük işlemlerinizde mevzuata uygun hareket etmenizi, doğru vergi oranlarıyla resmî belgeleri eksiksiz düzenlemenizi sağlayarak sizi olası gecikme ve ek maliyetlerinden koruyoruz." — Bilgi isteyiniz.
+
+8. İthalat/İhracat — "10 yılı aşkın tecrübemizle, Rusya ile ihracat ve ithalat süreçlerinizi profesyonelce yönetiyoruz. Tedarikçi ve müşteri bulmadan gümrük işlemlerine kadar tüm adımlarda kapsamlı destek sunuyoruz. Rusya ile ticaret hiç olmadığı kadar güvenli ve verimli!" — Bilgi isteyiniz.
+
+9. Doğrudan Satın Alım — "Türkiye-Rusya ticaretinde karşılaşılan ödeme, beyanname ve faturalama süreçlerini sizin adınıza yönetiyoruz. Ürünlerinizi Türkiye'de satın alarak, kendi şirketimiz üzerinden Rusya'ya ihraç ediyor ve tüm operasyonel yüklerinizi hafifletiyoruz." — Bilgi isteyiniz.
+
+============================
+PAGE 3 — PARA TRANSFERİ DETAY
+============================
+
+H1: "Rusya Para Transferi Danışmanlığı"
+Intro: "ChapterLOG ile kolay ve güvenli bir şekilde Rusya para transferi yapabilir, işinizi büyütebilirsiniz."
+
+Section 1 — "10 Yılı Aşkın Tecrübeyle Rusya Para Transferi":
+"Ana firmamızın Türkiye ve Rusya arasında 10 yılı aşkın süredir devam eden ticari faaliyetlerinden edindiğimiz birikimin üzerine kurulduk. Bu birikim ile rusya para transferi de dahil olmak üzere iki pazarın da ihtiyaçlarına özel ticari çözümler sunuyoruz. Türkiye'den Rusya'ya para transferi veya Rusya'dan Türkiye'ye para transferi için ChapterLOG'u kullanarak kolayca ve güvenli bir şekilde para transferi yapabilir, ticari faaliyetlerinizi güçlendirebilirsiniz."
+
+Section 2 — "Çözümlerimiz ve Komisyon Oranları":
+"Rusya para transferi sürecinde, hem mevzuat hem de kur farkı önemli bir rol oynar. Komisyon oranlarımız, piyasa koşulları, yasal düzenlemeler ve işlem tutarına bağlı olarak değişkenlik gösterebilir.
+• Türkiye-Rusya arası transferlerde: %3,5–%5
+• İhraç kayıtlı işlemlerde: +%2 ek komisyon
+• İthalat fatura devri: TCMB efektif satış kuru üzerinden %2
+• Rusya'dan mal alımında döviz ödemede: %0,5'ten başlar"
+
+Section 3 — 4 özellik kartı:
+Kart 1 — "Resmî Prosedür ile Güvence": "Resmî mevzuata uygun altyapımız sayesinde işlemlerinizi kanunlara ve bankacılık kurallarına bağlı kalarak gerçekleştiriyoruz. Her işlemi sözleşme güvencesi ile ilerletiyoruz. Hiçbir durumda ön ödeme yapmanız istenmez."
+Kart 2 — "Düşük Komisyon ve Hızlı İşlem": "Hem düşük komisyon hem de hızlı onay süreçleri sunarak zamandan ve maliyetten tasarruf etmenizi sağlıyoruz."
+Kart 3 — "Çoklu Döviz Seçenekleri": "Rusya'da Ruble; Türkiye'de TL, USD veya EUR gibi farklı para birimlerinde işlem yapma esnekliği sunuyoruz."
+Kart 4 — "İhtiyaç Anında Destek": "Uzman ekibimiz, para transferi sürecinizi yakından takip eder. Herhangi bir sorunuz ya da talebiniz olduğunda bize ulaşabilirsiniz."
+
+FAQ (10 soru — accordion):
+S1: "Bu hizmet güvenilir mi? Yasal çerçeve kapsamında mı?" — "Evet. ChapterLOG, Türkiye Cumhuriyeti'nde geçerli yasa, usul ve düzenlemeler doğrultusunda faaliyet gösterir. 5411 sayılı Bankacılık Kanunu, 6493 sayılı Ödeme Hizmetleri Kanunu ve ilgili yasal düzenlemelere aykırı olmayacak şekilde gerçekleştirilir."
+S2: "Komisyon oranları sabit mi?" — "Komisyon oranlarımız, piyasa koşulları, yasal düzenlemeler ve işlem tutarına bağlı olarak değişkenlik gösterebilir. Türkiye-Rusya transferlerinde %3,5–%5; ihraç kayıtlı işlemlerde +%2; ithalat fatura devrinde %2; Rusya'dan mal alımında %0,5'ten başlar."
+S3: "Transfer ne kadar sürede gerçekleşir?" — "Standart transferler genellikle birkaç iş günü içinde tamamlanır. Sözleşme gereğince, bize iletilen parayı en geç 5 (Beş) iş günü içinde tarafınıza aktarırız."
+S4: "Transfer sırasında değişkenlikler nelerdir?" — "Kur dalgalanmaları, piyasa koşulları veya yaptırım gibi dış etkenler işlem maliyetlerini ve süresini etkileyebilir."
+S5: "Zararlardan sorumlu musunuz?" — "Sözleşmede taahhüt ettiğimiz hizmetleri en iyi şekilde yerine getirmeyi garanti ediyoruz. Ancak sözleşmede belirtilmeyen değişkenliklerden kaynaklanan zararlarda sorumluluk kabul edemiyoruz."
+S6: "Hangi sektörlere hizmet veriyorsunuz?" — "Lojistik, Tarım, Tekstil, Makine ve Ekipman başta olmak üzere her sektördeki işletmelere hizmet veriyoruz."
+S7: "Bilgim dışında masraf çıkar mı?" — "Hayır. Tüm ücretlendirme şeffaf biçimde belirlenir. Yüksek kur makaslarından kaynaklanan ek maliyetlerden etkilenmezsiniz."
+S8: "Nakit ödeme alınır mı?" — "Hayır. Sözleşme gereği tüm para alışverişi yalnızca banka üzerinden yapılır."
+S9: "Hangi para birimleri destekleniyor?" — "Rusya'da Ruble, Türkiye'de TL, USD ve EUR."
+S10: "Süreç boyunca nasıl bilgilendirileceğim?" — "Uzman ekibimiz sürecinizi takip eder, her adımda bilgi verir."
+
+============================
+PAGE 4 — PARSİYEL NAKLİYE DETAY
+============================
+
+H1: "Rusya Parsiyel Nakliye Hizmeti"
+Intro: "ChapterLOG, Rusya parsiyel nakliye seçeneğiyle düşük maliyetli teslimat yapmanıza olanak tanır"
+
+"Neden parsiyel nakliye?" section:
+"Rusya'ya nakliye yaparken taşınacak ürününüz az ise Rusya parsiyel taşımacılık ile yükünüzü uygun fiyatlı ve hızlı bir şekilde ulaştırmanız mümkün. Rusya parsiyel nakliye hizmeti, aynı güzergahta taşınacak, farklı müşterilere ait olan yükleri aynı araç ile taşıma işlemidir. Böylece komple tır kiralamanın getireceği yüksek masraflardan kaçınabilirsiniz."
+
+Süreç section:
+"Ürünlerinizi depo birimimize teslim edebilirsiniz veya ek ücret karşılığında biz adresinizden alım yapabiliriz. Talebinize bağlı olarak, Rusya nakliye öncesinde sigortalama işlemiyle ürünlerinizi güvence altına alıyoruz. 500 bin Euro'ya kadar CMR sigortalı araçlarımızla Moskova Gümrük Depolama Sahası'na taşıma hizmeti sunuyoruz. Dilerseniz düzenli seferleri kullanarak, dilerseniz size özel seferler planlayarak Rusya nakliye hizmeti alabilirsiniz."
+
+Fiyat section:
+"Rusya ile ticaretinizde ihtiyaçlarınıza özel, esnek ve güvenilir Rusya nakliye hizmeti veriyoruz. Üstelik 325 USD'den başlayan teslimat maliyetleriyle! Müşterilerimizin doğru projeksiyon çıkartabilmesi için düzenli aralıklarla güncel maliyet tablolarımızı yayınlıyoruz."
+Tablo: Nereden: ChapterLOG Kayseri Depo | Nereye: Moskova Gümrük Sahası | Fiyat: M³ bazındadır.
+
+FAQ (7 soru — accordion):
+S1: "Teslim süresi ne kadar?" — "Kayseri'den çıkış sonrası Moskova'ya teslim süremiz genellikle 7-10 gün aralığındadır."
+S2: "325 USD hangi koşulda geçerli?" — "Bu fiyat belli parsiyel yük hacmi için taban fiyattır. Yükün cinsi, hacmi, sigortalama ve ek hizmetler fiyatı etkileyebilir."
+S3: "Sigorta kapsamı nedir?" — "500 bin Euro'ya kadar CMR sigortalı araçlarla hizmet veriyoruz. Hassas yükler için ek sigorta da sağlayabiliriz."
+S4: "Kapıdan alım ve adrese teslim var mı?" — "Evet. Adresinizden alım ve Rusya'nın istenen noktasına adrese teslim ek ücret karşılığında mevcuttur."
+S5: "Güncel maliyet tablosunu nereden görebilirim?" — "Düzenli aralıklarla web sitemizde yayınlıyor ve talep eden müşterilerimizle paylaşıyoruz."
+S6: "Firmama özel sefer planlanabilir mi?" — "Evet. Güzergah, sefer tarihi, araç tipi ihtiyacınıza göre kişiselleştirilir."
+S7: "Paketleme ve depolama opsiyonel mi?" — "Evet, ihtiyaç duyduğunuz ek hizmetleri nakliye talebiniz sırasında bildirebilirsiniz."
+
+============================
+PAGE 5 — İLETİŞİM
+============================
+H1: "Bize ulaşın"
+Subtitle: "Bize göre lojistik hizmetlerinin para birimi zamandır. Ekibimiz ile doğrudan iletişime geçin, zaman kaybetmeyin."
+
+Ofis: KAYSERİ OSB MAH. 9 CAD. NO:5/1 İÇ KAPI NO:2 MELİKGAZİ/KAYSERİ | info@bedirhan.com | Pazartesi–Cuma 09:00–18:00
+Response: "En geç 24 iş saati içerisinde tarafınıza cevap verilir."
+Form: Ad* | Soyad* | Telefon* | Email* | Mesaj* | Gönder button
+
+============================
+FOOTER
+============================
+ChapterLOG
+Address: KAYSERİ OSB MAH. 9 CAD. NO:5/1 İÇ KAPI NO:2 MELİKGAZİ/KAYSERİ
+Links: Parsiyel Nakliye | Para Transferi Danışmanlığı | Tır Nakliye | Lojistik Operasyon | İthalat-İhracat | Gümrük Danışmanlığı
+Social: Instagram | LinkedIn | Facebook
+Legal: Kullanım Şartları | Gizlilik Politikası
+Copyright: © 2025 Bedir Uluslararası Nakliyat Ticaret Ltd. Şti. Tüm hakları saklıdır.
+
+============================
+DESIGN
+============================
+Dark bg #0D0D0D, orange #F7941D, cards #161616, text #F0F0F0, muted #999.
+Font: Bebas Neue (headings), Barlow (body) from Google Fonts.
+Mobile responsive. Fade-in scroll animations. Active nav state.
+Language switcher TR/RU/EN in navbar — translate all text on switch.

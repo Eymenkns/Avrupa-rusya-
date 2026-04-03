@@ -1,0 +1,156 @@
+{
+  "colorScheme": "light",
+  "fonts": [
+    {
+      "family": "Madefor Text",
+      "role": "body"
+    },
+    {
+      "family": "Helvetica Neue",
+      "role": "body"
+    },
+    {
+      "family": "Madefor Display Bold",
+      "role": "heading"
+    }
+  ],
+  "colors": {
+    "primary": "#2B5672",
+    "accent": "#CE1421",
+    "background": "#FFFFFF",
+    "textPrimary": "#000000",
+    "link": "#0000EE"
+  },
+  "typography": {
+    "fontFamilies": {
+      "primary": "Madefor Text",
+      "heading": "Madefor Display Bold"
+    },
+    "fontStacks": {
+      "heading": [
+        "madefor-display-bold",
+        "helveticaneuew01-65medi",
+        "helveticaneuew02-65medi",
+        "helveticaneuew10-65medi",
+        "sans-serif"
+      ],
+      "body": [
+        "Arial",
+        "Helvetica",
+        "sans-serif"
+      ],
+      "paragraph": [
+        "madefor-text",
+        "helveticaneuew01-45ligh",
+        "helveticaneuew02-45ligh",
+        "helveticaneuew10-45ligh",
+        "sans-serif"
+      ]
+    },
+    "fontSizes": {
+      "h1": "90px",
+      "h2": "95.9625px",
+      "body": "16px"
+    }
+  },
+  "spacing": {
+    "baseUnit": 4,
+    "borderRadius": "7px"
+  },
+  "components": {
+    "input": {
+      "background": "transparent",
+      "textColor": "#2F2B36",
+      "borderColor": null,
+      "borderRadius": "5px",
+      "borderRadiusCorners": {
+        "topLeft": "5px",
+        "topRight": "5px",
+        "bottomRight": "5px",
+        "bottomLeft": "5px"
+      },
+      "shadow": "none"
+    },
+    "buttonPrimary": {
+      "background": "#CE1421",
+      "textColor": "#0000EE",
+      "borderRadius": "40px",
+      "borderRadiusCorners": {
+        "topLeft": "40px",
+        "topRight": "40px",
+        "bottomRight": "40px",
+        "bottomLeft": "40px"
+      },
+      "shadow": "none"
+    },
+    "buttonSecondary": {
+      "background": "#2F2B36",
+      "textColor": "#FFFFFF",
+      "borderColor": "#2F2B36",
+      "borderRadius": "100px",
+      "borderRadiusCorners": {
+        "topLeft": "100px",
+        "topRight": "100px",
+        "bottomRight": "100px",
+        "bottomLeft": "100px"
+      },
+      "shadow": "rgb(255, 255, 255) 0px 0px 0px 0px"
+    }
+  },
+  "images": {
+    "logo": "File saved at: attached_assets/logo.png",
+    "favicon": "File saved at: attached_assets/favicon.png",
+    "ogImage": "File saved at: attached_assets/ogImage.png",
+    "logoHref": "https://www.leveranse.com.tr",
+    "logoAlt": "Levernase Logo"
+  },
+  "__llm_logo_reasoning": {
+    "selectedIndex": 0,
+    "reasoning": "Selected #0 because it is visible, located in the header, and links to the homepage, matching the brand name 'Leveranse'.",
+    "confidence": 0.9,
+    "source": "llm"
+  },
+  "__llm_button_reasoning": {
+    "primary": {
+      "index": 2,
+      "text": "İletişim",
+      "reasoning": "Button #2 has a vibrant red/orange background (#CE1421), which is more attention-grabbing and likely intended as the primary call-to-action, especially with the text 'İletişim' (Contact)."
+    },
+    "secondary": {
+      "index": 0,
+      "text": "Gönder",
+      "reasoning": "Button #0 has a neutral background color (#2F2B36) and serves as a secondary action with the text 'Gönder' (Send), which is less prominent than the primary CTA."
+    },
+    "confidence": 0.95
+  },
+  "personality": {
+    "tone": "professional",
+    "energy": "medium",
+    "targetAudience": "businesses involved in logistics and trade between Turkey and Russia"
+  },
+  "designSystem": {
+    "framework": "custom",
+    "componentLibrary": ""
+  },
+  "confidence": {
+    "buttons": 0.95,
+    "colors": 0.9,
+    "overall": 0.925
+  },
+  "__llm_metadata": {
+    "logoSelection": {
+      "llmCalled": true,
+      "llmSucceeded": true,
+      "finalSource": "llm",
+      "rawLogoSelection": {
+        "selectedLogoIndex": 0,
+        "selectedLogoReasoning": "Selected #0 because it is visible, located in the header, and links to the homepage, matching the brand name 'Leveranse'.",
+        "confidence": 0.9
+      }
+    },
+    "buttonClassification": {
+      "llmCalled": true,
+      "llmSucceeded": true
+    }
+  }
+}

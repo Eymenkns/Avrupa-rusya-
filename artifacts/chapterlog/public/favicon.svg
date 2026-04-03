@@ -1,0 +1,7 @@
+<svg width="180" height="180" viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="180" height="180" rx="36" fill="#fb5b2d"/>
+  <!-- C letter -->
+  <path d="M72 62 C52 62 38 74 38 90 C38 106 52 118 72 118 C82 118 90 114 96 108 L84 98 C80 103 76 105 72 105 C61 105 53 98 53 90 C53 82 61 75 72 75 C76 75 80 77 84 82 L96 72 C90 66 82 62 72 62Z" fill="white"/>
+  <!-- L letter -->
+  <path d="M106 62 L106 118 L144 118 L144 105 L121 105 L121 62 Z" fill="white"/>
+</svg>

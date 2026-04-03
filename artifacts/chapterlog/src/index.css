@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=Work+Sans:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&display=swap');
+@import "tailwindcss";
+
+@theme inline {
+  --font-sans: 'Work Sans', sans-serif;
+  --font-display: 'Space Grotesk', sans-serif;
+  --font-serif: 'Newsreader', serif;
+
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+
+  --radius-sm: 0rem;
+  --radius-md: 0rem;
+  --radius-lg: 0rem;
+  --radius-xl: 0rem;
+  --radius-2xl: 0rem;
+}
+
+:root {
+  /* Void — the base */
+  --background: 0 0% 7.5%;
+  --foreground: 0 0% 94%;
+
+  /* Surface-low — used for section backgrounds / navbar */
+  --primary: 0 0% 11%;
+  --primary-foreground: 0 0% 94%;
+
+  /* Burnt Orange accent */
+  --accent: 15 96% 58%;
+  --accent-foreground: 0 0% 7.5%;
+
+  /* Surface-high — cards / elevated elements */
+  --secondary: 0 0% 16.5%;
+  --secondary-foreground: 0 0% 80%;
+
+  --muted: 0 0% 13%;
+  --muted-foreground: 0 0% 53%;
+
+  --card: 0 0% 13%;
+  --card-foreground: 0 0% 94%;
+
+  --border: 0 0% 20%;
+  --input: 0 0% 14%;
+  --ring: 15 96% 58%;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  /* Structural containers stay sharp — architectural feel */
+  section, article, header, footer, nav,
+  .card-sharp, .section-sharp {
+    border-radius: 0;
+  }
+  body {
+    @apply bg-background text-foreground antialiased font-sans selection:bg-accent selection:text-accent-foreground;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    @apply font-bold tracking-tight text-foreground;
+  }
+}
+
+/* Cards, service cards, blog cards — keep sharp */
+.sharp {
+  border-radius: 0 !important;
+}
+
+.border-glow-accent {
+  box-shadow: inset 0 -2px 0 0 hsl(var(--accent));
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Smooth section separators instead of hard border lines */
+.section-divider {
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(255,255,255,0.06) 30%, rgba(255,255,255,0.06) 70%, transparent);
+}
+
+/* Subtle gradient fade between dark sections */
+.section-fade-bottom {
+  -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+  mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+}
+
+@keyframes chapterRouteExpand {
+  0%   { transform: scaleX(0); }
+  100% { transform: scaleX(1); }
+}
+
+@keyframes shimmer {
+  0%   { background-position: -400px 0; }
+  100% { background-position: 400px 0; }
+}
