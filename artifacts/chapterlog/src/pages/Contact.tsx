@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import { motion } from "framer-motion";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -9,21 +9,19 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
-import { useLang } from "@/contexts/LanguageContext";
+import { useLang, type Language } from "@/contexts/LanguageContext";
 import { SEO } from "@/components/SEO";
 import { Helmet } from "react-helmet-async";
 
-const contactFormSchema = z.object({
-  name: z.string().min(2, { message: "Ad Soyad en az 2 karakter olmalıdır." }),
-  email: z.string().email({ message: "Geçerli bir e-posta adresi giriniz." }),
-  phone: z.string().min(10, { message: "Geçerli bir telefon numarası giriniz." }),
-  serviceType: z.string().optional(),
-  cargoDetails: z.string().optional(),
-  route: z.string().optional(),
-  message: z.string().min(10, { message: "Mesajınız en az 10 karakter olmalıdır." }),
-});
-
-type ContactFormValues = z.infer<typeof contactFormSchema>;
+type ContactFormValues = {
+  name: string;
+  email: string;
+  phone: string;
+  serviceType?: string;
+  cargoDetails?: string;
+  route?: string;
+  message: string;
+};
 
 const SERVICE_OPTIONS: Record<"tr" | "en" | "ru" | "de", string[]> = {
   tr: [
@@ -97,6 +95,11 @@ const L = {
     privacy: "Bilgileriniz yalnızca teklif hazırlama amacıyla kullanılır.",
     toastOk: "Mesajınız Alındı!", toastOkDesc: "En geç 24 iş saati içinde size dönüş yapacağız.",
     toastFail: "Gönderim Başarısız", toastFailDesc: "Lütfen WhatsApp veya telefon ile bize ulaşın.",
+    errNameMin: "Ad / firma en az 2 karakter olmalıdır.",
+    errEmail: "Geçerli bir e-posta adresi giriniz.",
+    errPhoneMin: "Geçerli bir telefon numarası giriniz (en az 10 karakter).",
+    errMessageMin: "Mesajınız en az 10 karakter olmalıdır.",
+    errServer: "Sunucu hatası",
   },
   en: {
     breadcrumb: "Contact", heroTitle: "Get in Touch",
@@ -118,6 +121,11 @@ const L = {
     privacy: "Your information is only used for preparing a quote.",
     toastOk: "Message received!", toastOkDesc: "We'll get back to you within 24 business hours.",
     toastFail: "Submission failed", toastFailDesc: "Please contact us via WhatsApp or phone.",
+    errNameMin: "Name / company must be at least 2 characters.",
+    errEmail: "Please enter a valid email address.",
+    errPhoneMin: "Please enter a valid phone number (at least 10 characters).",
+    errMessageMin: "Your message must be at least 10 characters.",
+    errServer: "Server error",
   },
   ru: {
     breadcrumb: "Контакты", heroTitle: "Свяжитесь с нами",
@@ -139,6 +147,11 @@ const L = {
     privacy: "Ваши данные используются только для подготовки предложения.",
     toastOk: "Сообщение получено!", toastOkDesc: "Мы ответим в течение 24 рабочих часов.",
     toastFail: "Ошибка отправки", toastFailDesc: "Пожалуйста, свяжитесь с нами по WhatsApp или телефону.",
+    errNameMin: "Имя / компания — не менее 2 символов.",
+    errEmail: "Введите корректный адрес электронной почты.",
+    errPhoneMin: "Введите корректный номер телефона (не менее 10 символов).",
+    errMessageMin: "Сообщение должно содержать не менее 10 символов.",
+    errServer: "Ошибка сервера",
   },
   de: {
     breadcrumb: "Kontakt", heroTitle: "Kontakt aufnehmen",
@@ -160,14 +173,33 @@ const L = {
     privacy: "Ihre Daten werden ausschließlich zur Angebotserstellung verwendet.",
     toastOk: "Nachricht erhalten!", toastOkDesc: "Wir melden uns innerhalb von 24 Geschäftsstunden.",
     toastFail: "Senden fehlgeschlagen", toastFailDesc: "Bitte kontaktieren Sie uns per WhatsApp oder Telefon.",
+    errNameMin: "Name / Firma muss mindestens 2 Zeichen haben.",
+    errEmail: "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
+    errPhoneMin: "Bitte geben Sie eine gültige Telefonnummer ein (mindestens 10 Zeichen).",
+    errMessageMin: "Ihre Nachricht muss mindestens 10 Zeichen haben.",
+    errServer: "Serverfehler",
   },
 };
 
-export default function Contact() {
+type ContactStrings = (typeof L)["tr"];
+
+function ContactQuoteForm({ lang, l }: { lang: Language; l: ContactStrings }) {
   const { toast } = useToast();
-  const { lang } = useLang();
-  const l = L[lang] ?? L.tr;
   const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const contactFormSchema = useMemo(
+    () =>
+      z.object({
+        name: z.string().min(2, { message: l.errNameMin }),
+        email: z.string().email({ message: l.errEmail }),
+        phone: z.string().min(10, { message: l.errPhoneMin }),
+        serviceType: z.string().optional(),
+        cargoDetails: z.string().optional(),
+        route: z.string().optional(),
+        message: z.string().min(10, { message: l.errMessageMin }),
+      }),
+    [l.errNameMin, l.errEmail, l.errPhoneMin, l.errMessageMin]
+  );
 
   const form = useForm<ContactFormValues>({
     resolver: zodResolver(contactFormSchema),
@@ -201,7 +233,7 @@ export default function Contact() {
         });
         form.reset();
       } else {
-        throw new Error(json.error || "Sunucu hatası");
+        throw new Error(json.error || l.errServer);
       }
     } catch {
       toast({
@@ -218,61 +250,6 @@ export default function Contact() {
     form.formState.errors[f]?.message;
 
   return (
-    <main className="flex-1 w-full bg-background pt-24 pb-20">
-      <SEO
-        path="/contact"
-        titleTr="İletişim — ChapterLOG | Rusya Lojistik Teklif Formu"
-        titleEn="Contact — ChapterLOG | Russia Logistics Quote Form"
-        titleRu="Контакты — ChapterLOG | Запрос на перевозку Турция–Россия"
-        descTr="Türkiye-Rusya veya Avrupa-Rusya nakliyesi, ticari para transferi ya da gümrük danışmanlığı için hızlı teklif alın. +90 533 380 30 56 | info@chapterlog.com.tr"
-        descEn="Get a fast quote for Turkey-Russia or Europe-Russia freight, commercial money transfers or customs consultancy. +90 533 380 30 56 | info@chapterlog.com.tr"
-        descRu="Запрос на перевозку Турция–Россия или Европа–Россия, денежные переводы или таможенный консалтинг. +90 533 380 30 56 | info@chapterlog.com.tr"
-        keywordsTr="ChapterLOG iletişim, nakliye teklif al, Rusya nakliye fiyat teklifi, lojistik teklif formu, Kayseri nakliye iletişim, para transferi teklif"
-        keywordsEn="ChapterLOG contact, get freight quote, Russia shipping quote, logistics quote form, money transfer quote Turkey Russia"
-        keywordsRu="контакты ChapterLOG, запрос на перевозку, стоимость доставки Россия, форма запроса логистики, запрос на денежный перевод"
-      />
-
-      <Helmet>
-        <script type="application/ld+json">{JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "Ana Sayfa", "item": "https://chapterlog.com.tr/" },
-            { "@type": "ListItem", "position": 2, "name": "İletişim", "item": "https://chapterlog.com.tr/contact" },
-          ],
-        })}</script>
-      </Helmet>
-
-      {/* ── HERO ──────────────────────────────────── */}
-      <section className="bg-[#111010] relative overflow-hidden border-b-2 border-accent">
-        <div className="absolute inset-0">
-          <img src="/images/logistics-inspection.png" alt="ChapterLOG lojistik depo gümrük denetimi" className="w-full h-full object-cover opacity-10 grayscale" loading="lazy" />
-          <div className="absolute inset-0 bg-gradient-to-r from-black via-black/90 to-black/60" />
-        </div>
-        <div className="container mx-auto px-4 md:px-6 py-20 relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="max-w-3xl"
-          >
-            <div className="flex items-center gap-2 mb-6">
-              <span className="w-8 h-px bg-accent" />
-              <span className="text-accent text-sm font-semibold tracking-widest uppercase">
-                {l.breadcrumb}
-              </span>
-            </div>
-            <h1 className="text-5xl md:text-6xl font-display font-bold text-white mb-5 leading-tight">
-              {l.heroTitle}
-            </h1>
-            <p className="text-gray-300 text-lg leading-relaxed max-w-xl">
-              {l.heroSub}
-            </p>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* ── MAIN CONTENT ──────────────────────────── */}
       <section className="py-16">
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
@@ -486,6 +463,69 @@ export default function Contact() {
           </div>
         </div>
       </section>
+  );
+}
+
+export default function Contact() {
+  const { lang } = useLang();
+  const l = L[lang] ?? L.tr;
+
+  return (
+    <main className="flex-1 w-full bg-background pt-24 pb-20">
+      <SEO
+        path="/contact"
+        titleTr="İletişim — ChapterLOG | Rusya Lojistik Teklif Formu"
+        titleEn="Contact — ChapterLOG | Russia Logistics Quote Form"
+        titleRu="Контакты — ChapterLOG | Запрос на перевозку Турция–Россия"
+        descTr="Türkiye-Rusya veya Avrupa-Rusya nakliyesi, ticari para transferi ya da gümrük danışmanlığı için hızlı teklif alın. +90 533 380 30 56 | info@chapterlog.com.tr"
+        descEn="Get a fast quote for Turkey-Russia or Europe-Russia freight, commercial money transfers or customs consultancy. +90 533 380 30 56 | info@chapterlog.com.tr"
+        descRu="Запрос на перевозку Турция–Россия или Европа–Россия, денежные переводы или таможенный консалтинг. +90 533 380 30 56 | info@chapterlog.com.tr"
+        keywordsTr="ChapterLOG iletişim, nakliye teklif al, Rusya nakliye fiyat teklifi, lojistik teklif formu, Kayseri nakliye iletişim, para transferi teklif"
+        keywordsEn="ChapterLOG contact, get freight quote, Russia shipping quote, logistics quote form, money transfer quote Turkey Russia"
+        keywordsRu="контакты ChapterLOG, запрос на перевозку, стоимость доставки Россия, форма запроса логистики, запрос на денежный перевод"
+      />
+
+      <Helmet>
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Ana Sayfa", "item": "https://chapterlog.com.tr/" },
+            { "@type": "ListItem", "position": 2, "name": "İletişim", "item": "https://chapterlog.com.tr/contact" },
+          ],
+        })}</script>
+      </Helmet>
+
+      {/* ── HERO ──────────────────────────────────── */}
+      <section className="bg-[#111010] relative overflow-hidden border-b-2 border-accent">
+        <div className="absolute inset-0">
+          <img src="/images/logistics-inspection.png" alt="ChapterLOG lojistik depo gümrük denetimi" className="w-full h-full object-cover opacity-10 grayscale" loading="lazy" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black via-black/90 to-black/60" />
+        </div>
+        <div className="container mx-auto px-4 md:px-6 py-20 relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="max-w-3xl"
+          >
+            <div className="flex items-center gap-2 mb-6">
+              <span className="w-8 h-px bg-accent" />
+              <span className="text-accent text-sm font-semibold tracking-widest uppercase">
+                {l.breadcrumb}
+              </span>
+            </div>
+            <h1 className="text-5xl md:text-6xl font-display font-bold text-white mb-5 leading-tight">
+              {l.heroTitle}
+            </h1>
+            <p className="text-gray-300 text-lg leading-relaxed max-w-xl">
+              {l.heroSub}
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
+      <ContactQuoteForm key={lang} lang={lang} l={l} />
     </main>
   );
 }

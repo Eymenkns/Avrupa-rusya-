@@ -10,6 +10,9 @@ export interface Translations {
     about: string;
     contact: string;
     cta: string;
+    openMenu: string;
+    closeMenu: string;
+    languageMenu: string;
   };
   hero: {
     badge: string;
@@ -121,6 +124,13 @@ export interface Translations {
     sub: string;
     readMore: string;
     allPosts: string;
+    searchPlaceholder: string;
+    searchAriaLabel: string;
+    noResults: string;
+    topics: [string, string, string, string];
+    ctaTitle: string;
+    ctaSub: string;
+    ctaBtn: string;
   };
   testimonials: {
     label: string;
@@ -152,6 +162,9 @@ const translations: Record<Language, Translations> = {
       about: "Hakkımızda",
       contact: "İletişim",
       cta: "Hemen Teklif Alın",
+      openMenu: "Menüyü aç",
+      closeMenu: "Menüyü kapat",
+      languageMenu: "Dil seçin",
     },
     hero: {
       badge: "🇹🇷 Türkiye Üzerinden Rusya'ya Güvenli Hat",
@@ -307,6 +320,13 @@ const translations: Record<Language, Translations> = {
       sub: "Avrupa-Rusya ve Türkiye-Rusya lojistiği, gümrük, nakliye ve para transferi hakkında uzman rehberleri.",
       readMore: "Devamını Oku",
       allPosts: "Tüm 12 Yazıyı İncele",
+      searchPlaceholder: "Yazılarda ara…",
+      searchAriaLabel: "Blog yazılarında ara",
+      noResults: "Aramanızla eşleşen yazı bulunamadı. Farklı bir kelime deneyin veya etiket filtresini sıfırlayın.",
+      topics: ["Nakliye", "Gümrük", "Para Transferi", "Transit"],
+      ctaTitle: "Sorularınız mı var?",
+      ctaSub: "Uzman ekibimiz Türkiye-Rusya lojistiği ve ticareti hakkında her sorunuzu yanıtlamaya hazır.",
+      ctaBtn: "Hemen yazın",
     },
     testimonials: { label: "Müşteri Görüşleri", title: "Müşterilerimiz Ne Diyor?" },
     contact: {
@@ -334,6 +354,9 @@ const translations: Record<Language, Translations> = {
       about: "About",
       contact: "Contact",
       cta: "Get a Quote",
+      openMenu: "Open menu",
+      closeMenu: "Close menu",
+      languageMenu: "Choose language",
     },
     hero: {
       badge: "🇹🇷 Safe Route to Russia via Turkey",
@@ -489,6 +512,13 @@ const translations: Record<Language, Translations> = {
       sub: "Expert guides on Turkey–Russia logistics, customs, freight and money transfers.",
       readMore: "Read More",
       allPosts: "View All 9 Articles",
+      searchPlaceholder: "Search articles…",
+      searchAriaLabel: "Search blog posts",
+      noResults: "No posts match your search. Try another term or clear the tag filter.",
+      topics: ["Freight", "Customs", "Money transfer", "Transit"],
+      ctaTitle: "Have questions?",
+      ctaSub: "Our team is ready to answer anything about Turkey–Russia logistics and trade.",
+      ctaBtn: "Contact us",
     },
     testimonials: { label: "Testimonials", title: "What Our Clients Say" },
     contact: {
@@ -516,6 +546,9 @@ const translations: Record<Language, Translations> = {
       about: "О нас",
       contact: "Контакты",
       cta: "Получить предложение",
+      openMenu: "Открыть меню",
+      closeMenu: "Закрыть меню",
+      languageMenu: "Выберите язык",
     },
     hero: {
       badge: "🇹🇷 Надёжный маршрут в Россию через Турцию",
@@ -671,6 +704,13 @@ const translations: Record<Language, Translations> = {
       sub: "Экспертные руководства по логистике, таможне и денежным переводам Турция–Россия.",
       readMore: "Читать далее",
       allPosts: "Все 9 статей",
+      searchPlaceholder: "Поиск по статьям…",
+      searchAriaLabel: "Поиск в блоге",
+      noResults: "Ничего не найдено. Попробуйте другой запрос или сбросьте фильтр по тегу.",
+      topics: ["Перевозки", "Таможня", "Денежные переводы", "Транзит"],
+      ctaTitle: "Остались вопросы?",
+      ctaSub: "Наша команда ответит на всё о логистике и торговле Турция–Россия.",
+      ctaBtn: "Написать нам",
     },
     testimonials: { label: "Отзывы клиентов", title: "Что говорят наши клиенты" },
     contact: {
@@ -698,6 +738,9 @@ const translations: Record<Language, Translations> = {
       about: "Über uns",
       contact: "Kontakt",
       cta: "Angebot anfordern",
+      openMenu: "Menü öffnen",
+      closeMenu: "Menü schließen",
+      languageMenu: "Sprache wählen",
     },
     hero: {
       badge: "🇹🇷 Sichere Route nach Russland über die Türkei",
@@ -853,6 +896,13 @@ const translations: Record<Language, Translations> = {
       sub: "Expertenleitfäden zu Logistik, Zoll, Fracht und Geldtransfers zwischen der Türkei und Russland.",
       readMore: "Weiterlesen",
       allPosts: "Alle 9 Artikel ansehen",
+      searchPlaceholder: "Artikel durchsuchen…",
+      searchAriaLabel: "Blog durchsuchen",
+      noResults: "Keine Artikel gefunden. Anderen Suchbegriff versuchen oder Tagfilter zurücksetzen.",
+      topics: ["Fracht", "Zoll", "Geldtransfer", "Transit"],
+      ctaTitle: "Noch Fragen?",
+      ctaSub: "Unser Team beantwortet alles zur Logistik und zum Handel Türkei–Russland.",
+      ctaBtn: "Kontakt aufnehmen",
     },
     testimonials: { label: "Referenzen", title: "Was unsere Kunden sagen" },
     contact: {
