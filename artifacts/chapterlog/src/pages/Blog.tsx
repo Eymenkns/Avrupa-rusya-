@@ -1,11 +1,12 @@
-import { useState } from "react";
+import { useState, useMemo, useEffect } from "react";
 import { motion } from "framer-motion";
-import { Link } from "wouter";
-import { ArrowRight, CalendarDays, Tag, Clock, CheckCircle2 } from "lucide-react";
+import { Link, useSearchParams } from "wouter";
+import { ArrowRight, CalendarDays, Tag, Clock, CheckCircle2, Search } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { useLang } from "@/contexts/LanguageContext";
 import { SEO } from "@/components/SEO";
-import { blogPosts, TAGS } from "@/data/blogPosts";
+import { Input } from "@/components/ui/input";
+import { blogPosts, TAGS, type BlogPost } from "@/data/blogPosts";
 
 const staggerContainer = {
   hidden: { opacity: 0 },
@@ -13,14 +14,59 @@ const staggerContainer = {
 };
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
-  show: { opacity: 1, y: 0, transition: { type: "spring", stiffness: 90 } },
+  show: { opacity: 1, y: 0, transition: { type: "spring" as const, stiffness: 90 } },
 };
+
+function postMatchesQuery(post: BlogPost, query: string): boolean {
+  if (!query) return true;
+  const q = query.toLowerCase();
+  const hay = [
+    post.title,
+    post.excerpt,
+    post.tag,
+    ...(post.tags ?? []),
+    ...post.highlights,
+  ]
+    .join(" ")
+    .toLowerCase();
+  return hay.includes(q);
+}
 
 export default function Blog() {
   const { t } = useLang();
+  const [searchParams, setSearchParams] = useSearchParams();
+  const qParam = searchParams.get("q") ?? "";
   const [activeTag, setActiveTag] = useState("Tümü");
+  const [searchDraft, setSearchDraft] = useState(qParam);
 
-  const filtered = activeTag === "Tümü" ? blogPosts : blogPosts.filter((p) => p.tag === activeTag);
+  useEffect(() => {
+    setSearchDraft(qParam);
+  }, [qParam]);
+
+  useEffect(() => {
+    const tId = window.setTimeout(() => {
+      const trimmed = searchDraft.trim();
+      const current = qParam.trim();
+      if (trimmed === current) return;
+      setSearchParams(
+        (prev) => {
+          const p = new URLSearchParams(prev);
+          if (trimmed) p.set("q", trimmed);
+          else p.delete("q");
+          return p;
+        },
+        { replace: true }
+      );
+    }, 350);
+    return () => window.clearTimeout(tId);
+  }, [searchDraft, qParam, setSearchParams]);
+
+  const filtered = useMemo(() => {
+    const byTag = activeTag === "Tümü" ? blogPosts : blogPosts.filter((p) => p.tag === activeTag);
+    const qq = qParam.trim();
+    if (!qq) return byTag;
+    return byTag.filter((p) => postMatchesQuery(p, qq));
+  }, [activeTag, qParam]);
 
   const webPageSchema = {
     "@context": "https://schema.org",
@@ -90,7 +136,7 @@ export default function Blog() {
               <h1 className="text-5xl md:text-6xl font-display font-bold text-white mb-4">{t.blog.title}</h1>
               <p className="text-base text-white/50 leading-relaxed font-serif max-w-lg">{t.blog.sub}</p>
               <div className="flex flex-wrap gap-3 mt-8">
-                {["Nakliye", "Gümrük", "Para Transferi", "Transit"].map((topic) => (
+                {t.blog.topics.map((topic) => (
                   <span key={topic} className="text-[11px] font-semibold text-white/30 bg-white/4 border border-white/8 px-3 py-1.5 font-sans tracking-wide">
                     {topic}
                   </span>
@@ -126,13 +172,26 @@ export default function Blog() {
         </div>
       </section>
 
-      {/* Tag Filter */}
+      {/* Tag filter + search (sticky) */}
       <section className="py-3 border-b border-white/5 bg-[#0e0e0e] sticky top-[64px] z-40">
-        <div className="container mx-auto px-4 md:px-6">
+        <div className="container mx-auto px-4 md:px-6 space-y-3">
+          <div className="relative max-w-md">
+            <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-white/35 pointer-events-none" aria-hidden />
+            <Input
+              type="search"
+              value={searchDraft}
+              onChange={(e) => setSearchDraft(e.target.value)}
+              placeholder={t.blog.searchPlaceholder}
+              aria-label={t.blog.searchAriaLabel}
+              autoComplete="off"
+              className="pl-9 h-10 bg-[#151414] border-white/10 text-sm text-white/90 placeholder:text-white/35"
+            />
+          </div>
           <div className="flex gap-2 overflow-x-auto pb-1" style={{ scrollbarWidth: "none" }}>
             {TAGS.map((tag) => (
               <button
                 key={tag}
+                type="button"
                 onClick={() => setActiveTag(tag)}
                 className={`shrink-0 px-3.5 py-1.5 text-[11px] font-bold transition-all border font-sans tracking-wide ${
                   activeTag === tag
@@ -150,57 +209,61 @@ export default function Blog() {
       {/* Blog Grid */}
       <section className="py-14">
         <div className="container mx-auto px-4 md:px-6">
-          <motion.div variants={staggerContainer} initial="hidden" animate="show" className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-            {filtered.map((post) => (
-              <motion.article
-                key={post.id}
-                variants={fadeUp}
-                className="relative bg-[#151414] border border-white/6 overflow-hidden hover:bg-[#1a1919] hover:border-white/15 hover:shadow-[0_4px_24px_rgba(0,0,0,0.4)] transition-all duration-300 flex flex-col group"
-              >
-                {/* Accent top line on hover */}
-                <div className="absolute top-0 left-0 right-0 h-0.5 bg-accent scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left z-10" />
+          {filtered.length === 0 ? (
+            <p className="text-center text-white/45 text-sm font-serif max-w-lg mx-auto py-12">{t.blog.noResults}</p>
+          ) : (
+            <motion.div variants={staggerContainer} initial="hidden" animate="show" className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+              {filtered.map((post) => (
+                <motion.article
+                  key={post.id}
+                  variants={fadeUp}
+                  className="relative bg-[#151414] border border-white/6 overflow-hidden hover:bg-[#1a1919] hover:border-white/15 hover:shadow-[0_4px_24px_rgba(0,0,0,0.4)] transition-all duration-300 flex flex-col group"
+                >
+                  {/* Accent top line on hover */}
+                  <div className="absolute top-0 left-0 right-0 h-0.5 bg-accent scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left z-10" />
 
-                {/* Cover image */}
-                <div className="relative h-52 overflow-hidden">
-                  <img
-                    src={post.image}
-                    alt={`${post.title} — ChapterLOG blog`}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 grayscale-[25%] group-hover:grayscale-0"
-                    loading="lazy"
-                    onError={(e) => { (e.target as HTMLImageElement).src = `https://picsum.photos/seed/${post.id}/600/400`; }}
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent" />
-                  <span className={`absolute top-3 left-3 inline-flex items-center gap-1 text-[10px] font-bold px-2.5 py-1 font-sans backdrop-blur-sm ${post.tagColor}`}>
-                    <Tag size={9} /> {post.tag}
-                  </span>
-                </div>
-
-                <div className="p-6 flex flex-col flex-1">
-                  <div className="flex items-center gap-3 mb-3 text-white/25">
-                    <span className="flex items-center gap-1 text-[10px] font-sans uppercase tracking-widest"><CalendarDays size={10} /> {post.date}</span>
-                    <span className="flex items-center gap-1 text-[10px] font-sans uppercase tracking-widest"><Clock size={10} /> {post.readTime}</span>
+                  {/* Cover image */}
+                  <div className="relative h-52 overflow-hidden">
+                    <img
+                      src={post.image}
+                      alt={`${post.title} — ChapterLOG blog`}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 grayscale-[25%] group-hover:grayscale-0"
+                      loading="lazy"
+                      onError={(e) => { (e.target as HTMLImageElement).src = `https://picsum.photos/seed/${post.id}/600/400`; }}
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent" />
+                    <span className={`absolute top-3 left-3 inline-flex items-center gap-1 text-[10px] font-bold px-2.5 py-1 font-sans backdrop-blur-sm ${post.tagColor}`}>
+                      <Tag size={9} /> {post.tag}
+                    </span>
                   </div>
 
-                  <h2 className="text-sm font-bold text-white/85 mb-2.5 group-hover:text-accent transition-colors leading-snug font-display">{post.title}</h2>
-                  <p className="text-xs text-white/35 leading-relaxed flex-1 mb-4 font-serif">{post.excerpt}</p>
+                  <div className="p-6 flex flex-col flex-1">
+                    <div className="flex items-center gap-3 mb-3 text-white/25">
+                      <span className="flex items-center gap-1 text-[10px] font-sans uppercase tracking-widest"><CalendarDays size={10} /> {post.date}</span>
+                      <span className="flex items-center gap-1 text-[10px] font-sans uppercase tracking-widest"><Clock size={10} /> {post.readTime}</span>
+                    </div>
 
-                  <ul className="space-y-1.5 mb-5 border-t border-white/6 pt-4">
-                    {post.highlights.slice(0, 2).map((h) => (
-                      <li key={h} className="flex items-start gap-2 text-xs text-white/35 font-serif">
-                        <CheckCircle2 size={11} className="text-accent mt-0.5 shrink-0" /> {h}
-                      </li>
-                    ))}
-                  </ul>
+                    <h2 className="text-sm font-bold text-white/85 mb-2.5 group-hover:text-accent transition-colors leading-snug font-display">{post.title}</h2>
+                    <p className="text-xs text-white/35 leading-relaxed flex-1 mb-4 font-serif">{post.excerpt}</p>
 
-                  <Link href={`/blog/${post.slug}`}>
-                    <span className="inline-flex items-center gap-1.5 text-accent font-bold text-xs group-hover:gap-3 transition-all mt-auto font-display tracking-wide cursor-pointer">
-                      {t.blog.readMore} <ArrowRight size={12} />
-                    </span>
-                  </Link>
-                </div>
-              </motion.article>
-            ))}
-          </motion.div>
+                    <ul className="space-y-1.5 mb-5 border-t border-white/6 pt-4">
+                      {post.highlights.slice(0, 2).map((h) => (
+                        <li key={h} className="flex items-start gap-2 text-xs text-white/35 font-serif">
+                          <CheckCircle2 size={11} className="text-accent mt-0.5 shrink-0" /> {h}
+                        </li>
+                      ))}
+                    </ul>
+
+                    <Link href={`/blog/${post.slug}`}>
+                      <span className="inline-flex items-center gap-1.5 text-accent font-bold text-xs group-hover:gap-3 transition-all mt-auto font-display tracking-wide cursor-pointer">
+                        {t.blog.readMore} <ArrowRight size={12} />
+                      </span>
+                    </Link>
+                  </div>
+                </motion.article>
+              ))}
+            </motion.div>
+          )}
         </div>
       </section>
 
@@ -208,11 +271,11 @@ export default function Blog() {
       <section className="container mx-auto px-4 md:px-6 pb-8">
         <div className="bg-[#1a1919] p-10 md:p-14 text-center border-l-2 border-accent">
           <div className="max-w-xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-white mb-4">Sorularınız mı Var?</h2>
-            <p className="text-white/40 mb-8 leading-relaxed font-serif">Uzman ekibimiz Türkiye-Rusya lojistiği ve ticareti hakkında her sorunuzu yanıtlamaya hazır.</p>
+            <h2 className="text-3xl md:text-4xl font-display font-bold text-white mb-4">{t.blog.ctaTitle}</h2>
+            <p className="text-white/40 mb-8 leading-relaxed font-serif">{t.blog.ctaSub}</p>
             <Link href="/contact">
-              <button className="px-10 py-4 bg-accent text-black font-bold text-base hover:bg-accent/90 transition-colors font-display">
-                Hemen Yazın
+              <button type="button" className="px-10 py-4 bg-accent text-black font-bold text-base hover:bg-accent/90 transition-colors font-display">
+                {t.blog.ctaBtn}
               </button>
             </Link>
           </div>

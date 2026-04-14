@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "wouter";
 import { Menu, X, Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -18,6 +18,7 @@ export function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [langOpen, setLangOpen] = useState(false);
   const { lang, setLang, t } = useLang();
+  const langMenuRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 20);
@@ -28,6 +29,28 @@ export function Navbar() {
   useEffect(() => {
     setMobileMenuOpen(false);
   }, [location]);
+
+  useEffect(() => {
+    if (!langOpen) return;
+    const onPointerDown = (e: MouseEvent | TouchEvent) => {
+      if (langMenuRef.current && !langMenuRef.current.contains(e.target as Node)) {
+        setLangOpen(false);
+      }
+    };
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        setLangOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", onPointerDown);
+    document.addEventListener("touchstart", onPointerDown);
+    document.addEventListener("keydown", onKeyDown);
+    return () => {
+      document.removeEventListener("mousedown", onPointerDown);
+      document.removeEventListener("touchstart", onPointerDown);
+      document.removeEventListener("keydown", onKeyDown);
+    };
+  }, [langOpen]);
 
   const navLinks = [
     { name: t.nav.home, path: "/" },
@@ -82,27 +105,38 @@ export function Navbar() {
           {/* Right side: Lang switcher + CTA */}
           <div className="hidden md:flex items-center gap-3 shrink-0">
             {/* Language Switcher */}
-            <div className="relative">
+            <div className="relative" ref={langMenuRef}>
               <button
+                type="button"
+                aria-expanded={langOpen}
+                aria-haspopup="menu"
+                aria-controls="desktop-lang-menu"
+                aria-label={t.nav.languageMenu}
                 onClick={() => setLangOpen(!langOpen)}
                 className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-white/20 text-white/80 hover:text-white hover:border-white/40 transition-colors text-sm font-semibold"
               >
-                <Globe size={14} />
-                <span>{currentLang.flag}</span>
+                <Globe size={14} aria-hidden />
+                <span aria-hidden>{currentLang.flag}</span>
               </button>
 
               {langOpen && (
-                <div className="absolute right-0 top-full mt-2 bg-primary border border-white/15 rounded-xl shadow-2xl py-1.5 z-50 min-w-[140px]">
+                <div
+                  id="desktop-lang-menu"
+                  role="menu"
+                  className="absolute right-0 top-full mt-2 bg-primary border border-white/15 rounded-xl shadow-2xl py-1.5 z-50 min-w-[140px]"
+                >
                   {LANGS.map((l) => (
                     <button
                       key={l.code}
+                      type="button"
+                      role="menuitem"
                       onClick={() => { setLang(l.code); setLangOpen(false); }}
                       className={cn(
                         "w-full text-left px-4 py-2.5 text-sm font-medium hover:bg-white/10 transition-colors flex items-center gap-2",
                         lang === l.code ? "text-accent" : "text-white/80"
                       )}
                     >
-                      <span className="text-base">{l.flag}</span> {l.label}
+                      <span className="text-base" aria-hidden>{l.flag}</span> {l.label}
                     </button>
                   ))}
                 </div>
@@ -118,20 +152,26 @@ export function Navbar() {
 
           {/* Mobile toggle */}
           <button
+            type="button"
             className="md:hidden text-white p-2"
+            aria-expanded={mobileMenuOpen}
+            aria-controls="mobile-primary-nav"
+            aria-label={mobileMenuOpen ? t.nav.closeMenu : t.nav.openMenu}
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
-            {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            {mobileMenuOpen ? <X size={24} aria-hidden /> : <Menu size={24} aria-hidden />}
           </button>
         </div>
       </div>
 
       {/* Mobile Nav */}
       <div
+        id="mobile-primary-nav"
         className={cn(
           "md:hidden absolute top-full left-0 w-full bg-primary shadow-xl transition-all duration-300 overflow-hidden",
           mobileMenuOpen ? "max-h-screen border-b border-white/10" : "max-h-0"
         )}
+        aria-hidden={!mobileMenuOpen}
       >
         <div className="px-4 py-6 flex flex-col gap-4">
           {navLinks.map((link) => (
@@ -154,6 +194,7 @@ export function Navbar() {
             {LANGS.map((l) => (
               <button
                 key={l.code}
+                type="button"
                 onClick={() => setLang(l.code)}
                 className={cn(
                   "flex-1 py-2 rounded-lg text-sm font-bold border transition-colors",

@@ -240,7 +240,7 @@ export default function Home() {
             {/* The animated line */}
             <div className="absolute top-1/2 left-0 right-0 h-px bg-white/10 -translate-y-1/2 overflow-hidden">
               <div
-                className="absolute inset-0 bg-accent"
+                className={`absolute inset-0 bg-accent chapter-route-line${routeMounted ? " chapter-route-line--visible" : ""}`}
                 style={{
                   boxShadow: "0 0 12px #fb5b2d",
                   transformOrigin: "left",

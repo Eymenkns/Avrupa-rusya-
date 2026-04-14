@@ -111,6 +111,13 @@ html {
   100% { transform: scaleX(1); }
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .chapter-route-line.chapter-route-line--visible {
+    animation: none !important;
+    transform: scaleX(1) !important;
+  }
+}
+
 @keyframes shimmer {
   0%   { background-position: -400px 0; }
   100% { background-position: 400px 0; }
