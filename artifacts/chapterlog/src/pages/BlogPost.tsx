@@ -14,6 +14,11 @@ export default function BlogPost() {
   if (!post) {
     return (
       <main className="flex-1 w-full bg-background pt-24 pb-20 flex items-center justify-center">
+        <Helmet>
+          <title>Makale bulunamadı | ChapterLOG</title>
+          <meta name="robots" content="noindex, nofollow" />
+          <link rel="canonical" href={`${SITE_URL}/blog`} />
+        </Helmet>
         <div className="text-center">
           <h1 className="text-2xl font-bold text-white mb-4 font-display">Makale bulunamadı</h1>
           <Link href="/blog">
