@@ -131,6 +131,14 @@ export interface Translations {
     ctaTitle: string;
     ctaSub: string;
     ctaBtn: string;
+    post: {
+      notFoundTitle: string;
+      notFoundBack: string;
+      backLabel: string;
+      relatedTitle: string;
+      ctaQuote: string;
+      articleTurkishNotice: string;
+    };
   };
   testimonials: {
     label: string;
@@ -147,6 +155,13 @@ export interface Translations {
     ourServices: string;
     contactInfo: string;
     copyright: string;
+    popularGuides: string;
+    whatsappCta: string;
+    terms: string;
+    privacy: string;
+    masakBadge: string;
+    serviceList: string[];
+    popularGuideLinks: Array<{ label: string; href: string }>;
   };
   sanctions: {
     notice: string;
@@ -327,6 +342,14 @@ const translations: Record<Language, Translations> = {
       ctaTitle: "Sorularınız mı var?",
       ctaSub: "Uzman ekibimiz Türkiye-Rusya lojistiği ve ticareti hakkında her sorunuzu yanıtlamaya hazır.",
       ctaBtn: "Hemen yazın",
+      post: {
+        notFoundTitle: "Makale bulunamadı",
+        notFoundBack: "Bloga dön",
+        backLabel: "Blog",
+        relatedTitle: "İlgili Yazılar",
+        ctaQuote: "Bu Hizmet İçin Teklif Alın",
+        articleTurkishNotice: "",
+      },
     },
     testimonials: { label: "Müşteri Görüşleri", title: "Müşterilerimiz Ne Diyor?" },
     contact: {
@@ -340,6 +363,24 @@ const translations: Record<Language, Translations> = {
       ourServices: "Hizmetlerimiz",
       contactInfo: "İletişim",
       copyright: "© 2025 ChapterLOG LLC. Tüm hakları saklıdır.",
+      popularGuides: "Popüler Rehberler",
+      whatsappCta: "WhatsApp ile Yazın",
+      terms: "Kullanım Şartları",
+      privacy: "Gizlilik Politikası",
+      masakBadge: "MASAK Uyumlu",
+      serviceList: [
+        "FTL Tam Dorse Nakliye",
+        "Parsiyel Nakliye (LTL)",
+        "Para Transferi",
+        "Gümrük Danışmanlığı",
+        "Konteyner Taşımacılığı",
+        "İthalat / İhracat",
+      ],
+      popularGuideLinks: [
+        { label: "Rusya'ya Para Transferi", href: "/blog/turkiyeden-rusyaya-para-transferi" },
+        { label: "Rusya Parsiyel Nakliye", href: "/blog/rusya-parsiyel-nakliye-325-usd" },
+        { label: "Rusya E-Ticaret Rehberi", href: "/blog/rusya-e-ticaret-wildberries-ozon-ihracat" },
+      ],
     },
     sanctions: {
       notice: "Türkiye, AB ve ABD yaptırım rejimlerine taraf değildir. Türkiye-Rusya ticaret ilişkisi, Türk mevzuatı çerçevesinde tamamen yasal olup tüm operasyonlarımız yürürlükteki ulusal ve uluslararası hukuka uygun biçimde yürütülmektedir.",
@@ -519,6 +560,14 @@ const translations: Record<Language, Translations> = {
       ctaTitle: "Have questions?",
       ctaSub: "Our team is ready to answer anything about Turkey–Russia logistics and trade.",
       ctaBtn: "Contact us",
+      post: {
+        notFoundTitle: "Article not found",
+        notFoundBack: "Back to blog",
+        backLabel: "Blog",
+        relatedTitle: "Related articles",
+        ctaQuote: "Get a quote for this service",
+        articleTurkishNotice: "Full article text is available in Turkish; summary above is translated.",
+      },
     },
     testimonials: { label: "Testimonials", title: "What Our Clients Say" },
     contact: {
@@ -532,6 +581,24 @@ const translations: Record<Language, Translations> = {
       ourServices: "Our Services",
       contactInfo: "Contact",
       copyright: "© 2025 ChapterLOG LLC. All rights reserved.",
+      popularGuides: "Popular guides",
+      whatsappCta: "Message on WhatsApp",
+      terms: "Terms of use",
+      privacy: "Privacy policy",
+      masakBadge: "MASAK compliant",
+      serviceList: [
+        "Full truckload (FTL)",
+        "Partial load (LTL)",
+        "Money transfer",
+        "Customs consultancy",
+        "Container shipping",
+        "Import / export",
+      ],
+      popularGuideLinks: [
+        { label: "Money transfer to Russia", href: "/blog/turkiyeden-rusyaya-para-transferi" },
+        { label: "Russia LTL freight", href: "/blog/rusya-parsiyel-nakliye-325-usd" },
+        { label: "Russia e-commerce guide", href: "/blog/rusya-e-ticaret-wildberries-ozon-ihracat" },
+      ],
     },
     sanctions: {
       notice: "Turkey is not subject to EU or US sanctions regimes. Turkey–Russia trade is fully legal under Turkish law, and all our operations are conducted in full compliance with applicable national and international legislation.",
@@ -711,6 +778,14 @@ const translations: Record<Language, Translations> = {
       ctaTitle: "Остались вопросы?",
       ctaSub: "Наша команда ответит на всё о логистике и торговле Турция–Россия.",
       ctaBtn: "Написать нам",
+      post: {
+        notFoundTitle: "Статья не найдена",
+        notFoundBack: "Вернуться в блог",
+        backLabel: "Блог",
+        relatedTitle: "Похожие материалы",
+        ctaQuote: "Запросить коммерческое предложение",
+        articleTurkishNotice: "Полный текст статьи на турецком; сверху — переведённое резюме.",
+      },
     },
     testimonials: { label: "Отзывы клиентов", title: "Что говорят наши клиенты" },
     contact: {
@@ -724,6 +799,24 @@ const translations: Record<Language, Translations> = {
       ourServices: "Наши услуги",
       contactInfo: "Контакты",
       copyright: "© 2025 ChapterLOG LLC. Все права защищены.",
+      popularGuides: "Популярные материалы",
+      whatsappCta: "Написать в WhatsApp",
+      terms: "Условия использования",
+      privacy: "Политика конфиденциальности",
+      masakBadge: "Соответствие MASAK",
+      serviceList: [
+        "FTL (полная загрузка)",
+        "Сборный груз (LTL)",
+        "Денежный перевод",
+        "Таможенный консалтинг",
+        "Контейнерные перевозки",
+        "Импорт / экспорт",
+      ],
+      popularGuideLinks: [
+        { label: "Перевод в Россию", href: "/blog/turkiyeden-rusyaya-para-transferi" },
+        { label: "Сборный груз в Россию", href: "/blog/rusya-parsiyel-nakliye-325-usd" },
+        { label: "E-commerce в России", href: "/blog/rusya-e-ticaret-wildberries-ozon-ihracat" },
+      ],
     },
     sanctions: {
       notice: "Турция не является участником санкционных режимов ЕС и США. Торговля между Турцией и Россией полностью законна в соответствии с турецким законодательством, а все наши операции осуществляются в полном соответствии с действующим национальным и международным законодательством.",
@@ -903,6 +996,14 @@ const translations: Record<Language, Translations> = {
       ctaTitle: "Noch Fragen?",
       ctaSub: "Unser Team beantwortet alles zur Logistik und zum Handel Türkei–Russland.",
       ctaBtn: "Kontakt aufnehmen",
+      post: {
+        notFoundTitle: "Artikel nicht gefunden",
+        notFoundBack: "Zurück zum Blog",
+        backLabel: "Blog",
+        relatedTitle: "Verwandte Artikel",
+        ctaQuote: "Angebot für diese Leistung anfordern",
+        articleTurkishNotice: "Der vollständige Artikel ist auf Türkisch; oben finden Sie eine Übersetzung der Kurzfassung.",
+      },
     },
     testimonials: { label: "Referenzen", title: "Was unsere Kunden sagen" },
     contact: {
@@ -916,6 +1017,24 @@ const translations: Record<Language, Translations> = {
       ourServices: "Unsere Leistungen",
       contactInfo: "Kontakt",
       copyright: "© 2025 ChapterLOG LLC. Alle Rechte vorbehalten.",
+      popularGuides: "Beliebte Ratgeber",
+      whatsappCta: "Per WhatsApp schreiben",
+      terms: "Nutzungsbedingungen",
+      privacy: "Datenschutz",
+      masakBadge: "MASAK-konform",
+      serviceList: [
+        "Komplettladung (FTL)",
+        "Teilladung (LTL)",
+        "Geldtransfer",
+        "Zollberatung",
+        "Containerversand",
+        "Import / Export",
+      ],
+      popularGuideLinks: [
+        { label: "Geldtransfer nach Russland", href: "/blog/turkiyeden-rusyaya-para-transferi" },
+        { label: "Teilladung Russland", href: "/blog/rusya-parsiyel-nakliye-325-usd" },
+        { label: "Russland E-Commerce Guide", href: "/blog/rusya-e-ticaret-wildberries-ozon-ihracat" },
+      ],
     },
     sanctions: {
       notice: "Die Türkei unterliegt nicht den Sanktionsregimen der EU oder USA. Der Handel zwischen der Türkei und Russland ist nach türkischem Recht vollständig legal, und alle unsere Operationen werden in voller Übereinstimmung mit dem geltenden nationalen und internationalen Recht durchgeführt.",
