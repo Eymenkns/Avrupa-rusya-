@@ -480,5 +480,3 @@ export const blogPosts: BlogPost[] = [
     ],
   },
 ];
-
-export const TAGS = ["Tümü", "Lojistik", "Para Transferi", "Nakliye", "Taşımacılık", "Konteyner", "FTL", "Gümrük", "Dış Ticaret", "İhracat", "Avrupa→Rusya", "Transit", "Sigorta", "E-Ticaret"];

@@ -6,7 +6,27 @@ import { Helmet } from "react-helmet-async";
 import { useLang } from "@/contexts/LanguageContext";
 import { SEO } from "@/components/SEO";
 import { Input } from "@/components/ui/input";
-import { blogPosts, TAGS, type BlogPost } from "@/data/blogPosts";
+import { blogPosts, type BlogPost } from "@/data/blogPosts";
+import { BLOG_TAG_FILTER_ALL, BLOG_TAG_LABELS } from "@/data/blogLocales";
+import { formatReadTime, getLocalizedBlogCard } from "@/lib/blogLocalization";
+
+/** Turkish canonical tags for filtering (matches `BlogPost.tag`). First entry is the \"all\" sentinel. */
+const TR_TAGS = [
+  "Tümü",
+  "Lojistik",
+  "Para Transferi",
+  "Nakliye",
+  "Taşımacılık",
+  "Konteyner",
+  "FTL",
+  "Gümrük",
+  "Dış Ticaret",
+  "İhracat",
+  "Avrupa→Rusya",
+  "Transit",
+  "Sigorta",
+  "E-Ticaret",
+] as const;
 
 const staggerContainer = {
   hidden: { opacity: 0 },
@@ -33,10 +53,11 @@ function postMatchesQuery(post: BlogPost, query: string): boolean {
 }
 
 export default function Blog() {
-  const { t } = useLang();
+  const { t, lang } = useLang();
   const [searchParams, setSearchParams] = useSearchParams();
   const qParam = searchParams.get("q") ?? "";
-  const [activeTag, setActiveTag] = useState("Tümü");
+  /** Active filter key in Turkish (matches `post.tag` in data). */
+  const [activeTagTr, setActiveTagTr] = useState<(typeof TR_TAGS)[number]>("Tümü");
   const [searchDraft, setSearchDraft] = useState(qParam);
 
   useEffect(() => {
@@ -62,11 +83,11 @@ export default function Blog() {
   }, [searchDraft, qParam, setSearchParams]);
 
   const filtered = useMemo(() => {
-    const byTag = activeTag === "Tümü" ? blogPosts : blogPosts.filter((p) => p.tag === activeTag);
+    const byTag = activeTagTr === "Tümü" ? blogPosts : blogPosts.filter((p) => p.tag === activeTagTr);
     const qq = qParam.trim();
     if (!qq) return byTag;
     return byTag.filter((p) => postMatchesQuery(p, qq));
-  }, [activeTag, qParam]);
+  }, [activeTagTr, qParam]);
 
   const webPageSchema = {
     "@context": "https://schema.org",
@@ -188,20 +209,23 @@ export default function Blog() {
             />
           </div>
           <div className="flex gap-2 overflow-x-auto pb-1" style={{ scrollbarWidth: "none" }}>
-            {TAGS.map((tag) => (
+            {TR_TAGS.map((tagTr) => {
+              const label =
+                tagTr === "Tümü" ? BLOG_TAG_FILTER_ALL[lang] : BLOG_TAG_LABELS[tagTr]?.[lang] ?? tagTr;
+              return (
               <button
-                key={tag}
+                key={tagTr}
                 type="button"
-                onClick={() => setActiveTag(tag)}
+                onClick={() => setActiveTagTr(tagTr)}
                 className={`shrink-0 px-3.5 py-1.5 text-[11px] font-bold transition-all border font-sans tracking-wide ${
-                  activeTag === tag
+                  activeTagTr === tagTr
                     ? "bg-accent text-black border-accent shadow-[0_0_12px_rgba(251,91,45,0.3)]"
                     : "bg-transparent text-white/35 border-white/10 hover:border-white/30 hover:text-white/65 hover:bg-white/4"
                 }`}
               >
-                {tag}
+                {label}
               </button>
-            ))}
+            );})}
           </div>
         </div>
       </section>
@@ -213,7 +237,10 @@ export default function Blog() {
             <p className="text-center text-white/45 text-sm font-serif max-w-lg mx-auto py-12">{t.blog.noResults}</p>
           ) : (
             <motion.div variants={staggerContainer} initial="hidden" animate="show" className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-              {filtered.map((post) => (
+              {filtered.map((post) => {
+                const loc = getLocalizedBlogCard(post, lang);
+                const readLabel = formatReadTime(post.readTime, lang);
+                return (
                 <motion.article
                   key={post.id}
                   variants={fadeUp}
@@ -226,25 +253,25 @@ export default function Blog() {
                   <div className="relative h-52 overflow-hidden">
                     <img
                       src={post.image}
-                      alt={`${post.title} — ChapterLOG blog`}
+                      alt={`${loc.title} — ChapterLOG blog`}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 grayscale-[25%] group-hover:grayscale-0"
                       loading="lazy"
                       onError={(e) => { (e.target as HTMLImageElement).src = `https://picsum.photos/seed/${post.id}/600/400`; }}
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent" />
                     <span className={`absolute top-3 left-3 inline-flex items-center gap-1 text-[10px] font-bold px-2.5 py-1 font-sans backdrop-blur-sm ${post.tagColor}`}>
-                      <Tag size={9} /> {post.tag}
+                      <Tag size={9} /> {loc.tag}
                     </span>
                   </div>
 
                   <div className="p-6 flex flex-col flex-1">
                     <div className="flex items-center gap-3 mb-3 text-white/25">
                       <span className="flex items-center gap-1 text-[10px] font-sans uppercase tracking-widest"><CalendarDays size={10} /> {post.date}</span>
-                      <span className="flex items-center gap-1 text-[10px] font-sans uppercase tracking-widest"><Clock size={10} /> {post.readTime}</span>
+                      <span className="flex items-center gap-1 text-[10px] font-sans uppercase tracking-widest"><Clock size={10} /> {readLabel}</span>
                     </div>
 
-                    <h2 className="text-sm font-bold text-white/85 mb-2.5 group-hover:text-accent transition-colors leading-snug font-display">{post.title}</h2>
-                    <p className="text-xs text-white/35 leading-relaxed flex-1 mb-4 font-serif">{post.excerpt}</p>
+                    <h2 className="text-sm font-bold text-white/85 mb-2.5 group-hover:text-accent transition-colors leading-snug font-display">{loc.title}</h2>
+                    <p className="text-xs text-white/35 leading-relaxed flex-1 mb-4 font-serif">{loc.excerpt}</p>
 
                     <ul className="space-y-1.5 mb-5 border-t border-white/6 pt-4">
                       {post.highlights.slice(0, 2).map((h) => (
@@ -261,7 +288,7 @@ export default function Blog() {
                     </Link>
                   </div>
                 </motion.article>
-              ))}
+              );})}
             </motion.div>
           )}
         </div>
