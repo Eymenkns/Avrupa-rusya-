@@ -11,6 +11,9 @@ const LANG_META: Record<string, { htmlLang: string; ogLocale: string }> = {
   de: { htmlLang: "de", ogLocale: "de_DE" },
 };
 
+/** Open Graph locales for this site — emit alternates so aggregators see every language. */
+const OG_LOCALES = ["tr_TR", "en_US", "ru_RU", "de_DE"] as const;
+
 export interface SEOProps {
   titleTr: string;
   titleEn: string;
@@ -52,7 +55,7 @@ export function SEO({
   const title = titles[lang] ?? titleTr;
   const desc = descs[lang] ?? descTr;
   const keyword = keywords[lang];
-  const { htmlLang, ogLocale } = LANG_META[lang];
+  const { htmlLang, ogLocale } = LANG_META[lang] ?? LANG_META.tr;
 
   const canonical = `${SITE_URL}${path}`;
   const trURL = `${SITE_URL}${path}?lang=tr`;
@@ -76,9 +79,9 @@ export function SEO({
       <meta property="og:description" content={desc} />
       <meta property="og:url" content={canonical} />
       <meta property="og:locale" content={ogLocale} />
-      <meta property="og:locale:alternate" content={lang === "tr" ? "en_US" : "tr_TR"} />
-      <meta property="og:locale:alternate" content={lang === "ru" ? "en_US" : "ru_RU"} />
-      <meta property="og:locale:alternate" content={lang === "de" ? "en_US" : "de_DE"} />
+      {OG_LOCALES.filter((loc) => loc !== ogLocale).map((loc) => (
+        <meta key={loc} property="og:locale:alternate" content={loc} />
+      ))}
       <meta property="og:image" content={image} />
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />

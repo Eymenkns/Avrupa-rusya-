@@ -8,10 +8,11 @@
     <xhtml:link rel="alternate" hreflang="tr"        href="https://chapterlog.com.tr/?lang=tr"/>
     <xhtml:link rel="alternate" hreflang="en"        href="https://chapterlog.com.tr/?lang=en"/>
     <xhtml:link rel="alternate" hreflang="ru"        href="https://chapterlog.com.tr/?lang=ru"/>
+    <xhtml:link rel="alternate" hreflang="de"        href="https://chapterlog.com.tr/?lang=de"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://chapterlog.com.tr/"/>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-    <lastmod>2026-03-24</lastmod>
+    <lastmod>2026-04-29</lastmod>
   </url>
 
   <!-- ===== SERVICES ===== -->
@@ -20,10 +21,11 @@
     <xhtml:link rel="alternate" hreflang="tr"        href="https://chapterlog.com.tr/services?lang=tr"/>
     <xhtml:link rel="alternate" hreflang="en"        href="https://chapterlog.com.tr/services?lang=en"/>
     <xhtml:link rel="alternate" hreflang="ru"        href="https://chapterlog.com.tr/services?lang=ru"/>
+    <xhtml:link rel="alternate" hreflang="de"        href="https://chapterlog.com.tr/services?lang=de"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://chapterlog.com.tr/services"/>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
-    <lastmod>2026-03-24</lastmod>
+    <lastmod>2026-04-29</lastmod>
   </url>
 
   <!-- ===== BLOG ===== -->
@@ -32,10 +34,11 @@
     <xhtml:link rel="alternate" hreflang="tr"        href="https://chapterlog.com.tr/blog?lang=tr"/>
     <xhtml:link rel="alternate" hreflang="en"        href="https://chapterlog.com.tr/blog?lang=en"/>
     <xhtml:link rel="alternate" hreflang="ru"        href="https://chapterlog.com.tr/blog?lang=ru"/>
+    <xhtml:link rel="alternate" hreflang="de"        href="https://chapterlog.com.tr/blog?lang=de"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://chapterlog.com.tr/blog"/>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <lastmod>2026-03-24</lastmod>
+    <lastmod>2026-04-29</lastmod>
   </url>
 
   <!-- ===== ABOUT ===== -->
@@ -44,10 +47,11 @@
     <xhtml:link rel="alternate" hreflang="tr"        href="https://chapterlog.com.tr/about?lang=tr"/>
     <xhtml:link rel="alternate" hreflang="en"        href="https://chapterlog.com.tr/about?lang=en"/>
     <xhtml:link rel="alternate" hreflang="ru"        href="https://chapterlog.com.tr/about?lang=ru"/>
+    <xhtml:link rel="alternate" hreflang="de"        href="https://chapterlog.com.tr/about?lang=de"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://chapterlog.com.tr/about"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <lastmod>2026-03-24</lastmod>
+    <lastmod>2026-04-29</lastmod>
   </url>
 
   <!-- ===== CONTACT ===== -->
@@ -56,19 +60,21 @@
     <xhtml:link rel="alternate" hreflang="tr"        href="https://chapterlog.com.tr/contact?lang=tr"/>
     <xhtml:link rel="alternate" hreflang="en"        href="https://chapterlog.com.tr/contact?lang=en"/>
     <xhtml:link rel="alternate" hreflang="ru"        href="https://chapterlog.com.tr/contact?lang=ru"/>
+    <xhtml:link rel="alternate" hreflang="de"        href="https://chapterlog.com.tr/contact?lang=de"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://chapterlog.com.tr/contact"/>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <lastmod>2026-03-24</lastmod>
+    <lastmod>2026-04-29</lastmod>
   </url>
 
-  <!-- ===== BLOG POSTS (17) ===== -->
+  <!-- ===== BLOG POSTS (20) ===== -->
   <!-- Post 1: Rusya Lojistik Operasyon -->
   <url>
     <loc>https://chapterlog.com.tr/blog/rusya-lojistik-operasyon-tek-cati</loc>
     <xhtml:link rel="alternate" hreflang="tr"        href="https://chapterlog.com.tr/blog/rusya-lojistik-operasyon-tek-cati"/>
     <xhtml:link rel="alternate" hreflang="en"        href="https://chapterlog.com.tr/blog/rusya-lojistik-operasyon-tek-cati"/>
     <xhtml:link rel="alternate" hreflang="ru"        href="https://chapterlog.com.tr/blog/rusya-lojistik-operasyon-tek-cati"/>
+    <xhtml:link rel="alternate" hreflang="de"        href="https://chapterlog.com.tr/blog/rusya-lojistik-operasyon-tek-cati?lang=de"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://chapterlog.com.tr/blog/rusya-lojistik-operasyon-tek-cati"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -81,6 +87,7 @@
     <xhtml:link rel="alternate" hreflang="tr"        href="https://chapterlog.com.tr/blog/turkiyeden-rusyaya-para-transferi"/>
     <xhtml:link rel="alternate" hreflang="en"        href="https://chapterlog.com.tr/blog/turkiyeden-rusyaya-para-transferi"/>
     <xhtml:link rel="alternate" hreflang="ru"        href="https://chapterlog.com.tr/blog/turkiyeden-rusyaya-para-transferi"/>
+    <xhtml:link rel="alternate" hreflang="de"        href="https://chapterlog.com.tr/blog/turkiyeden-rusyaya-para-transferi?lang=de"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://chapterlog.com.tr/blog/turkiyeden-rusyaya-para-transferi"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -93,6 +100,7 @@
     <xhtml:link rel="alternate" hreflang="tr"        href="https://chapterlog.com.tr/blog/rusya-parsiyel-nakliye-325-usd"/>
     <xhtml:link rel="alternate" hreflang="en"        href="https://chapterlog.com.tr/blog/rusya-parsiyel-nakliye-325-usd"/>
     <xhtml:link rel="alternate" hreflang="ru"        href="https://chapterlog.com.tr/blog/rusya-parsiyel-nakliye-325-usd"/>
+    <xhtml:link rel="alternate" hreflang="de"        href="https://chapterlog.com.tr/blog/rusya-parsiyel-nakliye-325-usd?lang=de"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://chapterlog.com.tr/blog/rusya-parsiyel-nakliye-325-usd"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -105,6 +113,7 @@
     <xhtml:link rel="alternate" hreflang="tr"        href="https://chapterlog.com.tr/blog/transit-tasimacilik-coklu-sinir-asimi"/>
     <xhtml:link rel="alternate" hreflang="en"        href="https://chapterlog.com.tr/blog/transit-tasimacilik-coklu-sinir-asimi"/>
     <xhtml:link rel="alternate" hreflang="ru"        href="https://chapterlog.com.tr/blog/transit-tasimacilik-coklu-sinir-asimi"/>
+    <xhtml:link rel="alternate" hreflang="de"        href="https://chapterlog.com.tr/blog/transit-tasimacilik-coklu-sinir-asimi?lang=de"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://chapterlog.com.tr/blog/transit-tasimacilik-coklu-sinir-asimi"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -117,6 +126,7 @@
     <xhtml:link rel="alternate" hreflang="tr"        href="https://chapterlog.com.tr/blog/rusya-konteyner-tasimaciligi-fcl"/>
     <xhtml:link rel="alternate" hreflang="en"        href="https://chapterlog.com.tr/blog/rusya-konteyner-tasimaciligi-fcl"/>
     <xhtml:link rel="alternate" hreflang="ru"        href="https://chapterlog.com.tr/blog/rusya-konteyner-tasimaciligi-fcl"/>
+    <xhtml:link rel="alternate" hreflang="de"        href="https://chapterlog.com.tr/blog/rusya-konteyner-tasimaciligi-fcl?lang=de"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://chapterlog.com.tr/blog/rusya-konteyner-tasimaciligi-fcl"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -129,6 +139,7 @@
     <xhtml:link rel="alternate" hreflang="tr"        href="https://chapterlog.com.tr/blog/ftl-tam-dorse-nakliye"/>
     <xhtml:link rel="alternate" hreflang="en"        href="https://chapterlog.com.tr/blog/ftl-tam-dorse-nakliye"/>
     <xhtml:link rel="alternate" hreflang="ru"        href="https://chapterlog.com.tr/blog/ftl-tam-dorse-nakliye"/>
+    <xhtml:link rel="alternate" hreflang="de"        href="https://chapterlog.com.tr/blog/ftl-tam-dorse-nakliye?lang=de"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://chapterlog.com.tr/blog/ftl-tam-dorse-nakliye"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -141,6 +152,7 @@
     <xhtml:link rel="alternate" hreflang="tr"        href="https://chapterlog.com.tr/blog/rusya-gumruk-danismanligi"/>
     <xhtml:link rel="alternate" hreflang="en"        href="https://chapterlog.com.tr/blog/rusya-gumruk-danismanligi"/>
     <xhtml:link rel="alternate" hreflang="ru"        href="https://chapterlog.com.tr/blog/rusya-gumruk-danismanligi"/>
+    <xhtml:link rel="alternate" hreflang="de"        href="https://chapterlog.com.tr/blog/rusya-gumruk-danismanligi?lang=de"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://chapterlog.com.tr/blog/rusya-gumruk-danismanligi"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -153,6 +165,7 @@
     <xhtml:link rel="alternate" hreflang="tr"        href="https://chapterlog.com.tr/blog/rusya-ile-ticaret-ithalat-ihracat-danismanligi"/>
     <xhtml:link rel="alternate" hreflang="en"        href="https://chapterlog.com.tr/blog/rusya-ile-ticaret-ithalat-ihracat-danismanligi"/>
     <xhtml:link rel="alternate" hreflang="ru"        href="https://chapterlog.com.tr/blog/rusya-ile-ticaret-ithalat-ihracat-danismanligi"/>
+    <xhtml:link rel="alternate" hreflang="de"        href="https://chapterlog.com.tr/blog/rusya-ile-ticaret-ithalat-ihracat-danismanligi?lang=de"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://chapterlog.com.tr/blog/rusya-ile-ticaret-ithalat-ihracat-danismanligi"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -165,6 +178,7 @@
     <xhtml:link rel="alternate" hreflang="tr"        href="https://chapterlog.com.tr/blog/ihracat-icin-dogrudan-satin-alim"/>
     <xhtml:link rel="alternate" hreflang="en"        href="https://chapterlog.com.tr/blog/ihracat-icin-dogrudan-satin-alim"/>
     <xhtml:link rel="alternate" hreflang="ru"        href="https://chapterlog.com.tr/blog/ihracat-icin-dogrudan-satin-alim"/>
+    <xhtml:link rel="alternate" hreflang="de"        href="https://chapterlog.com.tr/blog/ihracat-icin-dogrudan-satin-alim?lang=de"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://chapterlog.com.tr/blog/ihracat-icin-dogrudan-satin-alim"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -177,6 +191,7 @@
     <xhtml:link rel="alternate" hreflang="tr"        href="https://chapterlog.com.tr/blog/avrupadan-rusyaya-nakliye-turkiye-transit"/>
     <xhtml:link rel="alternate" hreflang="en"        href="https://chapterlog.com.tr/blog/avrupadan-rusyaya-nakliye-turkiye-transit"/>
     <xhtml:link rel="alternate" hreflang="ru"        href="https://chapterlog.com.tr/blog/avrupadan-rusyaya-nakliye-turkiye-transit"/>
+    <xhtml:link rel="alternate" hreflang="de"        href="https://chapterlog.com.tr/blog/avrupadan-rusyaya-nakliye-turkiye-transit?lang=de"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://chapterlog.com.tr/blog/avrupadan-rusyaya-nakliye-turkiye-transit"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -189,6 +204,7 @@
     <xhtml:link rel="alternate" hreflang="tr"        href="https://chapterlog.com.tr/blog/almanyadan-rusyaya-mal-gondermek-2025"/>
     <xhtml:link rel="alternate" hreflang="en"        href="https://chapterlog.com.tr/blog/almanyadan-rusyaya-mal-gondermek-2025"/>
     <xhtml:link rel="alternate" hreflang="ru"        href="https://chapterlog.com.tr/blog/almanyadan-rusyaya-mal-gondermek-2025"/>
+    <xhtml:link rel="alternate" hreflang="de"        href="https://chapterlog.com.tr/blog/almanyadan-rusyaya-mal-gondermek-2025?lang=de"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://chapterlog.com.tr/blog/almanyadan-rusyaya-mal-gondermek-2025"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -201,6 +217,7 @@
     <xhtml:link rel="alternate" hreflang="tr"        href="https://chapterlog.com.tr/blog/avrupadan-rusyaya-gumruk-eac-sertifikasi"/>
     <xhtml:link rel="alternate" hreflang="en"        href="https://chapterlog.com.tr/blog/avrupadan-rusyaya-gumruk-eac-sertifikasi"/>
     <xhtml:link rel="alternate" hreflang="ru"        href="https://chapterlog.com.tr/blog/avrupadan-rusyaya-gumruk-eac-sertifikasi"/>
+    <xhtml:link rel="alternate" hreflang="de"        href="https://chapterlog.com.tr/blog/avrupadan-rusyaya-gumruk-eac-sertifikasi?lang=de"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://chapterlog.com.tr/blog/avrupadan-rusyaya-gumruk-eac-sertifikasi"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -213,6 +230,7 @@
     <xhtml:link rel="alternate" hreflang="tr"        href="https://chapterlog.com.tr/blog/2025-2026-turkiye-rusya-nakliye-fiyatlari"/>
     <xhtml:link rel="alternate" hreflang="en"        href="https://chapterlog.com.tr/blog/2025-2026-turkiye-rusya-nakliye-fiyatlari"/>
     <xhtml:link rel="alternate" hreflang="ru"        href="https://chapterlog.com.tr/blog/2025-2026-turkiye-rusya-nakliye-fiyatlari"/>
+    <xhtml:link rel="alternate" hreflang="de"        href="https://chapterlog.com.tr/blog/2025-2026-turkiye-rusya-nakliye-fiyatlari?lang=de"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://chapterlog.com.tr/blog/2025-2026-turkiye-rusya-nakliye-fiyatlari"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -225,6 +243,7 @@
     <xhtml:link rel="alternate" hreflang="tr"        href="https://chapterlog.com.tr/blog/rusya-parsiyel-mi-komple-tir-mi"/>
     <xhtml:link rel="alternate" hreflang="en"        href="https://chapterlog.com.tr/blog/rusya-parsiyel-mi-komple-tir-mi"/>
     <xhtml:link rel="alternate" hreflang="ru"        href="https://chapterlog.com.tr/blog/rusya-parsiyel-mi-komple-tir-mi"/>
+    <xhtml:link rel="alternate" hreflang="de"        href="https://chapterlog.com.tr/blog/rusya-parsiyel-mi-komple-tir-mi?lang=de"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://chapterlog.com.tr/blog/rusya-parsiyel-mi-komple-tir-mi"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -237,6 +256,7 @@
     <xhtml:link rel="alternate" hreflang="tr"        href="https://chapterlog.com.tr/blog/rusyaya-ihracatta-gumruk-islemleri-2025"/>
     <xhtml:link rel="alternate" hreflang="en"        href="https://chapterlog.com.tr/blog/rusyaya-ihracatta-gumruk-islemleri-2025"/>
     <xhtml:link rel="alternate" hreflang="ru"        href="https://chapterlog.com.tr/blog/rusyaya-ihracatta-gumruk-islemleri-2025"/>
+    <xhtml:link rel="alternate" hreflang="de"        href="https://chapterlog.com.tr/blog/rusyaya-ihracatta-gumruk-islemleri-2025?lang=de"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://chapterlog.com.tr/blog/rusyaya-ihracatta-gumruk-islemleri-2025"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -249,6 +269,7 @@
     <xhtml:link rel="alternate" hreflang="tr"        href="https://chapterlog.com.tr/blog/turkiye-rusya-lojistik-guzergahlari"/>
     <xhtml:link rel="alternate" hreflang="en"        href="https://chapterlog.com.tr/blog/turkiye-rusya-lojistik-guzergahlari"/>
     <xhtml:link rel="alternate" hreflang="ru"        href="https://chapterlog.com.tr/blog/turkiye-rusya-lojistik-guzergahlari"/>
+    <xhtml:link rel="alternate" hreflang="de"        href="https://chapterlog.com.tr/blog/turkiye-rusya-lojistik-guzergahlari?lang=de"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://chapterlog.com.tr/blog/turkiye-rusya-lojistik-guzergahlari"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -261,6 +282,7 @@
     <xhtml:link rel="alternate" hreflang="tr"        href="https://chapterlog.com.tr/blog/cmr-sigortasi-rusya-nakliye"/>
     <xhtml:link rel="alternate" hreflang="en"        href="https://chapterlog.com.tr/blog/cmr-sigortasi-rusya-nakliye"/>
     <xhtml:link rel="alternate" hreflang="ru"        href="https://chapterlog.com.tr/blog/cmr-sigortasi-rusya-nakliye"/>
+    <xhtml:link rel="alternate" hreflang="de"        href="https://chapterlog.com.tr/blog/cmr-sigortasi-rusya-nakliye?lang=de"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://chapterlog.com.tr/blog/cmr-sigortasi-rusya-nakliye"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -273,6 +295,7 @@
     <xhtml:link rel="alternate" hreflang="tr"        href="https://chapterlog.com.tr/blog/rusya-ihracat-odeme-yontemleri-2026"/>
     <xhtml:link rel="alternate" hreflang="en"        href="https://chapterlog.com.tr/blog/rusya-ihracat-odeme-yontemleri-2026"/>
     <xhtml:link rel="alternate" hreflang="ru"        href="https://chapterlog.com.tr/blog/rusya-ihracat-odeme-yontemleri-2026"/>
+    <xhtml:link rel="alternate" hreflang="de"        href="https://chapterlog.com.tr/blog/rusya-ihracat-odeme-yontemleri-2026?lang=de"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://chapterlog.com.tr/blog/rusya-ihracat-odeme-yontemleri-2026"/>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -285,6 +308,7 @@
     <xhtml:link rel="alternate" hreflang="tr"        href="https://chapterlog.com.tr/blog/rusya-e-ticaret-wildberries-ozon-ihracat"/>
     <xhtml:link rel="alternate" hreflang="en"        href="https://chapterlog.com.tr/blog/rusya-e-ticaret-wildberries-ozon-ihracat"/>
     <xhtml:link rel="alternate" hreflang="ru"        href="https://chapterlog.com.tr/blog/rusya-e-ticaret-wildberries-ozon-ihracat"/>
+    <xhtml:link rel="alternate" hreflang="de"        href="https://chapterlog.com.tr/blog/rusya-e-ticaret-wildberries-ozon-ihracat?lang=de"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://chapterlog.com.tr/blog/rusya-e-ticaret-wildberries-ozon-ihracat"/>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -297,6 +321,7 @@
     <xhtml:link rel="alternate" hreflang="tr"        href="https://chapterlog.com.tr/blog/rusyadan-turkiyeye-para-transferi-2026"/>
     <xhtml:link rel="alternate" hreflang="en"        href="https://chapterlog.com.tr/blog/rusyadan-turkiyeye-para-transferi-2026"/>
     <xhtml:link rel="alternate" hreflang="ru"        href="https://chapterlog.com.tr/blog/rusyadan-turkiyeye-para-transferi-2026"/>
+    <xhtml:link rel="alternate" hreflang="de"        href="https://chapterlog.com.tr/blog/rusyadan-turkiyeye-para-transferi-2026?lang=de"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://chapterlog.com.tr/blog/rusyadan-turkiyeye-para-transferi-2026"/>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
