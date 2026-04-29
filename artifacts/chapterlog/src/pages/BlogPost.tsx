@@ -47,8 +47,8 @@ export default function BlogPost() {
       "logo": {
         "@type": "ImageObject",
         "url": `${SITE_URL}/favicon.png`,
-        "width": 192,
-        "height": 192,
+        "width": 512,
+        "height": 512,
       },
     },
     "mainEntityOfPage": {

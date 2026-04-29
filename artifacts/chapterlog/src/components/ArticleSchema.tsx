@@ -40,8 +40,8 @@ export function ArticleSchema({ headline, description, datePublished, dateModifi
       "logo": {
         "@type": "ImageObject",
         "url": "https://chapterlog.com.tr/favicon.png",
-        "width": 192,
-        "height": 192,
+        "width": 512,
+        "height": 512,
       },
     },
     "isPartOf": {
@@ -114,8 +114,8 @@ export function ArticleListSchema({ articles }: { articles: ArticleSchemaProps[]
       "logo": {
         "@type": "ImageObject",
         "url": "https://chapterlog.com.tr/favicon.png",
-        "width": 192,
-        "height": 192,
+        "width": 512,
+        "height": 512,
       },
     },
   }));
