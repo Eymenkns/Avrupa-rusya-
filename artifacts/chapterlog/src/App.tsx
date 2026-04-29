@@ -55,8 +55,8 @@ const GLOBAL_STRUCTURED_DATA = {
       "logo": {
         "@type": "ImageObject",
         "url": "https://chapterlog.com.tr/favicon.png",
-        "width": 192,
-        "height": 192,
+        "width": 512,
+        "height": 512,
       },
       "image": "https://chapterlog.com.tr/opengraph.jpg",
       "contactPoint": [
