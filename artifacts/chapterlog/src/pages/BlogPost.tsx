@@ -46,7 +46,9 @@ export default function BlogPost() {
       "name": "ChapterLOG LLC",
       "logo": {
         "@type": "ImageObject",
-        "url": `${SITE_URL}/favicon.svg`,
+        "url": `${SITE_URL}/favicon.png`,
+        "width": 192,
+        "height": 192,
       },
     },
     "mainEntityOfPage": {
