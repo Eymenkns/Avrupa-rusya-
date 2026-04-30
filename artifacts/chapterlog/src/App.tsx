@@ -169,6 +169,26 @@ const GLOBAL_STRUCTURED_DATA = {
   ],
 };
 
+/** Matches index.html — repeated after hydration so stubborn browsers re-fetch tab icons. */
+function FaviconLinks() {
+  const origin =
+    typeof window !== "undefined" && window.location.origin ? window.location.origin : "https://chapterlog.com.tr";
+  const abs = (path: string) => `${origin}${path}`;
+  return (
+    <Helmet>
+      <link rel="icon" href={abs("/favicon.ico")} sizes="any" />
+      <link rel="icon" type="image/png" sizes="32x32" href={abs("/favicon-32x32.png")} />
+      <link rel="shortcut icon" href={abs("/favicon.ico")} />
+      <link rel="icon" type="image/png" sizes="16x16" href={abs("/favicon-16x16.png")} />
+      <link rel="icon" type="image/png" sizes="48x48" href={abs("/favicon-48x48.png")} />
+      <link rel="icon" type="image/png" sizes="192x192" href={abs("/favicon-192x192.png")} />
+      <link rel="icon" type="image/png" sizes="512x512" href={abs("/favicon.png")} />
+      <link rel="icon" type="image/svg+xml" href={abs("/favicon.svg")} />
+      <link rel="apple-touch-icon" sizes="180x180" href={abs("/apple-touch-icon.png")} />
+    </Helmet>
+  );
+}
+
 function ScrollToTop() {
   const [pathname] = useLocation();
 
@@ -202,6 +222,7 @@ function Router() {
 function App() {
   return (
     <HelmetProvider>
+      <FaviconLinks />
       <Helmet>
         <script type="application/ld+json">
           {JSON.stringify(GLOBAL_STRUCTURED_DATA)}
