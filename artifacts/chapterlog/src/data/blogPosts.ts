@@ -1,3 +1,5 @@
+import { extendedBlogPosts } from "./blogPostsExtended";
+
 export const IMGS = {
   logistics: "/images/logistics-operations.png",
   money: "/images/money-transfer.png",
@@ -479,4 +481,5 @@ export const blogPosts: BlogPost[] = [
       },
     ],
   },
+  ...extendedBlogPosts,
 ];

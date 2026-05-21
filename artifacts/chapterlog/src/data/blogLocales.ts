@@ -127,4 +127,79 @@ export const blogLocales: Record<string, Partial<Record<"en" | "ru" | "de", Blog
     ru: { title: "Переводы Россия–Турция в 2026: гид для импортёров", excerpt: "Торговые поступления из России: каналы, валюта и комплаенс.", tag: "Переводы" },
     de: { title: "Geldtransfers Russland–Türkei 2026: Leitfaden für Importeure", excerpt: "Handelszahlungen aus Russland: Kanäle, FX und Compliance.", tag: "Geldtransfer" },
   },
+  "kayseri-rusya-nakliye-lojistik": {
+    en: { title: "Kayseri to Russia freight: central hub advantages", excerpt: "Consolidation, LTL and FTL from Central Anatolia on the Turkey–Russia corridor.", tag: "Logistics" },
+    ru: { title: "Перевозки из Кайсери в Россию: преимущества хаба", excerpt: "Консолидация, сборные и полные фуры с коридора Турция–Россия.", tag: "Логистика" },
+    de: { title: "Fracht Kayseri–Russland: Vorteile als Drehkreuz", excerpt: "Konsolidierung, Teilladung und Komplett-LKW vom Korridor Türkei–Russland.", tag: "Logistik" },
+  },
+  "istanbul-rusya-tir-nakliye": {
+    en: { title: "Istanbul to Russia road freight: Marmara corridor guide", excerpt: "LTL, FTL and transit options for shipments leaving Istanbul and Marmara.", tag: "Freight" },
+    ru: { title: "Стамбул–Россия автоперевозки: гид по Мармаре", excerpt: "Сборный груз, полная фура и транзит для отправок из Стамбула.", tag: "Грузоперевозки" },
+    de: { title: "Istanbul–Russland LKW-Fracht: Marmara-Leitfaden", excerpt: "Teilladung, Komplett-LKW und Transit für Sendungen aus der Marmararegion.", tag: "Fracht" },
+  },
+  "gost-r-sertifikasi-rusya-ihracat": {
+    en: { title: "GOST-R certificate: conformity for Russia exports", excerpt: "How GOST-R relates to EAC, which products need it, and how we manage certification.", tag: "Customs" },
+    ru: { title: "Сертификат GOST-R: соответствие для экспорта в Россию", excerpt: "GOST-R и EAC, обязательные категории и сопровождение сертификации.", tag: "Таможня" },
+    de: { title: "GOST-R-Zertifikat: Konformität für Russland-Export", excerpt: "GOST-R vs. EAC, Pflichtprodukte und Begleitung der Zertifizierung.", tag: "Zoll" },
+  },
+  "tir-karneti-rusya-nakliye-rehberi": {
+    en: { title: "TIR carnet for Russia road freight: process guide", excerpt: "International trucking documents, seals and transit steps on the Turkey–Russia lane.", tag: "Haulage" },
+    ru: { title: "Книжка TIR для перевозок в Россию: пошагово", excerpt: "Документы, пломбы и транзит на маршруте Турция–Россия.", tag: "Перевозки" },
+    de: { title: "TIR-Karnet für Russland-Straßentransport", excerpt: "Dokumente, Plomben und Transit auf der Strecke Türkei–Russland.", tag: "Transport" },
+  },
+  "ubak-izni-rusya-tasimacilik": {
+    en: { title: "UBAK permits: road haulage credentials for Russia", excerpt: "Multilateral quotas and why proper permits matter on cross-border trucking.", tag: "Haulage" },
+    ru: { title: "Разрешения UBAK: документы для перевозок в Россию", excerpt: "Многосторонние квоты и риски перевозок без разрешений.", tag: "Перевозки" },
+    de: { title: "UBAK-Genehmigungen: Straßentransport nach Russland", excerpt: "Multilaterale Kontingente und Risiken ohne gültige Genehmigungen.", tag: "Transport" },
+  },
+  "italyadan-rusyaya-mal-gonderimi": {
+    en: { title: "Italy to Russia freight via Turkey transit", excerpt: "Moving Italian-origin cargo to Russia when direct EU lanes are constrained.", tag: "Europe→Russia" },
+    ru: { title: "Италия–Россия через транзит Турции", excerpt: "Доставка итальянского груза в Россию при ограничениях прямых линий ЕС.", tag: "Европа→Россия" },
+    de: { title: "Italien–Russland über Türkei-Transit", excerpt: "Italienische Ware nach Russland bei eingeschränkten EU-Direktverbindungen.", tag: "Europa→Russland" },
+  },
+  "hollandadan-rusyaya-nakliye-transit": {
+    en: { title: "Netherlands to Russia freight: Rotterdam transit", excerpt: "Benelux cargo routed through Turkey for compliant delivery to Russia.", tag: "Europe→Russia" },
+    ru: { title: "Нидерланды–Россия: транзит через Роттердам", excerpt: "Грузы Benelux через Турцию с соблюдением требований для России.", tag: "Европа→Россия" },
+    de: { title: "Niederlande–Russland: Transit ab Rotterdam", excerpt: "Benelux-Fracht über die Türkei für konforme Zustellung nach Russland.", tag: "Europa→Russland" },
+  },
+  "fransadan-rusyaya-ihracat-lojistik": {
+    en: { title: "France to Russia export logistics", excerpt: "Paris and Lyon lanes, cosmetics, food compliance and Turkey transit.", tag: "Europe→Russia" },
+    ru: { title: "Экспортная логистика Франция–Россия", excerpt: "Маршруты Париж/Лион, косметика, пищевые требования и транзит через Турцию.", tag: "Европа→Россия" },
+    de: { title: "Exportlogistik Frankreich–Russland", excerpt: "Paris/Lyon, Kosmetik, Lebensmittel-Compliance und Transit über die Türkei.", tag: "Europa→Russland" },
+  },
+  "tekstil-ihracati-rusya-rehberi": {
+    en: { title: "Textile exports to Russia: customs and logistics", excerpt: "EAC, labeling, duties and marketplace delivery for apparel shipments.", tag: "Export" },
+    ru: { title: "Экспорт текстиля в Россию: таможня и логистика", excerpt: "EAC, маркировка, пошлины и доставка на маркетплейсы.", tag: "Экспорт" },
+    de: { title: "Textilexport nach Russland: Zoll und Logistik", excerpt: "EAC, Etikettierung, Abgaben und Marktplatz-Lieferung für Bekleidung.", tag: "Export" },
+  },
+  "gida-urunleri-rusya-ihracat-gumruk": {
+    en: { title: "Food exports to Russia: hygiene certs & cold chain", excerpt: "EAC, veterinary documents and refrigerated trucking on the corridor.", tag: "Export" },
+    ru: { title: "Экспорт продуктов в Россию: гигиена и холодовая цепь", excerpt: "EAC, ветеринарные документы и рефрижераторные перевозки.", tag: "Экспорт" },
+    de: { title: "Lebensmittelexport nach Russland: Hygiene & Kühlkette", excerpt: "EAC, Veterinärdokumente und Kühltransport auf dem Korridor.", tag: "Export" },
+  },
+  "otomotiv-yedek-parca-rusya-nakliye": {
+    en: { title: "Auto parts shipping to Russia: HS codes & EAC", excerpt: "Spare parts classification, technical regulations and fast delivery options.", tag: "Freight" },
+    ru: { title: "Автозапчасти в Россию: коды ТН ВЭД и EAC", excerpt: "Классификация, техрегламенты и варианты быстрой доставки.", tag: "Грузоперевозки" },
+    de: { title: "Autoteile nach Russland: HS-Codes & EAC", excerpt: "Klassifizierung, Technische Vorschriften und schnelle Lieferoptionen.", tag: "Fracht" },
+  },
+  "soguk-zincir-rusya-nakliye": {
+    en: { title: "Cold chain freight to Russia", excerpt: "Temperature-controlled trucking for food and pharma on Turkey–Russia routes.", tag: "Freight" },
+    ru: { title: "Холодовая цепь в Россию", excerpt: "Температурный транспорт для продуктов и фармы на маршруте Турция–Россия.", tag: "Грузоперевозки" },
+    de: { title: "Kühlkette nach Russland", excerpt: "Temperaturgeführter Transport für Lebensmittel und Pharma Türkei–Russland.", tag: "Fracht" },
+  },
+  "adr-tehlikeli-madde-rusya-tasima": {
+    en: { title: "ADR hazardous goods to Russia: rules & documents", excerpt: "UN numbers, vehicle requirements and border compliance for hazmat loads.", tag: "Haulage" },
+    ru: { title: "ADR опасные грузы в Россию: правила и документы", excerpt: "UN-номера, требования к ТС и таможня для опасных грузов.", tag: "Перевозки" },
+    de: { title: "ADR-Gefahrgut nach Russland: Regeln & Unterlagen", excerpt: "UN-Nummern, Fahrzeuganforderungen und Grenzcompliance für Gefahrgut.", tag: "Transport" },
+  },
+  "moskova-nakliye-suresi-maliyet": {
+    en: { title: "Moscow freight time & cost from Turkey (2026)", excerpt: "LTL/FTL lead times, price drivers and customs delays on the capital lane.", tag: "Logistics" },
+    ru: { title: "Сроки и стоимость доставки в Москву из Турции (2026)", excerpt: "Сборный/полный груз, факторы цены и задержки на таможне.", tag: "Логистика" },
+    de: { title: "Moskau-Fracht: Zeit & Kosten aus der Türkei (2026)", excerpt: "Teil-/Komplettladung, Preistreiber und Zollverzögerungen.", tag: "Logistik" },
+  },
+  "sankt-peterburg-turkiye-nakliye": {
+    en: { title: "Saint Petersburg freight from Turkey", excerpt: "Northern Russia routing, lead times and distribution beyond Moscow.", tag: "Logistics" },
+    ru: { title: "Доставка в Санкт-Петербург из Турции", excerpt: "Маршруты на север России, сроки и распределение после Москвы.", tag: "Логистика" },
+    de: { title: "Fracht Sankt Petersburg aus der Türkei", excerpt: "Routing nach Nordrussland, Laufzeiten und Distribution über Moskau.", tag: "Logistik" },
+  },
 };

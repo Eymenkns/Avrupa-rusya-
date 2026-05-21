@@ -14,6 +14,9 @@ Allow: /favicon-512x512.png
 
 Sitemap: https://chapterlog.com.tr/sitemap.xml
 
+# Blog RSS feed for crawlers and syndication
+Allow: /feed.xml
+
 User-agent: GPTBot
 Disallow: /
 
