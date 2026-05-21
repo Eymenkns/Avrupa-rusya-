@@ -1,37 +1,18 @@
 /**
- * Generates public/sitemap.xml and public/feed.xml from blogPosts.ts metadata.
+ * Generates public/sitemap.xml, public/feed.xml from blog data.
  * Run: node scripts/generate-seo-assets.mjs
  */
-import { readFileSync, writeFileSync } from "node:fs";
+import { writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
+import { BLOG_CATEGORIES_META, loadBlogPosts } from "./parse-blog-data.mjs";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, "..");
 const SITE = "https://chapterlog.com.tr";
 const TODAY = new Date().toISOString().slice(0, 10);
 
-const blogSource = readFileSync(join(ROOT, "src/data/blogPosts.ts"), "utf8");
-const extendedSource = readFileSync(join(ROOT, "src/data/blogPostsExtended.ts"), "utf8");
-const combined = blogSource + extendedSource;
-
-/** @type {{ slug: string; isoDate: string; title: string; excerpt: string }[]} */
-const posts = [];
-const slugRe = /slug:\s*"([^"]+)"/g;
-const isoRe = /isoDate:\s*"([^"]+)"/g;
-const titleRe = /title:\s*"((?:[^"\\]|\\.)*)"/g;
-const excerptRe = /excerpt:\s*"((?:[^"\\]|\\.)*)"/g;
-
-const blocks = combined.split(/\{\s*\n\s*id:\s*\d+/).slice(1);
-for (const block of blocks) {
-  const slug = block.match(/slug:\s*"([^"]+)"/)?.[1];
-  const isoDate = block.match(/isoDate:\s*"([^"]+)"/)?.[1];
-  const title = block.match(/title:\s*"((?:[^"\\]|\\.)*)"/)?.[1]?.replace(/\\"/g, '"');
-  const excerpt = block.match(/excerpt:\s*"((?:[^"\\]|\\.)*)"/)?.[1]?.replace(/\\"/g, '"');
-  if (slug && isoDate && title) {
-    posts.push({ slug, isoDate, title, excerpt: excerpt ?? "" });
-  }
-}
+const posts = loadBlogPosts();
 
 const staticPages = [
   { path: "/", priority: "1.0", changefreq: "weekly" },
@@ -79,10 +60,29 @@ function blogUrl({ slug, isoDate }) {
   </url>`;
 }
 
+function categoryUrl({ slug }) {
+  const path = `/blog/kategori/${slug}`;
+  const loc = `${SITE}${path}`;
+  return `  <url>
+    <loc>${loc}</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="${loc}"/>
+    <xhtml:link rel="alternate" hreflang="en" href="${loc}?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="${loc}?lang=ru"/>
+    <xhtml:link rel="alternate" hreflang="de" href="${loc}?lang=de"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="${loc}"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+    <lastmod>${TODAY}</lastmod>
+  </url>`;
+}
+
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
 ${staticPages.map(staticUrl).join("\n\n")}
+
+  <!-- Blog categories (${BLOG_CATEGORIES_META.length}) -->
+${BLOG_CATEGORIES_META.map(categoryUrl).join("\n")}
 
   <!-- Blog posts (${posts.length}) -->
 ${posts.map(blogUrl).join("\n")}
@@ -126,4 +126,6 @@ ${rssItems}
 
 writeFileSync(join(ROOT, "public/sitemap.xml"), sitemap);
 writeFileSync(join(ROOT, "public/feed.xml"), feed);
-console.log(`Generated sitemap.xml and feed.xml with ${posts.length} blog posts.`);
+console.log(
+  `Generated sitemap.xml (${posts.length} posts + ${BLOG_CATEGORIES_META.length} categories) and feed.xml.`,
+);

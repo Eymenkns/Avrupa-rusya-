@@ -131,6 +131,9 @@ export interface Translations {
     ctaTitle: string;
     ctaSub: string;
     ctaBtn: string;
+    category: {
+      articleCount: string;
+    };
     post: {
       notFoundTitle: string;
       notFoundBack: string;
@@ -342,6 +345,7 @@ const translations: Record<Language, Translations> = {
       ctaTitle: "Sorularınız mı var?",
       ctaSub: "Uzman ekibimiz Türkiye-Rusya lojistiği ve ticareti hakkında her sorunuzu yanıtlamaya hazır.",
       ctaBtn: "Hemen yazın",
+      category: { articleCount: "rehber" },
       post: {
         notFoundTitle: "Makale bulunamadı",
         notFoundBack: "Bloga dön",
@@ -563,6 +567,7 @@ const translations: Record<Language, Translations> = {
       ctaTitle: "Have questions?",
       ctaSub: "Our team is ready to answer anything about Turkey–Russia logistics and trade.",
       ctaBtn: "Contact us",
+      category: { articleCount: "guides" },
       post: {
         notFoundTitle: "Article not found",
         notFoundBack: "Back to blog",
@@ -784,6 +789,7 @@ const translations: Record<Language, Translations> = {
       ctaTitle: "Остались вопросы?",
       ctaSub: "Наша команда ответит на всё о логистике и торговле Турция–Россия.",
       ctaBtn: "Написать нам",
+      category: { articleCount: "статей" },
       post: {
         notFoundTitle: "Статья не найдена",
         notFoundBack: "Вернуться в блог",
@@ -1005,6 +1011,7 @@ const translations: Record<Language, Translations> = {
       ctaTitle: "Noch Fragen?",
       ctaSub: "Unser Team beantwortet alles zur Logistik und zum Handel Türkei–Russland.",
       ctaBtn: "Kontakt aufnehmen",
+      category: { articleCount: "Artikel" },
       post: {
         notFoundTitle: "Artikel nicht gefunden",
         notFoundBack: "Zurück zum Blog",

@@ -6,6 +6,7 @@ import { blogPosts } from "@/data/blogPosts";
 import { SEO } from "@/components/SEO";
 import { useLang } from "@/contexts/LanguageContext";
 import { formatReadTime, getLocalizedBlogCard } from "@/lib/blogLocalization";
+import { getCategorySlugForTag } from "@/lib/blogCategories";
 
 const SITE_URL = "https://chapterlog.com.tr";
 
@@ -38,6 +39,7 @@ export default function BlogPost() {
 
   const loc = getLocalizedBlogCard(post, lang);
   const readLabel = formatReadTime(post.readTime, lang);
+  const categorySlug = getCategorySlugForTag(post.tag);
   const seoEn = getLocalizedBlogCard(post, "en");
   const seoRu = getLocalizedBlogCard(post, "ru");
   const seoDe = getLocalizedBlogCard(post, "de");
@@ -121,9 +123,17 @@ export default function BlogPost() {
         <div className="absolute inset-0 flex flex-col justify-end">
           <div className="container mx-auto px-4 md:px-6 pb-10">
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
-              <span className={`inline-flex items-center gap-1.5 text-xs font-bold px-3 py-1.5 mb-4 font-sans rounded-full ${post.tagColor}`}>
-                <Tag size={10} /> {loc.tag}
-              </span>
+              {categorySlug ? (
+                <Link href={`/blog/kategori/${categorySlug}`}>
+                  <span className={`inline-flex items-center gap-1.5 text-xs font-bold px-3 py-1.5 mb-4 font-sans rounded-full cursor-pointer hover:opacity-90 ${post.tagColor}`}>
+                    <Tag size={10} /> {loc.tag}
+                  </span>
+                </Link>
+              ) : (
+                <span className={`inline-flex items-center gap-1.5 text-xs font-bold px-3 py-1.5 mb-4 font-sans rounded-full ${post.tagColor}`}>
+                  <Tag size={10} /> {loc.tag}
+                </span>
+              )}
               <h1 className="text-2xl md:text-4xl font-display font-bold text-white leading-snug max-w-3xl">
                 {loc.title}
               </h1>

@@ -61,6 +61,151 @@
     <lastmod>2026-05-21</lastmod>
   </url>
 
+  <!-- Blog categories (13) -->
+  <url>
+    <loc>https://chapterlog.com.tr/blog/kategori/lojistik</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://chapterlog.com.tr/blog/kategori/lojistik"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://chapterlog.com.tr/blog/kategori/lojistik?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://chapterlog.com.tr/blog/kategori/lojistik?lang=ru"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://chapterlog.com.tr/blog/kategori/lojistik?lang=de"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://chapterlog.com.tr/blog/kategori/lojistik"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+    <lastmod>2026-05-21</lastmod>
+  </url>
+  <url>
+    <loc>https://chapterlog.com.tr/blog/kategori/para-transferi</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://chapterlog.com.tr/blog/kategori/para-transferi"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://chapterlog.com.tr/blog/kategori/para-transferi?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://chapterlog.com.tr/blog/kategori/para-transferi?lang=ru"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://chapterlog.com.tr/blog/kategori/para-transferi?lang=de"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://chapterlog.com.tr/blog/kategori/para-transferi"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+    <lastmod>2026-05-21</lastmod>
+  </url>
+  <url>
+    <loc>https://chapterlog.com.tr/blog/kategori/nakliye</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://chapterlog.com.tr/blog/kategori/nakliye"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://chapterlog.com.tr/blog/kategori/nakliye?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://chapterlog.com.tr/blog/kategori/nakliye?lang=ru"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://chapterlog.com.tr/blog/kategori/nakliye?lang=de"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://chapterlog.com.tr/blog/kategori/nakliye"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+    <lastmod>2026-05-21</lastmod>
+  </url>
+  <url>
+    <loc>https://chapterlog.com.tr/blog/kategori/tasimacilik</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://chapterlog.com.tr/blog/kategori/tasimacilik"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://chapterlog.com.tr/blog/kategori/tasimacilik?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://chapterlog.com.tr/blog/kategori/tasimacilik?lang=ru"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://chapterlog.com.tr/blog/kategori/tasimacilik?lang=de"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://chapterlog.com.tr/blog/kategori/tasimacilik"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+    <lastmod>2026-05-21</lastmod>
+  </url>
+  <url>
+    <loc>https://chapterlog.com.tr/blog/kategori/konteyner</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://chapterlog.com.tr/blog/kategori/konteyner"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://chapterlog.com.tr/blog/kategori/konteyner?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://chapterlog.com.tr/blog/kategori/konteyner?lang=ru"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://chapterlog.com.tr/blog/kategori/konteyner?lang=de"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://chapterlog.com.tr/blog/kategori/konteyner"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+    <lastmod>2026-05-21</lastmod>
+  </url>
+  <url>
+    <loc>https://chapterlog.com.tr/blog/kategori/ftl</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://chapterlog.com.tr/blog/kategori/ftl"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://chapterlog.com.tr/blog/kategori/ftl?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://chapterlog.com.tr/blog/kategori/ftl?lang=ru"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://chapterlog.com.tr/blog/kategori/ftl?lang=de"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://chapterlog.com.tr/blog/kategori/ftl"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+    <lastmod>2026-05-21</lastmod>
+  </url>
+  <url>
+    <loc>https://chapterlog.com.tr/blog/kategori/gumruk</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://chapterlog.com.tr/blog/kategori/gumruk"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://chapterlog.com.tr/blog/kategori/gumruk?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://chapterlog.com.tr/blog/kategori/gumruk?lang=ru"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://chapterlog.com.tr/blog/kategori/gumruk?lang=de"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://chapterlog.com.tr/blog/kategori/gumruk"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+    <lastmod>2026-05-21</lastmod>
+  </url>
+  <url>
+    <loc>https://chapterlog.com.tr/blog/kategori/dis-ticaret</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://chapterlog.com.tr/blog/kategori/dis-ticaret"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://chapterlog.com.tr/blog/kategori/dis-ticaret?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://chapterlog.com.tr/blog/kategori/dis-ticaret?lang=ru"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://chapterlog.com.tr/blog/kategori/dis-ticaret?lang=de"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://chapterlog.com.tr/blog/kategori/dis-ticaret"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+    <lastmod>2026-05-21</lastmod>
+  </url>
+  <url>
+    <loc>https://chapterlog.com.tr/blog/kategori/ihracat</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://chapterlog.com.tr/blog/kategori/ihracat"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://chapterlog.com.tr/blog/kategori/ihracat?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://chapterlog.com.tr/blog/kategori/ihracat?lang=ru"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://chapterlog.com.tr/blog/kategori/ihracat?lang=de"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://chapterlog.com.tr/blog/kategori/ihracat"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+    <lastmod>2026-05-21</lastmod>
+  </url>
+  <url>
+    <loc>https://chapterlog.com.tr/blog/kategori/avrupa-rusya</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://chapterlog.com.tr/blog/kategori/avrupa-rusya"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://chapterlog.com.tr/blog/kategori/avrupa-rusya?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://chapterlog.com.tr/blog/kategori/avrupa-rusya?lang=ru"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://chapterlog.com.tr/blog/kategori/avrupa-rusya?lang=de"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://chapterlog.com.tr/blog/kategori/avrupa-rusya"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+    <lastmod>2026-05-21</lastmod>
+  </url>
+  <url>
+    <loc>https://chapterlog.com.tr/blog/kategori/transit</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://chapterlog.com.tr/blog/kategori/transit"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://chapterlog.com.tr/blog/kategori/transit?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://chapterlog.com.tr/blog/kategori/transit?lang=ru"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://chapterlog.com.tr/blog/kategori/transit?lang=de"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://chapterlog.com.tr/blog/kategori/transit"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+    <lastmod>2026-05-21</lastmod>
+  </url>
+  <url>
+    <loc>https://chapterlog.com.tr/blog/kategori/sigorta</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://chapterlog.com.tr/blog/kategori/sigorta"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://chapterlog.com.tr/blog/kategori/sigorta?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://chapterlog.com.tr/blog/kategori/sigorta?lang=ru"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://chapterlog.com.tr/blog/kategori/sigorta?lang=de"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://chapterlog.com.tr/blog/kategori/sigorta"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+    <lastmod>2026-05-21</lastmod>
+  </url>
+  <url>
+    <loc>https://chapterlog.com.tr/blog/kategori/e-ticaret</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://chapterlog.com.tr/blog/kategori/e-ticaret"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://chapterlog.com.tr/blog/kategori/e-ticaret?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://chapterlog.com.tr/blog/kategori/e-ticaret?lang=ru"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://chapterlog.com.tr/blog/kategori/e-ticaret?lang=de"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://chapterlog.com.tr/blog/kategori/e-ticaret"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+    <lastmod>2026-05-21</lastmod>
+  </url>
+
   <!-- Blog posts (35) -->
   <url>
     <loc>https://chapterlog.com.tr/blog/rusya-lojistik-operasyon-tek-cati</loc>
