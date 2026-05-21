@@ -131,6 +131,9 @@ export interface Translations {
     ctaTitle: string;
     ctaSub: string;
     ctaBtn: string;
+    category: {
+      articleCount: string;
+    };
     post: {
       notFoundTitle: string;
       notFoundBack: string;
@@ -334,7 +337,7 @@ const translations: Record<Language, Translations> = {
       title: "Sektör Bilgisi",
       sub: "Avrupa-Rusya ve Türkiye-Rusya lojistiği, gümrük, nakliye ve para transferi hakkında uzman rehberleri.",
       readMore: "Devamını Oku",
-      allPosts: "Tüm 12 Yazıyı İncele",
+      allPosts: "Tüm 35 Rehberi İncele",
       searchPlaceholder: "Yazılarda ara…",
       searchAriaLabel: "Blog yazılarında ara",
       noResults: "Aramanızla eşleşen yazı bulunamadı. Farklı bir kelime deneyin veya etiket filtresini sıfırlayın.",
@@ -342,6 +345,7 @@ const translations: Record<Language, Translations> = {
       ctaTitle: "Sorularınız mı var?",
       ctaSub: "Uzman ekibimiz Türkiye-Rusya lojistiği ve ticareti hakkında her sorunuzu yanıtlamaya hazır.",
       ctaBtn: "Hemen yazın",
+      category: { articleCount: "rehber" },
       post: {
         notFoundTitle: "Makale bulunamadı",
         notFoundBack: "Bloga dön",
@@ -380,6 +384,9 @@ const translations: Record<Language, Translations> = {
         { label: "Rusya'ya Para Transferi", href: "/blog/turkiyeden-rusyaya-para-transferi" },
         { label: "Rusya Parsiyel Nakliye", href: "/blog/rusya-parsiyel-nakliye-325-usd" },
         { label: "Rusya E-Ticaret Rehberi", href: "/blog/rusya-e-ticaret-wildberries-ozon-ihracat" },
+        { label: "Kayseri Rusya Nakliye", href: "/blog/kayseri-rusya-nakliye-lojistik" },
+        { label: "GOST-R Sertifikası Rehberi", href: "/blog/gost-r-sertifikasi-rusya-ihracat" },
+        { label: "Moskova Nakliye Süre ve Maliyet", href: "/blog/moskova-nakliye-suresi-maliyet" },
       ],
     },
     sanctions: {
@@ -552,7 +559,7 @@ const translations: Record<Language, Translations> = {
       title: "Industry Insights",
       sub: "Expert guides on Turkey–Russia logistics, customs, freight and money transfers.",
       readMore: "Read More",
-      allPosts: "View All 9 Articles",
+      allPosts: "View All 35 Guides",
       searchPlaceholder: "Search articles…",
       searchAriaLabel: "Search blog posts",
       noResults: "No posts match your search. Try another term or clear the tag filter.",
@@ -560,6 +567,7 @@ const translations: Record<Language, Translations> = {
       ctaTitle: "Have questions?",
       ctaSub: "Our team is ready to answer anything about Turkey–Russia logistics and trade.",
       ctaBtn: "Contact us",
+      category: { articleCount: "guides" },
       post: {
         notFoundTitle: "Article not found",
         notFoundBack: "Back to blog",
@@ -598,6 +606,9 @@ const translations: Record<Language, Translations> = {
         { label: "Money transfer to Russia", href: "/blog/turkiyeden-rusyaya-para-transferi" },
         { label: "Russia LTL freight", href: "/blog/rusya-parsiyel-nakliye-325-usd" },
         { label: "Russia e-commerce guide", href: "/blog/rusya-e-ticaret-wildberries-ozon-ihracat" },
+        { label: "Kayseri–Russia freight", href: "/blog/kayseri-rusya-nakliye-lojistik" },
+        { label: "GOST-R certificate guide", href: "/blog/gost-r-sertifikasi-rusya-ihracat" },
+        { label: "Moscow freight time & cost", href: "/blog/moskova-nakliye-suresi-maliyet" },
       ],
     },
     sanctions: {
@@ -770,7 +781,7 @@ const translations: Record<Language, Translations> = {
       title: "Отраслевые знания",
       sub: "Экспертные руководства по логистике, таможне и денежным переводам Турция–Россия.",
       readMore: "Читать далее",
-      allPosts: "Все 9 статей",
+      allPosts: "Все 35 статей",
       searchPlaceholder: "Поиск по статьям…",
       searchAriaLabel: "Поиск в блоге",
       noResults: "Ничего не найдено. Попробуйте другой запрос или сбросьте фильтр по тегу.",
@@ -778,6 +789,7 @@ const translations: Record<Language, Translations> = {
       ctaTitle: "Остались вопросы?",
       ctaSub: "Наша команда ответит на всё о логистике и торговле Турция–Россия.",
       ctaBtn: "Написать нам",
+      category: { articleCount: "статей" },
       post: {
         notFoundTitle: "Статья не найдена",
         notFoundBack: "Вернуться в блог",
@@ -816,6 +828,9 @@ const translations: Record<Language, Translations> = {
         { label: "Перевод в Россию", href: "/blog/turkiyeden-rusyaya-para-transferi" },
         { label: "Сборный груз в Россию", href: "/blog/rusya-parsiyel-nakliye-325-usd" },
         { label: "E-commerce в России", href: "/blog/rusya-e-ticaret-wildberries-ozon-ihracat" },
+        { label: "Перевозки Кайсери–Россия", href: "/blog/kayseri-rusya-nakliye-lojistik" },
+        { label: "Сертификат GOST-R", href: "/blog/gost-r-sertifikasi-rusya-ihracat" },
+        { label: "Сроки доставки в Москву", href: "/blog/moskova-nakliye-suresi-maliyet" },
       ],
     },
     sanctions: {
@@ -988,7 +1003,7 @@ const translations: Record<Language, Translations> = {
       title: "Brancheneinblicke",
       sub: "Expertenleitfäden zu Logistik, Zoll, Fracht und Geldtransfers zwischen der Türkei und Russland.",
       readMore: "Weiterlesen",
-      allPosts: "Alle 9 Artikel ansehen",
+      allPosts: "Alle 35 Artikel ansehen",
       searchPlaceholder: "Artikel durchsuchen…",
       searchAriaLabel: "Blog durchsuchen",
       noResults: "Keine Artikel gefunden. Anderen Suchbegriff versuchen oder Tagfilter zurücksetzen.",
@@ -996,6 +1011,7 @@ const translations: Record<Language, Translations> = {
       ctaTitle: "Noch Fragen?",
       ctaSub: "Unser Team beantwortet alles zur Logistik und zum Handel Türkei–Russland.",
       ctaBtn: "Kontakt aufnehmen",
+      category: { articleCount: "Artikel" },
       post: {
         notFoundTitle: "Artikel nicht gefunden",
         notFoundBack: "Zurück zum Blog",
@@ -1034,6 +1050,9 @@ const translations: Record<Language, Translations> = {
         { label: "Geldtransfer nach Russland", href: "/blog/turkiyeden-rusyaya-para-transferi" },
         { label: "Teilladung Russland", href: "/blog/rusya-parsiyel-nakliye-325-usd" },
         { label: "Russland E-Commerce Guide", href: "/blog/rusya-e-ticaret-wildberries-ozon-ihracat" },
+        { label: "Fracht Kayseri–Russland", href: "/blog/kayseri-rusya-nakliye-lojistik" },
+        { label: "GOST-R-Zertifikat", href: "/blog/gost-r-sertifikasi-rusya-ihracat" },
+        { label: "Moskau Fracht Zeit & Kosten", href: "/blog/moskova-nakliye-suresi-maliyet" },
       ],
     },
     sanctions: {

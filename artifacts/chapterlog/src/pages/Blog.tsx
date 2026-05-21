@@ -9,6 +9,7 @@ import { Input } from "@/components/ui/input";
 import { blogPosts, type BlogPost } from "@/data/blogPosts";
 import { BLOG_TAG_FILTER_ALL, BLOG_TAG_LABELS } from "@/data/blogLocales";
 import { formatReadTime, getLocalizedBlogCard } from "@/lib/blogLocalization";
+import { getCategorySlugForTag } from "@/lib/blogCategories";
 
 /** Turkish canonical tags for filtering (matches `BlogPost.tag`). First entry is the \"all\" sentinel. */
 const TR_TAGS = [
@@ -212,20 +213,31 @@ export default function Blog() {
             {TR_TAGS.map((tagTr) => {
               const label =
                 tagTr === "Tümü" ? BLOG_TAG_FILTER_ALL[lang] : BLOG_TAG_LABELS[tagTr]?.[lang] ?? tagTr;
+              const categorySlug = tagTr !== "Tümü" ? getCategorySlugForTag(tagTr) : undefined;
+              const isActive = activeTagTr === tagTr;
+              const chipClass = `shrink-0 px-3.5 py-1.5 text-[11px] font-bold transition-all border font-sans tracking-wide ${
+                isActive
+                  ? "bg-accent text-black border-accent shadow-[0_0_12px_rgba(251,91,45,0.3)]"
+                  : "bg-transparent text-white/35 border-white/10 hover:border-white/30 hover:text-white/65 hover:bg-white/4"
+              }`;
+              if (categorySlug) {
+                return (
+                  <Link key={tagTr} href={`/blog/kategori/${categorySlug}`}>
+                    <span className={`inline-block ${chipClass} cursor-pointer`}>{label}</span>
+                  </Link>
+                );
+              }
               return (
-              <button
-                key={tagTr}
-                type="button"
-                onClick={() => setActiveTagTr(tagTr)}
-                className={`shrink-0 px-3.5 py-1.5 text-[11px] font-bold transition-all border font-sans tracking-wide ${
-                  activeTagTr === tagTr
-                    ? "bg-accent text-black border-accent shadow-[0_0_12px_rgba(251,91,45,0.3)]"
-                    : "bg-transparent text-white/35 border-white/10 hover:border-white/30 hover:text-white/65 hover:bg-white/4"
-                }`}
-              >
-                {label}
-              </button>
-            );})}
+                <button
+                  key={tagTr}
+                  type="button"
+                  onClick={() => setActiveTagTr(tagTr)}
+                  className={chipClass}
+                >
+                  {label}
+                </button>
+              );
+            })}
           </div>
         </div>
       </section>

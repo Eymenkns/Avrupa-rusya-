@@ -16,6 +16,7 @@ import Home from "@/pages/Home";
 import Services from "@/pages/Services";
 import Contact from "@/pages/Contact";
 import Blog from "@/pages/Blog";
+import BlogCategory from "@/pages/BlogCategory";
 import BlogPost from "@/pages/BlogPost";
 import About from "@/pages/About";
 import NotFound from "@/pages/not-found";
@@ -208,6 +209,7 @@ function Router() {
         <Route path="/" component={Home} />
         <Route path="/services" component={Services} />
         <Route path="/blog" component={Blog} />
+        <Route path="/blog/kategori/:categorySlug" component={BlogCategory} />
         <Route path="/blog/:slug" component={BlogPost} />
         <Route path="/about" component={About} />
         <Route path="/contact" component={Contact} />
