@@ -41,3 +41,9 @@ Note: `@workspace/chapterlog` and `@workspace/mockup-sandbox` have pre-existing 
 - SMTP is optional; without SMTP env vars, contact submissions fall back to JSONL file logging in `logs/contact-submissions.jsonl` relative to the API server working directory.
 - The DB schema is currently empty (only placeholder comments in `lib/db/src/schema/index.ts`), so `drizzle-kit push` is a no-op.
 - Replit-specific Vite plugins (`@replit/vite-plugin-cartographer`, `@replit/vite-plugin-dev-banner`) are only loaded when `REPL_ID` env var is set; they are safely skipped in local dev.
+
+### TMS / Modaltrans (masraf pipeline)
+- Integration package: `@workspace/modaltrans` in `lib/integrations/modaltrans`
+- API routes (api-server): `POST /api/tms/expenses`, `POST /api/tms/expenses/:id/sync`, `POST /api/tms/expenses/:id/settle`, `POST /api/tms/expenses/:id/run-pipeline`, `GET /api/tms/shipments/:shipmentId/costs`
+- Required env for Modaltrans sync: `MODALTRANS_API_URL` (e.g. `https://demo.modaltrans.com`), `MODALTRANS_BEARER_TOKEN`
+- After schema changes: `pnpm --filter @workspace/db run push`
