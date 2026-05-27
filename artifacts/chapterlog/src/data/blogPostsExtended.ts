@@ -1,5 +1,4 @@
-import type { BlogPost } from "./blogPosts";
-import { IMGS } from "./blogPosts";
+import { IMGS, type BlogPost } from "./blogShared";
 
 /** SEO-focused articles (ids 21–35) — merged into `blogPosts` in blogPosts.ts */
 export const extendedBlogPosts: BlogPost[] = [
